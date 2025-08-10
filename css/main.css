@@ -1143,6 +1143,208 @@ a:hover {
     background: var(--primary-dark);
 }
 
+/* Enhanced State Page Store Listings */
+.state-stores-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    margin-top: var(--space-2xl);
+}
+
+.state-store-item {
+    background: var(--white);
+    border: 2px solid var(--gray-200);
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.state-store-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--gradient-primary);
+    transform: scaleY(0);
+    transition: transform 0.3s;
+}
+
+.state-store-item:hover::before {
+    transform: scaleY(1);
+}
+
+.state-store-item:hover {
+    border-color: var(--primary);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.state-store-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-lg);
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+}
+
+.state-store-name {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    font-family: var(--font-display);
+}
+
+.store-name-link {
+    color: var(--primary);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.store-name-link:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+.state-store-rating {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.review-count {
+    color: var(--gray-500);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.state-store-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-md);
+    align-items: start;
+}
+
+.state-store-details > div {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: 0.9rem;
+    color: var(--gray-600);
+}
+
+.state-store-details .address-icon,
+.state-store-details .location-icon,
+.state-store-details .phone-icon,
+.state-store-details .web-icon,
+.state-store-details .specialty-icon {
+    color: var(--primary);
+    font-size: 1rem;
+    min-width: 16px;
+}
+
+.city-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.city-link:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+.phone-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.phone-link:hover {
+    color: var(--primary-dark);
+}
+
+.website-link {
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.website-link:hover {
+    color: var(--primary);
+}
+
+.specialty-text {
+    font-style: italic;
+    color: var(--gray-500);
+}
+
+/* City List Styling */
+.city-list {
+    background: var(--gray-50);
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+    margin: var(--space-xl) 0;
+    line-height: 1.8;
+}
+
+.city-list-item {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+    white-space: nowrap;
+}
+
+.city-list-item:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+/* Mobile Responsive for State Store Listings */
+@media (max-width: 768px) {
+    .state-store-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .state-store-details {
+        grid-template-columns: 1fr;
+        gap: var(--space-sm);
+    }
+    
+    .state-store-item {
+        padding: var(--space-lg);
+    }
+    
+    .city-list {
+        padding: var(--space-lg);
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 480px) {
+    .state-stores-grid {
+        gap: var(--space-md);
+    }
+    
+    .state-store-name {
+        font-size: 1.125rem;
+    }
+    
+    .state-store-details {
+        font-size: 0.875rem;
+    }
+}
+
 /* Print styles */
 @media print {
     .header,
@@ -1152,7 +1354,8 @@ a:hover {
         display: none;
     }
     
-    .store-card {
+    .store-card,
+    .state-store-item {
         break-inside: avoid;
         box-shadow: none;
         border: 1px solid var(--gray-300);
