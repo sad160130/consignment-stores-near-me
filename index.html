@@ -3,122 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consignment Stores Near Me - Find Local Secondhand Shops & Thrift Stores</title>
-    <meta name="description" content="Find the best consignment stores near you. Browse 2,600+ secondhand shops, thrift stores, and consignment shops across all 50 US states. Search by location, store name, or zip code.">
-    <meta name="keywords" content="consignment stores near me, thrift stores, secondhand shops, consignment shops, used furniture, vintage clothing, antiques">
-    <link rel="canonical" href="/">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Consignment Stores Near Me - Find Local Consignment Shops Nationwide</title>
+    <meta name="description" content="Find the best consignment stores near you! Search thousands of consignment shops nationwide by location, store name, or zip code. Discover quality secondhand items at great prices.">
+    <meta name="keywords" content="consignment stores, consignment shops, secondhand stores, thrift stores, resale shops, used goods, vintage clothing, furniture consignment">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://consignmentstoresnearme.com/">
+    <link rel="icon" href="/favicon-new.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/css/main.css">
     
-    <!-- JSON-LD Structured Data -->
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Consignment Stores Near Me - Find Local Consignment Shops">
+    <meta property="og:description" content="Find the best consignment stores near you! Search thousands of consignment shops nationwide.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://consignmentstoresnearme.com/">
+    <meta property="og:site_name" content="Consignment Stores Near Me">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Consignment Stores Near Me - Find Local Consignment Shops">
+    <meta name="twitter:description" content="Find the best consignment stores near you! Search thousands of consignment shops nationwide.">
+    
+    <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "Consignment Stores Near Me",
-        "url": "/",
-        "description": "Find the best consignment stores, thrift shops, and secondhand stores near you",
+        "description": "Find local consignment stores and secondhand shops nationwide",
+        "url": "https://consignmentstoresnearme.com",
         "potentialAction": {
             "@type": "SearchAction",
-            "target": "/?search={search_term_string}",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://consignmentstoresnearme.com/search?q={search_term_string}"
+            },
             "query-input": "required name=search_term_string"
         }
     }
     </script>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
+    <header>
         <div class="header-container">
-            <a href="/" class="logo">
-                <img src="images/logo.svg" alt="Consignment Stores Near Me Logo">
-                <span class="logo-text">Consignment Stores Near Me</span>
-            </a>
-            
-            <nav>
+            <div class="logo">
+                <img src="/images/logo-main.svg" alt="Consignment Stores Near Me Logo">
+            </div>
+            <nav class="main-nav">
                 <ul class="nav-menu">
                     <li class="nav-item">
                         <a href="#" class="nav-link">Stores by State</a>
                         <div class="dropdown">
                             <div class="dropdown-columns">
-                                <a href="/alabama/" class="dropdown-link">Alabama</a>
-                                <a href="/alaska/" class="dropdown-link">Alaska</a>
-                                <a href="/arizona/" class="dropdown-link">Arizona</a>
-                                <a href="/arkansas/" class="dropdown-link">Arkansas</a>
-                                <a href="/california/" class="dropdown-link">California</a>
-                                <a href="/colorado/" class="dropdown-link">Colorado</a>
-                                <a href="/connecticut/" class="dropdown-link">Connecticut</a>
-                                <a href="/delaware/" class="dropdown-link">Delaware</a>
-                                <a href="/florida/" class="dropdown-link">Florida</a>
-                                <a href="/georgia/" class="dropdown-link">Georgia</a>
-                                <a href="/hawaii/" class="dropdown-link">Hawaii</a>
-                                <a href="/idaho/" class="dropdown-link">Idaho</a>
-                                <a href="/illinois/" class="dropdown-link">Illinois</a>
-                                <a href="/indiana/" class="dropdown-link">Indiana</a>
-                                <a href="/iowa/" class="dropdown-link">Iowa</a>
-                                <a href="/kansas/" class="dropdown-link">Kansas</a>
-                                <a href="/kentucky/" class="dropdown-link">Kentucky</a>
-                                <a href="/louisiana/" class="dropdown-link">Louisiana</a>
-                                <a href="/maine/" class="dropdown-link">Maine</a>
-                                <a href="/maryland/" class="dropdown-link">Maryland</a>
-                                <a href="/massachusetts/" class="dropdown-link">Massachusetts</a>
-                                <a href="/michigan/" class="dropdown-link">Michigan</a>
-                                <a href="/minnesota/" class="dropdown-link">Minnesota</a>
-                                <a href="/mississippi/" class="dropdown-link">Mississippi</a>
-                                <a href="/missouri/" class="dropdown-link">Missouri</a>
-                                <a href="/montana/" class="dropdown-link">Montana</a>
-                                <a href="/nebraska/" class="dropdown-link">Nebraska</a>
-                                <a href="/nevada/" class="dropdown-link">Nevada</a>
-                                <a href="/new-hampshire/" class="dropdown-link">New Hampshire</a>
-                                <a href="/new-jersey/" class="dropdown-link">New Jersey</a>
-                                <a href="/new-mexico/" class="dropdown-link">New Mexico</a>
-                                <a href="/new-york/" class="dropdown-link">New York</a>
-                                <a href="/north-carolina/" class="dropdown-link">North Carolina</a>
-                                <a href="/north-dakota/" class="dropdown-link">North Dakota</a>
-                                <a href="/ohio/" class="dropdown-link">Ohio</a>
-                                <a href="/oklahoma/" class="dropdown-link">Oklahoma</a>
-                                <a href="/oregon/" class="dropdown-link">Oregon</a>
-                                <a href="/pennsylvania/" class="dropdown-link">Pennsylvania</a>
-                                <a href="/rhode-island/" class="dropdown-link">Rhode Island</a>
-                                <a href="/south-carolina/" class="dropdown-link">South Carolina</a>
-                                <a href="/south-dakota/" class="dropdown-link">South Dakota</a>
-                                <a href="/tennessee/" class="dropdown-link">Tennessee</a>
-                                <a href="/texas/" class="dropdown-link">Texas</a>
-                                <a href="/utah/" class="dropdown-link">Utah</a>
-                                <a href="/vermont/" class="dropdown-link">Vermont</a>
-                                <a href="/virginia/" class="dropdown-link">Virginia</a>
-                                <a href="/washington/" class="dropdown-link">Washington</a>
-                                <a href="/west-virginia/" class="dropdown-link">West Virginia</a>
-                                <a href="/wisconsin/" class="dropdown-link">Wisconsin</a>
-                                <a href="/wyoming/" class="dropdown-link">Wyoming</a>
+                                <div class="dropdown-column">
+                                    <h4>A - F</h4>
+                                    <a href="/alabama/" class="dropdown-item">Alabama</a>
+                                    <a href="/alaska/" class="dropdown-item">Alaska</a>
+                                    <a href="/arizona/" class="dropdown-item">Arizona</a>
+                                    <a href="/arkansas/" class="dropdown-item">Arkansas</a>
+                                    <a href="/california/" class="dropdown-item">California</a>
+                                    <a href="/colorado/" class="dropdown-item">Colorado</a>
+                                    <a href="/connecticut/" class="dropdown-item">Connecticut</a>
+                                    <a href="/delaware/" class="dropdown-item">Delaware</a>
+                                    <a href="/florida/" class="dropdown-item">Florida</a>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h4>G - M</h4>
+                                    <a href="/georgia/" class="dropdown-item">Georgia</a>
+                                    <a href="/hawaii/" class="dropdown-item">Hawaii</a>
+                                    <a href="/idaho/" class="dropdown-item">Idaho</a>
+                                    <a href="/illinois/" class="dropdown-item">Illinois</a>
+                                    <a href="/indiana/" class="dropdown-item">Indiana</a>
+                                    <a href="/iowa/" class="dropdown-item">Iowa</a>
+                                    <a href="/kansas/" class="dropdown-item">Kansas</a>
+                                    <a href="/kentucky/" class="dropdown-item">Kentucky</a>
+                                    <a href="/louisiana/" class="dropdown-item">Louisiana</a>
+                                    <a href="/maine/" class="dropdown-item">Maine</a>
+                                    <a href="/maryland/" class="dropdown-item">Maryland</a>
+                                    <a href="/massachusetts/" class="dropdown-item">Massachusetts</a>
+                                    <a href="/michigan/" class="dropdown-item">Michigan</a>
+                                    <a href="/minnesota/" class="dropdown-item">Minnesota</a>
+                                    <a href="/mississippi/" class="dropdown-item">Mississippi</a>
+                                    <a href="/missouri/" class="dropdown-item">Missouri</a>
+                                    <a href="/montana/" class="dropdown-item">Montana</a>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h4>N - W</h4>
+                                    <a href="/nebraska/" class="dropdown-item">Nebraska</a>
+                                    <a href="/nevada/" class="dropdown-item">Nevada</a>
+                                    <a href="/new-hampshire/" class="dropdown-item">New Hampshire</a>
+                                    <a href="/new-jersey/" class="dropdown-item">New Jersey</a>
+                                    <a href="/new-mexico/" class="dropdown-item">New Mexico</a>
+                                    <a href="/new-york/" class="dropdown-item">New York</a>
+                                    <a href="/north-carolina/" class="dropdown-item">North Carolina</a>
+                                    <a href="/north-dakota/" class="dropdown-item">North Dakota</a>
+                                    <a href="/ohio/" class="dropdown-item">Ohio</a>
+                                    <a href="/oklahoma/" class="dropdown-item">Oklahoma</a>
+                                    <a href="/oregon/" class="dropdown-item">Oregon</a>
+                                    <a href="/pennsylvania/" class="dropdown-item">Pennsylvania</a>
+                                    <a href="/rhode-island/" class="dropdown-item">Rhode Island</a>
+                                    <a href="/south-carolina/" class="dropdown-item">South Carolina</a>
+                                    <a href="/south-dakota/" class="dropdown-item">South Dakota</a>
+                                    <a href="/tennessee/" class="dropdown-item">Tennessee</a>
+                                    <a href="/texas/" class="dropdown-item">Texas</a>
+                                    <a href="/utah/" class="dropdown-item">Utah</a>
+                                    <a href="/vermont/" class="dropdown-item">Vermont</a>
+                                    <a href="/virginia/" class="dropdown-item">Virginia</a>
+                                    <a href="/washington/" class="dropdown-item">Washington</a>
+                                    <a href="/west-virginia/" class="dropdown-item">West Virginia</a>
+                                    <a href="/wisconsin/" class="dropdown-item">Wisconsin</a>
+                                    <a href="/wyoming/" class="dropdown-item">Wyoming</a>
+                                </div>
                             </div>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Stores by City</a>
+                        <a href="#" class="nav-link">Store by City</a>
                         <div class="dropdown">
-                            <div class="dropdown-columns">
-                                <!-- Top cities will be populated here -->
-                                <a href="/california/los-angeles/" class="dropdown-link">Los Angeles, CA</a>
-                                <a href="/new-york/new-york-city/" class="dropdown-link">New York, NY</a>
-                                <a href="/illinois/chicago/" class="dropdown-link">Chicago, IL</a>
-                                <a href="/texas/houston/" class="dropdown-link">Houston, TX</a>
-                                <a href="/arizona/phoenix/" class="dropdown-link">Phoenix, AZ</a>
-                                <a href="/pennsylvania/philadelphia/" class="dropdown-link">Philadelphia, PA</a>
-                                <a href="/texas/san-antonio/" class="dropdown-link">San Antonio, TX</a>
-                                <a href="/california/san-diego/" class="dropdown-link">San Diego, CA</a>
-                                <a href="/texas/dallas/" class="dropdown-link">Dallas, TX</a>
-                                <a href="/california/san-jose/" class="dropdown-link">San Jose, CA</a>
-                                <a href="/texas/austin/" class="dropdown-link">Austin, TX</a>
-                                <a href="/florida/jacksonville/" class="dropdown-link">Jacksonville, FL</a>
-                                <a href="/california/san-francisco/" class="dropdown-link">San Francisco, CA</a>
-                                <a href="/indiana/indianapolis/" class="dropdown-link">Indianapolis, IN</a>
-                                <a href="/ohio/columbus/" class="dropdown-link">Columbus, OH</a>
-                                <a href="/north-carolina/charlotte/" class="dropdown-link">Charlotte, NC</a>
-                                <a href="/washington/seattle/" class="dropdown-link">Seattle, WA</a>
-                                <a href="/colorado/denver/" class="dropdown-link">Denver, CO</a>
-                                <a href="/massachusetts/boston/" class="dropdown-link">Boston, MA</a>
-                                <a href="/tennessee/nashville/" class="dropdown-link">Nashville, TN</a>
+                            <div class="dropdown-content">
+                                <a href="/alabama/birmingham/" class="dropdown-item">Birmingham, AL</a>
+                                <a href="/california/los-angeles/" class="dropdown-item">Los Angeles, CA</a>
+                                <a href="/florida/miami/" class="dropdown-item">Miami, FL</a>
+                                <a href="/georgia/atlanta/" class="dropdown-item">Atlanta, GA</a>
+                                <a href="/illinois/chicago/" class="dropdown-item">Chicago, IL</a>
+                                <a href="/massachusetts/boston/" class="dropdown-item">Boston, MA</a>
+                                <a href="/michigan/detroit/" class="dropdown-item">Detroit, MI</a>
+                                <a href="/minnesota/minneapolis/" class="dropdown-item">Minneapolis, MN</a>
+                                <a href="/new-york/" class="dropdown-item">New York, NY</a>
+                                <a href="/texas/" class="dropdown-item">Houston, TX</a>
+                                <a href="/sitemap/" class="dropdown-item text-blue">View All Cities →</a>
                             </div>
                         </div>
                     </li>
@@ -130,248 +142,243 @@
         </div>
     </header>
 
-    <!-- Main Content -->
     <main>
-        <!-- Search Section -->
+        <!-- Hero Search Section -->
         <section class="search-container">
-            <h1 class="search-title">Find Consignment Stores Near You</h1>
-            <p class="search-subtitle">Discover the best secondhand shops, thrift stores, and consignment stores in your area</p>
-            <form class="search-form" action="/search/" method="get">
-                <input type="text" name="q" class="search-input" placeholder="Enter store name, city, state, or zip code..." required>
-                <button type="submit" class="search-btn">Search</button>
+            <h1>Find Consignment Stores Near You</h1>
+            <p>Search thousands of consignment shops nationwide by store name, city, state, or zip code</p>
+            <form class="search-form" action="/search" method="GET">
+                <input type="text" class="search-input" name="q" placeholder="Enter store name, city, state, or zip code..." required>
+                <button type="submit" class="search-button">Search Stores</button>
             </form>
         </section>
 
-        <div class="main-container">
-            <!-- Featured Stores Section -->
-            <section>
-                <h2 style="font-size: 28px; margin-bottom: 30px; color: var(--dark-blue); text-align: center;">Top Rated Consignment Stores</h2>
-                
-                <div class="stores-grid">
-                    <!-- Featured store cards will be populated from data -->
-                    
-        <div class="store-card">
-            <h3 class="store-name">American Furniture Warehouse</h3>
-            <p class="store-address">5801 N 99th Ave, Glendale, AZ 85305</p>
-            <p class="store-reviews">★★★★★ (19062 reviews)</p>
-            <div class="store-features">
-                <span class="feature-tag">Fair Pricing</span><span class="feature-tag">Clean & Organized</span><span class="feature-tag">Clothing</span><span class="feature-tag">Furniture</span>
-            </div>
-            <div class="store-contact"><a href="tel:6024228800" class="contact-link">📞 Call</a><a href="https://www.afw.com/stores/az/glendale?utm_campaign=googlelocal" class="contact-link" target="_blank">🌐 Website</a></div>
-        </div>
-    
-
-        <div class="store-card">
-            <h3 class="store-name">The Highlands</h3>
-            <p class="store-address">546 Cabela Dr, Triadelphia, WV 26059</p>
-            <p class="store-reviews">★★★★★ (5577 reviews)</p>
-            <div class="store-features">
-                <span class="feature-tag">Fair Pricing</span><span class="feature-tag">Clean & Organized</span><span class="feature-tag">Clothing</span><span class="feature-tag">Friendly Staff</span>
-            </div>
-            <div class="store-contact"><a href="tel:3042343628" class="contact-link">📞 Call</a><a href="http://www.hitthehighlands.com/" class="contact-link" target="_blank">🌐 Website</a></div>
-        </div>
-    
-
-        <div class="store-card">
-            <h3 class="store-name">Hunt Valley Towne Centre</h3>
-            <p class="store-address">118 Shawan Rd, Cockeysville, MD 21030</p>
-            <p class="store-reviews">★★★★★ (5291 reviews)</p>
-            <div class="store-features">
-                <span class="feature-tag">Fair Pricing</span><span class="feature-tag">Clean & Organized</span><span class="feature-tag">Clothing</span><span class="feature-tag">Friendly Staff</span>
-            </div>
-            <div class="store-contact"><a href="tel:0" class="contact-link">📞 Call</a><a href="http://www.shophuntvalley.com/" class="contact-link" target="_blank">🌐 Website</a></div>
-        </div>
-    
-
-        <div class="store-card">
-            <h3 class="store-name">Gran Plaza Outlets</h3>
-            <p class="store-address">888 W 2nd St, Calexico, CA 92231</p>
-            <p class="store-reviews">★★★★★ (4929 reviews)</p>
-            <div class="store-features">
-                <span class="feature-tag">Fair Pricing</span><span class="feature-tag">Clean & Organized</span><span class="feature-tag">Clothing</span><span class="feature-tag">Friendly Staff</span>
-            </div>
-            <div class="store-contact"><a href="tel:7607689002" class="contact-link">📞 Call</a><a href="https://www.granplazaoutlets.com/" class="contact-link" target="_blank">🌐 Website</a></div>
-        </div>
-    
-
-        <div class="store-card">
-            <h3 class="store-name">Rooms To Go Outlet</h3>
-            <p class="store-address">62 Westbank Expy, Gretna, LA 70053</p>
-            <p class="store-reviews">★★★★★ (3617 reviews)</p>
-            <div class="store-features">
-                <span class="feature-tag">Fair Pricing</span><span class="feature-tag">Clean & Organized</span><span class="feature-tag">Clothing</span><span class="feature-tag">Friendly Staff</span>
-            </div>
-            <div class="store-contact"><a href="tel:5043674100" class="contact-link">📞 Call</a><a href="https://www.roomstogo.com/stores/louisiana/gretna-westside-outlet-furniture-store-925?utm_source=listings" class="contact-link" target="_blank">🌐 Website</a></div>
-        </div>
-    
-
-        <div class="store-card">
-            <h3 class="store-name">Boiling Springs Shopping Center</h3>
-            <p class="store-address">4028 SC-9, Spartanburg, SC 29316</p>
-            <p class="store-reviews">★★★★★ (2316 reviews)</p>
-            <div class="store-features">
-                <span class="feature-tag">Fair Pricing</span><span class="feature-tag">Wide Selection</span><span class="feature-tag">Clean & Organized</span><span class="feature-tag">Clothing</span>
-            </div>
-            <div class="store-contact"><a href="tel:0" class="contact-link">📞 Call</a></div>
-        </div>
-    
-                </div>
-            </section>
-
-            <!-- Popular States Section -->
-            <section style="margin-top: 50px;">
-                <h2 style="font-size: 28px; margin-bottom: 30px; color: var(--dark-blue); text-align: center;">Browse Consignment Stores by State</h2>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 40px;">
-                    <a href="/alabama/" style="background: var(--light-blue); padding: 20px; text-align: center; text-decoration: none; color: var(--dark-blue); border-radius: 8px; font-weight: 500; transition: all 0.3s ease;">
-                        Alabama
-                        <span style="display: block; font-size: 14px; color: var(--dark-gray); margin-top: 5px;">50 stores</span>
-                    </a>
-                    <a href="/alaska/" style="background: var(--light-blue); padding: 20px; text-align: center; text-decoration: none; color: var(--dark-blue); border-radius: 8px; font-weight: 500; transition: all 0.3s ease;">
-                        Alaska
-                        <span style="display: block; font-size: 14px; color: var(--dark-gray); margin-top: 5px;">50 stores</span>
-                    </a>
-                    <a href="/arizona/" style="background: var(--light-blue); padding: 20px; text-align: center; text-decoration: none; color: var(--dark-blue); border-radius: 8px; font-weight: 500; transition: all 0.3s ease;">
-                        Arizona
-                        <span style="display: block; font-size: 14px; color: var(--dark-gray); margin-top: 5px;">50 stores</span>
-                    </a>
-                    <a href="/arkansas/" style="background: var(--light-blue); padding: 20px; text-align: center; text-decoration: none; color: var(--dark-blue); border-radius: 8px; font-weight: 500; transition: all 0.3s ease;">
-                        Arkansas
-                        <span style="display: block; font-size: 14px; color: var(--dark-gray); margin-top: 5px;">50 stores</span>
-                    </a>
-                    <a href="/california/" style="background: var(--light-blue); padding: 20px; text-align: center; text-decoration: none; color: var(--dark-blue); border-radius: 8px; font-weight: 500; transition: all 0.3s ease;">
-                        California
-                        <span style="display: block; font-size: 14px; color: var(--dark-gray); margin-top: 5px;">50 stores</span>
-                    </a>
-                    <a href="/colorado/" style="background: var(--light-blue); padding: 20px; text-align: center; text-decoration: none; color: var(--dark-blue); border-radius: 8px; font-weight: 500; transition: all 0.3s ease;">
-                        Colorado
-                        <span style="display: block; font-size: 14px; color: var(--dark-gray); margin-top: 5px;">50 stores</span>
-                    </a>
-                    <a href="/connecticut/" style="background: var(--light-blue); padding: 20px; text-align: center; text-decoration: none; color: var(--dark-blue); border-radius: 8px; font-weight: 500; transition: all 0.3s ease;">
-                        Connecticut
-                        <span style="display: block; font-size: 14px; color: var(--dark-gray); margin-top: 5px;">50 stores</span>
-                    </a>
-                    <a href="/delaware/" style="background: var(--light-blue); padding: 20px; text-align: center; text-decoration: none; color: var(--dark-blue); border-radius: 8px; font-weight: 500; transition: all 0.3s ease;">
-                        Delaware
-                        <span style="display: block; font-size: 14px; color: var(--dark-gray); margin-top: 5px;">50 stores</span>
-                    </a>
-                    <a href="/district-of-columbia/" style="background: var(--light-blue); padding: 20px; text-align: center; text-decoration: none; color: var(--dark-blue); border-radius: 8px; font-weight: 500; transition: all 0.3s ease;">
-                        District of Columbia
-                        <span style="display: block; font-size: 14px; color: var(--dark-gray); margin-top: 5px;">50 stores</span>
-                    </a>
-                    <a href="/florida/" style="background: var(--light-blue); padding: 20px; text-align: center; text-decoration: none; color: var(--dark-blue); border-radius: 8px; font-weight: 500; transition: all 0.3s ease;">
-                        Florida
-                        <span style="display: block; font-size: 14px; color: var(--dark-gray); margin-top: 5px;">50 stores</span>
-                    </a>
-                    <a href="/georgia/" style="background: var(--light-blue); padding: 20px; text-align: center; text-decoration: none; color: var(--dark-blue); border-radius: 8px; font-weight: 500; transition: all 0.3s ease;">
-                        Georgia
-                        <span style="display: block; font-size: 14px; color: var(--dark-gray); margin-top: 5px;">50 stores</span>
-                    </a>
-                    <a href="/hawaii/" style="background: var(--light-blue); padding: 20px; text-align: center; text-decoration: none; color: var(--dark-blue); border-radius: 8px; font-weight: 500; transition: all 0.3s ease;">
-                        Hawaii
-                        <span style="display: block; font-size: 14px; color: var(--dark-gray); margin-top: 5px;">50 stores</span>
-                    </a>
-                </div>
-            </section>
-
-            <!-- About Section -->
-            <section style="background: var(--light-gray); padding: 40px; border-radius: 10px; margin: 40px 0;">
-                <h2 style="font-size: 28px; margin-bottom: 20px; color: var(--dark-blue); text-align: center;">Why Choose Consignment Stores?</h2>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-                    <div style="text-align: center;">
-                        <h3 style="color: var(--dark-blue); margin-bottom: 10px;">♻️ Sustainable Shopping</h3>
-                        <p>Give pre-loved items a second life while reducing environmental impact and supporting circular economy practices.</p>
+        <!-- Featured Stores Section -->
+        <section class="featured-section">
+            <h2>Featured Consignment Stores</h2>
+            <div class="store-grid">
+                <!-- Store 1 -->
+                <article class="store-card">
+                    <img src="https://lh5.googleusercontent.com/p/AF1QipNqfvvBa5rH0ZKAE94sFARAjeFddGCwYSNqGeDa=w800-h500-k-no" alt="Lovelady Thrift Store" class="store-image">
+                    <div class="store-info">
+                        <h3 class="store-name">Lovelady Thrift Store</h3>
+                        <p class="store-address">2402 Old Springville Rd, Center Point, AL 35215</p>
+                        <div class="store-details">
+                            <span class="store-reviews">610 reviews</span>
+                            <span class="store-phone">+1 205-951-9230</span>
+                        </div>
+                        <div class="store-features">
+                            <span class="feature-tag">Affordable Pricing</span>
+                            <span class="feature-tag">Clean & Organized</span>
+                            <span class="feature-tag">Clothing</span>
+                            <span class="feature-tag">Friendly Staff</span>
+                        </div>
+                        <div class="store-actions">
+                            <a href="/alabama/center-point/" class="btn-primary">View Details</a>
+                            <a href="https://www.loveladycenter.org/thrift-stores/" class="btn-secondary" target="_blank">Visit Website</a>
+                        </div>
                     </div>
-                    <div style="text-align: center;">
-                        <h3 style="color: var(--dark-blue); margin-bottom: 10px;">💰 Great Value</h3>
-                        <p>Find high-quality items at fraction of retail prices. Perfect for budget-conscious shoppers and treasure hunters.</p>
+                </article>
+
+                <!-- Store 2 -->
+                <article class="store-card">
+                    <img src="https://lh5.googleusercontent.com/p/AF1QipMW7K59SqVIB6wZAR3BtjduBROW7_zerjg-gbYc=w800-h500-k-no" alt="Elisabet Boutique" class="store-image">
+                    <div class="store-info">
+                        <h3 class="store-name">Elisabet Boutique</h3>
+                        <p class="store-address">124 N College St, Auburn, AL 36830</p>
+                        <div class="store-details">
+                            <span class="store-reviews">198 reviews</span>
+                            <span class="store-phone">+1 334-209-2504</span>
+                        </div>
+                        <div class="store-features">
+                            <span class="feature-tag">Premium Brands</span>
+                            <span class="feature-tag">Clothing</span>
+                            <span class="feature-tag">Gift Items</span>
+                            <span class="feature-tag">Friendly Staff</span>
+                        </div>
+                        <div class="store-actions">
+                            <a href="/alabama/auburn/" class="btn-primary">View Details</a>
+                            <a href="https://shopelisabetboutique.com/" class="btn-secondary" target="_blank">Visit Website</a>
+                        </div>
                     </div>
-                    <div style="text-align: center;">
-                        <h3 style="color: var(--dark-blue); margin-bottom: 10px;">🏪 Support Local</h3>
-                        <p>Support local businesses and community members while discovering unique items you won't find in regular stores.</p>
+                </article>
+
+                <!-- Store 3 -->
+                <article class="store-card">
+                    <img src="https://lh5.googleusercontent.com/p/AF1QipPILYqE8bSt3Uw3uUx50_JbjJCfzLOUNpI_8Bt0=w800-h500-k-no" alt="Rapha Ministries Thrift Store" class="store-image">
+                    <div class="store-info">
+                        <h3 class="store-name">Rapha Ministries Thrift Store</h3>
+                        <p class="store-address">319 Gilbert Ferry Rd SW, Attalla, AL 35954</p>
+                        <div class="store-details">
+                            <span class="store-reviews">195 reviews</span>
+                            <span class="store-phone">+1 256-290-1818</span>
+                        </div>
+                        <div class="store-features">
+                            <span class="feature-tag">Affordable Pricing</span>
+                            <span class="feature-tag">Clean & Organized</span>
+                            <span class="feature-tag">Clothing</span>
+                            <span class="feature-tag">Friendly Staff</span>
+                        </div>
+                        <div class="store-actions">
+                            <a href="/alabama/attalla/" class="btn-primary">View Details</a>
+                            <a href="https://www.raphathrift.com/" class="btn-secondary" target="_blank">Visit Website</a>
+                        </div>
                     </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Browse by State Section -->
+        <section class="browse-section">
+            <h2>Browse Consignment Stores by State</h2>
+            <div class="state-grid">
+                <div class="state-card">
+                    <h3><a href="/alabama/">Alabama</a></h3>
+                    <p>Find consignment stores in Birmingham, Mobile, Montgomery and other Alabama cities.</p>
                 </div>
-            </section>
-        </div>
+                <div class="state-card">
+                    <h3><a href="/california/">California</a></h3>
+                    <p>Discover consignment shops in Los Angeles, San Francisco, San Diego and throughout California.</p>
+                </div>
+                <div class="state-card">
+                    <h3><a href="/florida/">Florida</a></h3>
+                    <p>Explore consignment stores in Miami, Orlando, Tampa and other Florida cities.</p>
+                </div>
+                <div class="state-card">
+                    <h3><a href="/georgia/">Georgia</a></h3>
+                    <p>Browse consignment shops in Atlanta, Savannah, Augusta and across Georgia.</p>
+                </div>
+                <div class="state-card">
+                    <h3><a href="/illinois/">Illinois</a></h3>
+                    <p>Find great consignment stores in Chicago, Springfield, Rockford and throughout Illinois.</p>
+                </div>
+                <div class="state-card">
+                    <h3><a href="/texas/">Texas</a></h3>
+                    <p>Discover consignment shops in Houston, Dallas, Austin, San Antonio and other Texas cities.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEO Content Section -->
+        <section class="content-section">
+            <h2>Why Choose Consignment Stores?</h2>
+            <p>Consignment stores offer an eco-friendly and budget-conscious way to shop for quality items. Whether you're looking for vintage clothing, unique furniture pieces, or designer accessories at discounted prices, consignment shops provide incredible value while supporting sustainable shopping practices.</p>
+            
+            <h3>Benefits of Shopping at Consignment Stores</h3>
+            <ul>
+                <li><strong>Great Value:</strong> Find high-quality items at fraction of retail prices</li>
+                <li><strong>Unique Finds:</strong> Discover one-of-a-kind vintage and designer pieces</li>
+                <li><strong>Eco-Friendly:</strong> Support sustainable shopping by giving items a second life</li>
+                <li><strong>Community Support:</strong> Many consignment stores support local charities and causes</li>
+                <li><strong>Quality Items:</strong> Most consignment stores carefully curate their inventory</li>
+            </ul>
+
+            <h3>What Can You Find at Consignment Stores?</h3>
+            <p>Our directory features consignment stores specializing in various categories including clothing, furniture, antiques, books, jewelry, gift items, premium brands, and general merchandise. Use our filters to find stores that carry exactly what you're looking for.</p>
+        </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <div class="footer-container">
-            <div class="footer-grid">
+            <div class="footer-content">
                 <div class="footer-section">
-                    <h4>Popular States</h4>
+                    <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="/california/">California Consignment Stores</a></li>
-                        <li><a href="/texas/">Texas Consignment Stores</a></li>
-                        <li><a href="/florida/">Florida Consignment Stores</a></li>
-                        <li><a href="/new-york/">New York Consignment Stores</a></li>
-                        <li><a href="/illinois/">Illinois Consignment Stores</a></li>
-                        <li><a href="/pennsylvania/">Pennsylvania Consignment Stores</a></li>
-                        <li><a href="/ohio/">Ohio Consignment Stores</a></li>
-                        <li><a href="/michigan/">Michigan Consignment Stores</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Popular Cities</h4>
-                    <ul>
-                        <li><a href="/california/los-angeles/">Los Angeles Consignment</a></li>
-                        <li><a href="/new-york/new-york-city/">NYC Consignment Stores</a></li>
-                        <li><a href="/illinois/chicago/">Chicago Consignment</a></li>
-                        <li><a href="/texas/houston/">Houston Consignment</a></li>
-                        <li><a href="/california/san-francisco/">San Francisco Consignment</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Store Categories</h4>
-                    <ul>
-                        <li><a href="/categories/clothing/">Clothing Consignment</a></li>
-                        <li><a href="/categories/furniture/">Furniture Consignment</a></li>
-                        <li><a href="/categories/antiques/">Antique Consignment</a></li>
-                        <li><a href="/categories/books/">Book Consignment</a></li>
-                        <li><a href="/categories/jewelry/">Jewelry Consignment</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Resources</h4>
-                    <ul>
+                        <li><a href="/">Home</a></li>
                         <li><a href="/about/">About Us</a></li>
-                        <li><a href="/sitemap/">Site Map</a></li>
+                        <li><a href="/sitemap/">Sitemap</a></li>
                         <li><a href="/sitemap.xml">XML Sitemap</a></li>
-                        <li><a href="/contact/">Contact Us</a></li>
-                        <li><a href="/privacy/">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Browse by Region</h3>
+                    <ul>
+                        <li><a href="/alabama/">Alabama Consignment Stores</a></li>
+                        <li><a href="/california/">California Consignment Stores</a></li>
+                        <li><a href="/florida/">Florida Consignment Stores</a></li>
+                        <li><a href="/illinois/">Illinois Consignment Stores</a></li>
+                        <li><a href="/texas/">Texas Consignment Stores</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Popular Cities</h3>
+                    <ul>
+                        <li><a href="/alabama/birmingham/">Birmingham Consignment Stores</a></li>
+                        <li><a href="/california/los-angeles/">Los Angeles Consignment Stores</a></li>
+                        <li><a href="/florida/miami/">Miami Consignment Stores</a></li>
+                        <li><a href="/georgia/atlanta/">Atlanta Consignment Stores</a></li>
+                        <li><a href="/illinois/chicago/">Chicago Consignment Stores</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Store Categories</h3>
+                    <ul>
+                        <li>Clothing Consignment</li>
+                        <li>Furniture Consignment</li>
+                        <li>Antique Stores</li>
+                        <li>Designer Consignment</li>
+                        <li>Book Stores</li>
                     </ul>
                 </div>
             </div>
-            
             <div class="footer-bottom">
-                <p>&copy; 2024 Consignment Stores Near Me. All rights reserved. Discover 2,600+ consignment stores, thrift shops, and secondhand stores across all 50 US states and 1,700+ cities.</p>
+                <p>&copy; 2024 Consignment Stores Near Me. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Search Functionality -->
-    <script src="js/search.js"></script>
-    <script>
-        // Add hover effects to state links
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('[href^="/"]').forEach(link => {
-                if (link.style.background === 'var(--light-blue)') {
-                    link.addEventListener('mouseenter', function() {
-                        this.style.background = 'var(--primary-blue)';
-                        this.style.color = 'white';
-                    });
-                    link.addEventListener('mouseleave', function() {
-                        this.style.background = 'var(--light-blue)';
-                        this.style.color = 'var(--dark-blue)';
-                    });
-                }
-            });
-        });
-    </script>
+    <script src="/js/search.js"></script>
+    <style>
+        .state-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .state-card {
+            background-color: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+        
+        .state-card:hover {
+            transform: translateY(-2px);
+        }
+        
+        .state-card h3 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .state-card h3 a {
+            color: var(--dark-blue);
+            text-decoration: none;
+        }
+        
+        .state-card h3 a:hover {
+            color: var(--primary-blue);
+        }
+        
+        .content-section {
+            margin: 3rem 0;
+        }
+        
+        .content-section h2,
+        .content-section h3 {
+            color: var(--dark-blue);
+        }
+        
+        .content-section ul {
+            padding-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .content-section li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
 </body>
 </html>
