@@ -39,3 +39,33 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Python files
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
+.venv
+
+# Data files (too large for git)
+*.xlsx
+*.csv
+consignment_stores_data.json
+
+# Build scripts
+analyze_data.py
+generate_*.py
+get_state_counts.py
+add_nearby_cities.py
+
+# Deployment files
+deploy.bat
+deploy.sh
+gitignore-new.txt
+
+# Template files
+templates/

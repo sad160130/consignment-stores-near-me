@@ -198,7 +198,25 @@
             </div>
         </section>
 
-        <!-- SEO Content Section -->
+                <!-- Nearby Cities Section -->
+        <section class="nearby-cities">
+            <div class="container">
+                <h2>Nearby Cities with Consignment Stores</h2>
+                <p>Explore consignment stores in cities near Gadsden, Alabama.</p>
+                <div class="nearby-cities-grid">
+                    <div class="nearby-city-item">
+                        <h3><a href="/alabama/center-point/">Center Point</a></h3>
+                        <p>Browse local consignment stores</p>
+                    </div>
+                    <div class="nearby-city-item">
+                        <h3><a href="/alabama/cullman/">Cullman</a></h3>
+                        <p>Browse local consignment stores</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- SEO Content Section -->
         <section class="city-content">
             <div class="container">
                 <h2>Consignment Shopping in Gadsden, Alabama</h2>
@@ -364,7 +382,70 @@
             font-size: 0.8rem;
             font-weight: 500;
         }
+             
+        .nearby-cities {
+            background-color: var(--light-gray);
+            padding: 3rem 0;
+        }
         
+        .nearby-cities h2 {
+            color: var(--dark-blue);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .nearby-cities p {
+            text-align: center;
+            color: var(--gray);
+            margin-bottom: 2rem;
+        }
+        
+        .nearby-cities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .nearby-city-item {
+            background-color: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+        
+        .nearby-city-item:hover {
+            transform: translateY(-2px);
+        }
+        
+        .nearby-city-item h3 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .nearby-city-item h3 a {
+            color: var(--dark-blue);
+            text-decoration: none;
+        }
+        
+        .nearby-city-item h3 a:hover {
+            color: var(--primary-blue);
+        }
+        
+        .nearby-city-item p {
+            color: var(--gray);
+            margin: 0;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .nearby-cities-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 1rem;
+            }
+        }
+   
         .store-specialties {
             font-size: 0.95rem;
             color: var(--dark-gray);

@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Consignment Stores Near Me
 
-## Getting Started
+A comprehensive directory of consignment stores nationwide in the USA. Find quality secondhand shops, thrift stores, and consignment boutiques in your area.
 
-First, run the development server:
+## 🌟 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **2,600+ Stores**: Complete database of consignment stores across all 50 states + DC
+- **SEO Optimized**: Each page optimized for local search ranking
+- **Responsive Design**: Beautiful white and light blue design that works on all devices
+- **Advanced Search**: Search by store name, city, state, or ZIP code
+- **Nearby Cities**: Discover consignment stores in nearby areas
+- **Store Details**: Contact info, reviews, specialties, and features for each store
+
+## 🗺️ Coverage
+
+- **States**: All 50 U.S. states + Washington DC
+- **Cities**: 1,720+ cities with consignment stores
+- **Store Listings**: Complete information including:
+  - Business name, address, phone, website
+  - Customer review counts
+  - Store specialties (clothing, furniture, antiques, etc.)
+  - Features (pricing, cleanliness, staff friendliness)
+
+## 🚀 Technology Stack
+
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
+- **Styling**: Custom CSS with CSS Variables
+- **SEO**: Schema.org structured data, optimized meta tags
+- **Performance**: Optimized images, clean code structure
+- **Responsive**: Mobile-first design approach
+
+## 📁 Project Structure
+
+```
+├── index.html                 # Homepage
+├── about/index.html          # About Us page
+├── sitemap/index.html        # HTML sitemap
+├── sitemap.xml              # XML sitemap for search engines
+├── css/main.css             # Main stylesheet
+├── js/search.js             # Search functionality
+├── images/                  # Logos and icons
+├── [state]/                 # State directories
+│   ├── index.html          # State page
+│   └── [city]/             # City directories
+│       └── index.html      # City page with store listings
+└── favicon.ico             # Site favicon
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔍 SEO Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **URL Structure**: Clean, SEO-friendly URLs (`/state/city/`)
+- **Page Titles**: Optimized for local search queries
+- **Meta Descriptions**: Unique descriptions for each page
+- **Structured Data**: Rich snippets for better search results
+- **Internal Linking**: Comprehensive cross-linking structure
+- **Sitemap**: Complete HTML and XML sitemaps
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🎯 Target Keywords
 
-## Learn More
+- **Homepage**: "Consignment Stores Near Me"
+- **State Pages**: "[State] Consignment Stores"
+- **City Pages**: "Best Consignment Stores [City]", "Consignment Stores [City]"
 
-To learn more about Next.js, take a look at the following resources:
+## 📱 Browser Support
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers (iOS Safari, Chrome Mobile)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚀 Deployment
 
-## Deploy on Vercel
+This is a static HTML website that can be deployed to:
+- **Vercel** (recommended for static sites)
+- **Netlify**
+- **GitHub Pages**
+- **Any web hosting provider**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Vercel Deployment Steps:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Push code to GitHub repository
+2. Connect GitHub repo to Vercel
+3. Deploy automatically
+
+### Performance Notes:
+- Total size: ~646MB (due to 1,775 HTML pages)
+- All static files - no server required
+- Fast loading with optimized images
+- Mobile-responsive design
+
+## 🔧 Development
+
+To run locally:
+```bash
+# Serve files with any web server
+python -m http.server 8000
+# or
+npx serve .
+```
+
+## 📄 License
+
+This project contains a directory of public business information. Store information is publicly available data.
+
+## 📞 Contact
+
+For questions or updates, please visit our About Us page for contact information.
