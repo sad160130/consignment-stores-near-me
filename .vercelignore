@@ -1,6 +1,7 @@
 app/
 components/
 lib/
+public/
 next.config.ts
 tsconfig.json
 next-env.d.ts
@@ -11,7 +12,8 @@ postcss.config.mjs
 *.py
 *.xlsx
 *.csv
-*.json
+consignment_stores_data.json
+state_data.json
 templates/
 *.ts
 *.tsx
