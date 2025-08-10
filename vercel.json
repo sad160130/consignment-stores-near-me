@@ -1,6 +1,4 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false,
-  "directoryListing": false,
-  "public": true
+  "trailingSlash": false
 }
