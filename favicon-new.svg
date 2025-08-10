@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Background Circle -->
+  <circle cx="16" cy="16" r="15" fill="#E3F2FD"/>
+  
+  <!-- Store Icon (simplified for favicon) -->
+  <g transform="translate(6, 8)">
+    <!-- Store Building -->
+    <rect x="0" y="8" width="20" height="12" fill="#4A90E2" rx="1"/>
+    <!-- Store Roof -->
+    <polygon points="0,8 10,2 20,8" fill="#2C5282"/>
+    <!-- Store Window/Door -->
+    <rect x="3" y="11" width="5" height="5" fill="#FFFFFF"/>
+    <rect x="12" y="11" width="5" height="5" fill="#FFFFFF"/>
+    <rect x="7.5" y="14" width="5" height="6" fill="#2C5282"/>
+  </g>
+</svg>

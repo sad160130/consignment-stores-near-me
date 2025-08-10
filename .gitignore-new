@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# Excel and data files
+*.xlsx
+*.xls
+*.csv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Node (if you add any npm packages later)
+node_modules/
+package-lock.json
+
+# Temporary files
+*.tmp
+*.bak
+~*
+
+# Python scripts (keep these out of deployment)
+generate_*.py
+analyze_*.py
+add_*.py
+get_*.py
+
+# Data files
+*.json
+state_data.json
+consignment_stores_data.json
+
+# Keep only the website files for deployment
