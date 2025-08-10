@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oregon Consignment Stores - Find Local Secondhand Shops & Thrift Stores</title>
-    <meta name="description" content="Find the best consignment stores in Oregon. Browse 50 local secondhand shops, thrift stores, and consignment stores across Oregon. Search by city and location.">
-    <meta name="keywords" content="Oregon consignment stores, Oregon thrift stores, Oregon secondhand shops, consignment stores Oregon, thrift shops Oregon">
-    <link rel="canonical" href="/oregon/">
-    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-    <link rel="stylesheet" href="../css/styles.css">
+    <title>Best Consignment Stores in Oregon - Oregon Secondhand Shops Directory</title>
+    <meta name="description" content="Discover 50+ quality consignment shops, thrift stores, and secondhand boutiques in Oregon. Find great deals on clothing, furniture, antiques, and more.">
+    <meta name="keywords" content="Oregon consignment stores, Oregon thrift stores, Oregon secondhand shops, consignment stores Oregon">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://consignmentstoresnearme.com/oregon/">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/css/main.css">
     
-    <!-- JSON-LD Structured Data -->
+    <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "WebPage",
+        "@type": "CollectionPage",
         "name": "Oregon Consignment Stores",
-        "description": "Directory of consignment stores in Oregon",
+        "description": "Directory of consignment stores and thrift shops in Oregon",
+        "url": "https://consignmentstoresnearme.com/oregon/",
         "breadcrumb": {
             "@type": "BreadcrumbList",
             "itemListElement": [
@@ -24,101 +26,103 @@
                     "@type": "ListItem",
                     "position": 1,
                     "name": "Home",
-                    "item": "/"
+                    "item": "https://consignmentstoresnearme.com/"
                 },
                 {
                     "@type": "ListItem",
                     "position": 2,
-                    "name": "Oregon Consignment Stores"
+                    "name": "Oregon Consignment Stores",
+                    "item": "https://consignmentstoresnearme.com/oregon/"
                 }
             ]
+        },
+        "mainEntity": {
+            "@type": "ItemList",
+            "name": "Oregon Consignment Stores",
+            "numberOfItems": "50"
         }
     }
     </script>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
+    <header>
         <div class="header-container">
-            <a href="/" class="logo">
-                <img src="../images/logo.svg" alt="Consignment Stores Near Me Logo">
-                <span class="logo-text">Consignment Stores Near Me</span>
-            </a>
-            
-            <nav>
+            <div class="logo">
+                <img src="/images/logo-main.svg" alt="Consignment Stores Near Me Logo">
+            </div>
+            <nav class="main-nav">
                 <ul class="nav-menu">
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Stores by State</a>
+                        <a href="#" class="nav-link" style="color: var(--primary-blue); font-weight: 600;">Stores by State</a>
                         <div class="dropdown">
                             <div class="dropdown-columns">
-                                <a href="/alabama/" class="dropdown-link">Alabama</a>
-                                <a href="/alaska/" class="dropdown-link">Alaska</a>
-                                <a href="/arizona/" class="dropdown-link">Arizona</a>
-                                <a href="/arkansas/" class="dropdown-link">Arkansas</a>
-                                <a href="/california/" class="dropdown-link">California</a>
-                                <a href="/colorado/" class="dropdown-link">Colorado</a>
-                                <a href="/connecticut/" class="dropdown-link">Connecticut</a>
-                                <a href="/delaware/" class="dropdown-link">Delaware</a>
-                                <a href="/florida/" class="dropdown-link">Florida</a>
-                                <a href="/georgia/" class="dropdown-link">Georgia</a>
-                                <a href="/hawaii/" class="dropdown-link">Hawaii</a>
-                                <a href="/idaho/" class="dropdown-link">Idaho</a>
-                                <a href="/illinois/" class="dropdown-link">Illinois</a>
-                                <a href="/indiana/" class="dropdown-link">Indiana</a>
-                                <a href="/iowa/" class="dropdown-link">Iowa</a>
-                                <a href="/kansas/" class="dropdown-link">Kansas</a>
-                                <a href="/kentucky/" class="dropdown-link">Kentucky</a>
-                                <a href="/louisiana/" class="dropdown-link">Louisiana</a>
-                                <a href="/maine/" class="dropdown-link">Maine</a>
-                                <a href="/maryland/" class="dropdown-link">Maryland</a>
-                                <a href="/massachusetts/" class="dropdown-link">Massachusetts</a>
-                                <a href="/michigan/" class="dropdown-link">Michigan</a>
-                                <a href="/minnesota/" class="dropdown-link">Minnesota</a>
-                                <a href="/mississippi/" class="dropdown-link">Mississippi</a>
-                                <a href="/missouri/" class="dropdown-link">Missouri</a>
-                                <a href="/montana/" class="dropdown-link">Montana</a>
-                                <a href="/nebraska/" class="dropdown-link">Nebraska</a>
-                                <a href="/nevada/" class="dropdown-link">Nevada</a>
-                                <a href="/new-hampshire/" class="dropdown-link">New Hampshire</a>
-                                <a href="/new-jersey/" class="dropdown-link">New Jersey</a>
-                                <a href="/new-mexico/" class="dropdown-link">New Mexico</a>
-                                <a href="/new-york/" class="dropdown-link">New York</a>
-                                <a href="/north-carolina/" class="dropdown-link">North Carolina</a>
-                                <a href="/north-dakota/" class="dropdown-link">North Dakota</a>
-                                <a href="/ohio/" class="dropdown-link">Ohio</a>
-                                <a href="/oklahoma/" class="dropdown-link">Oklahoma</a>
-                                <a href="/oregon/" class="dropdown-link">Oregon</a>
-                                <a href="/pennsylvania/" class="dropdown-link">Pennsylvania</a>
-                                <a href="/rhode-island/" class="dropdown-link">Rhode Island</a>
-                                <a href="/south-carolina/" class="dropdown-link">South Carolina</a>
-                                <a href="/south-dakota/" class="dropdown-link">South Dakota</a>
-                                <a href="/tennessee/" class="dropdown-link">Tennessee</a>
-                                <a href="/texas/" class="dropdown-link">Texas</a>
-                                <a href="/utah/" class="dropdown-link">Utah</a>
-                                <a href="/vermont/" class="dropdown-link">Vermont</a>
-                                <a href="/virginia/" class="dropdown-link">Virginia</a>
-                                <a href="/washington/" class="dropdown-link">Washington</a>
-                                <a href="/west-virginia/" class="dropdown-link">West Virginia</a>
-                                <a href="/wisconsin/" class="dropdown-link">Wisconsin</a>
-                                <a href="/wyoming/" class="dropdown-link">Wyoming</a>
+                                <div class="dropdown-column">
+                                    <h4>A - F</h4>
+                                    <a href="/alabama/" class="dropdown-item">Alabama</a>
+                                    <a href="/alaska/" class="dropdown-item">Alaska</a>
+                                    <a href="/arizona/" class="dropdown-item">Arizona</a>
+                                    <a href="/arkansas/" class="dropdown-item">Arkansas</a>
+                                    <a href="/california/" class="dropdown-item">California</a>
+                                    <a href="/colorado/" class="dropdown-item">Colorado</a>
+                                    <a href="/connecticut/" class="dropdown-item">Connecticut</a>
+                                    <a href="/delaware/" class="dropdown-item">Delaware</a>
+                                    <a href="/florida/" class="dropdown-item">Florida</a>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h4>G - M</h4>
+                                    <a href="/georgia/" class="dropdown-item">Georgia</a>
+                                    <a href="/hawaii/" class="dropdown-item">Hawaii</a>
+                                    <a href="/idaho/" class="dropdown-item">Idaho</a>
+                                    <a href="/illinois/" class="dropdown-item">Illinois</a>
+                                    <a href="/indiana/" class="dropdown-item">Indiana</a>
+                                    <a href="/iowa/" class="dropdown-item">Iowa</a>
+                                    <a href="/kansas/" class="dropdown-item">Kansas</a>
+                                    <a href="/kentucky/" class="dropdown-item">Kentucky</a>
+                                    <a href="/louisiana/" class="dropdown-item">Louisiana</a>
+                                    <a href="/maine/" class="dropdown-item">Maine</a>
+                                    <a href="/maryland/" class="dropdown-item">Maryland</a>
+                                    <a href="/massachusetts/" class="dropdown-item">Massachusetts</a>
+                                    <a href="/michigan/" class="dropdown-item">Michigan</a>
+                                    <a href="/minnesota/" class="dropdown-item">Minnesota</a>
+                                    <a href="/mississippi/" class="dropdown-item">Mississippi</a>
+                                    <a href="/missouri/" class="dropdown-item">Missouri</a>
+                                    <a href="/montana/" class="dropdown-item">Montana</a>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h4>N - W</h4>
+                                    <a href="/nebraska/" class="dropdown-item">Nebraska</a>
+                                    <a href="/nevada/" class="dropdown-item">Nevada</a>
+                                    <a href="/new-hampshire/" class="dropdown-item">New Hampshire</a>
+                                    <a href="/new-jersey/" class="dropdown-item">New Jersey</a>
+                                    <a href="/new-mexico/" class="dropdown-item">New Mexico</a>
+                                    <a href="/new-york/" class="dropdown-item">New York</a>
+                                    <a href="/north-carolina/" class="dropdown-item">North Carolina</a>
+                                    <a href="/north-dakota/" class="dropdown-item">North Dakota</a>
+                                    <a href="/ohio/" class="dropdown-item">Ohio</a>
+                                    <a href="/oklahoma/" class="dropdown-item">Oklahoma</a>
+                                    <a href="/oregon/" class="dropdown-item">Oregon</a>
+                                    <a href="/pennsylvania/" class="dropdown-item">Pennsylvania</a>
+                                    <a href="/rhode-island/" class="dropdown-item">Rhode Island</a>
+                                    <a href="/south-carolina/" class="dropdown-item">South Carolina</a>
+                                    <a href="/south-dakota/" class="dropdown-item">South Dakota</a>
+                                    <a href="/tennessee/" class="dropdown-item">Tennessee</a>
+                                    <a href="/texas/" class="dropdown-item">Texas</a>
+                                    <a href="/utah/" class="dropdown-item">Utah</a>
+                                    <a href="/vermont/" class="dropdown-item">Vermont</a>
+                                    <a href="/virginia/" class="dropdown-item">Virginia</a>
+                                    <a href="/washington/" class="dropdown-item">Washington</a>
+                                    <a href="/west-virginia/" class="dropdown-item">West Virginia</a>
+                                    <a href="/wisconsin/" class="dropdown-item">Wisconsin</a>
+                                    <a href="/wyoming/" class="dropdown-item">Wyoming</a>
+                                </div>
                             </div>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Stores by City</a>
+                        <a href="#" class="nav-link">Store by City</a>
                         <div class="dropdown">
-                            <div class="dropdown-columns">
-                                <!-- Popular cities for this state will be populated here -->
-                                <a href="/oregon/eugene/" class="dropdown-link">Eugene, OR</a>
-<a href="/oregon/bend/" class="dropdown-link">Bend, OR</a>
-<a href="/oregon/salem/" class="dropdown-link">Salem, OR</a>
-<a href="/oregon/florence/" class="dropdown-link">Florence, OR</a>
-<a href="/oregon/medford/" class="dropdown-link">Medford, OR</a>
-<a href="/oregon/madras/" class="dropdown-link">Madras, OR</a>
-<a href="/oregon/newberg/" class="dropdown-link">Newberg, OR</a>
-<a href="/oregon/coos-bay/" class="dropdown-link">Coos Bay, OR</a>
-<a href="/oregon/astoria/" class="dropdown-link">Astoria, OR</a>
-<a href="/oregon/grants-pass/" class="dropdown-link">Grants Pass, OR</a>
+                            <div class="dropdown-content">
+                                <a href="/sitemap/" class="dropdown-item text-blue">View All Cities →</a>
                             </div>
                         </div>
                     </li>
@@ -130,249 +134,453 @@
         </div>
     </header>
 
-    <!-- Breadcrumb -->
-    <div class="breadcrumb">
-        <a href="/">Home</a> > <a href="/oregon/">Oregon Consignment Stores</a>
-    </div>
+    <main>
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item">
+                    <a href="/" class="breadcrumb-link">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <span>Oregon Consignment Stores</span>
+                </li>
+            </ol>
+        </nav>
 
-    <!-- Page Header -->
-    <div class="page-header">
-        <div class="main-container">
-            <h1 class="page-title">Best Consignment Stores in Oregon</h1>
-            <p class="page-subtitle">Find 50 local consignment stores, thrift shops, and secondhand stores across Oregon</p>
-        </div>
-    </div>
-
-    <!-- Main Content -->
-    <main class="main-container">
-        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 40px;">
-            <!-- Left Column - Store Listings -->
-            <div>
-                <!-- Intro Text -->
-                <section style="margin-bottom: 40px;">
-                    <p style="font-size: 18px; line-height: 1.8; color: var(--dark-gray);">
-                        Discover the best consignment stores in Oregon! Our comprehensive directory features 50 carefully curated consignment shops, thrift stores, and secondhand retailers across the state. Whether you're looking for designer clothing, vintage furniture, rare books, or unique antiques, Oregon's consignment stores offer incredible value and one-of-a-kind finds.
-                    </p>
-                </section>
-
-                <!-- Featured Stores Grid -->
-                <section>
-                    <h2 style="font-size: 24px; color: var(--dark-blue); margin-bottom: 30px;">Top Rated Oregon Consignment Stores</h2>
-                    
-                    <div class="stores-grid">
-                        <!-- Store cards will be populated from data -->
-                        
-        <div class="store-card">
-            <h3 class="store-name">Langlois Market</h3>
-            <p class="store-address">48444 US-101, Langlois, OR 97450</p>
-            <p class="store-reviews">★★★★★ (1081 reviews)</p>
-            <div class="store-features">
-                <span class="feature-tag">Fair Pricing</span><span class="feature-tag">Clean & Organized</span><span class="feature-tag">Clothing</span><span class="feature-tag">Friendly Staff</span>
+        <!-- State Hero Section -->
+        <section class="state-hero">
+            <div class="container">
+                <h1>Best Consignment Stores in Oregon</h1>
+                <p class="lead">Discover 50+ quality consignment shops, thrift stores, and secondhand boutiques in Oregon. Find great deals on clothing, furniture, antiques, and more.</p>
             </div>
-            <div class="store-contact"><a href="tel:5413482476" class="contact-link">📞 Call</a><a href="http://www.langloismarket.com/" class="contact-link" target="_blank">🌐 Website</a></div>
-        </div>
-    
+        </section>
 
-        <div class="store-card">
-            <h3 class="store-name">Hoodland Thriftway</h3>
-            <p class="store-address">68280 US-26, Welches, OR 97067</p>
-            <p class="store-reviews">★★★★★ (710 reviews)</p>
-            <div class="store-features">
-                <span class="feature-tag">Affordable Pricing</span><span class="feature-tag">Clean & Organized</span><span class="feature-tag">Clothing</span><span class="feature-tag">Friendly Staff</span>
+        <!-- Quick Search Section -->
+        <section class="quick-search">
+            <div class="container">
+                <form class="search-form" action="/search" method="GET">
+                    <input type="hidden" name="state" value="Oregon">
+                    <input type="text" class="search-input" name="q" placeholder="Search Oregon consignment stores..." required>
+                    <button type="submit" class="search-button">Search</button>
+                </form>
             </div>
-            <div class="store-contact"><a href="tel:5036223244" class="contact-link">📞 Call</a><a href="http://www.hoodlandthriftway.com/" class="contact-link" target="_blank">🌐 Website</a></div>
-        </div>
-    
+        </section>
 
-        <div class="store-card">
-            <h3 class="store-name">Goodwill Industries Of The Columbia Willamette</h3>
-            <p class="store-address">315 Orchard Dr, Dallas, OR 97338</p>
-            <p class="store-reviews">★★★★★ (635 reviews)</p>
-            <div class="store-features">
-                <span class="feature-tag">Fair Pricing</span><span class="feature-tag">Clean & Organized</span><span class="feature-tag">Clothing</span><span class="feature-tag">Friendly Staff</span>
-            </div>
-            <div class="store-contact"><a href="tel:5038311426" class="contact-link">📞 Call</a><a href="https://meetgoodwill.org/" class="contact-link" target="_blank">🌐 Website</a></div>
-        </div>
-    
+        <!-- Featured Stores Section -->
+        <section class="featured-stores">
+            <div class="container">
+                <h2>Featured Oregon Consignment Stores</h2>
+                <div class="store-grid">
 
-        <div class="store-card">
-            <h3 class="store-name">Goodwill Industries Of The Columbia Willamette</h3>
-            <p class="store-address">61315 S Hwy 97, Bend, OR 97702</p>
-            <p class="store-reviews">★★★★★ (501 reviews)</p>
-            <div class="store-features">
-                <span class="feature-tag">Fair Pricing</span><span class="feature-tag">Clean & Organized</span><span class="feature-tag">Clothing</span><span class="feature-tag">Friendly Staff</span>
-            </div>
-            <div class="store-contact"><a href="tel:5413129070" class="contact-link">📞 Call</a><a href="https://meetgoodwill.org/" class="contact-link" target="_blank">🌐 Website</a></div>
-        </div>
-    
+                    <article class="store-card">
+                        <img src="https://lh5.googleusercontent.com/p/AF1QipPvFol-f0Ncak4X92149_K6E7Y7r4riBJUrw7N0=w800-h500-k-no" alt="Langlois Market in Langlois, Oregon" class="store-image">
+                        <div class="store-info">
+                            <h3 class="store-name">Langlois Market</h3>
+                            <p class="store-address">Langlois, Oregon</p>
+                            <div class="store-details">
+                                <span class="store-reviews">1081 reviews</span>
+                                <span class="store-phone">+1 541-348-2476</span>
+                            </div>
+                            <div class="store-features">
+                                <span class="feature-tag">Mid-Range Pricing</span><span class="feature-tag">Clean & Organized</span><span class="feature-tag">Clothing</span><span class="feature-tag">General Merchandise</span>
+                            </div>
+                            <div class="store-actions">
+                                <a href="/oregon/langlois/" class="btn-primary">View Details</a>
+                                <a href="http://www.langloismarket.com/" class="btn-secondary" target="_blank">Visit Website</a>
+                            </div>
+                        </div>
+                    </article>
 
-        <div class="store-card">
-            <h3 class="store-name">Bricks &amp; Minifigs Eugene - Lego Resale Store</h3>
-            <p class="store-address">780 Blair Blvd, Eugene, OR 97402</p>
-            <p class="store-reviews">★★★★★ (374 reviews)</p>
-            <div class="store-features">
-                <span class="feature-tag">Fair Pricing</span><span class="feature-tag">Clean & Organized</span><span class="feature-tag">Clothing</span><span class="feature-tag">Friendly Staff</span>
-            </div>
-            <div class="store-contact"><a href="tel:5412254981" class="contact-link">📞 Call</a><a href="https://bricksandminifigseugene.com/" class="contact-link" target="_blank">🌐 Website</a></div>
-        </div>
-    
+                    <article class="store-card">
+                        <img src="https://lh5.googleusercontent.com/p/AF1QipNgKMYVTvRk3Oi_SlVnJB1pWiEHW4IrlCUnB2uH=w800-h500-k-no" alt="Hoodland Thriftway in Welches, Oregon" class="store-image">
+                        <div class="store-info">
+                            <h3 class="store-name">Hoodland Thriftway</h3>
+                            <p class="store-address">Welches, Oregon</p>
+                            <div class="store-details">
+                                <span class="store-reviews">710 reviews</span>
+                                <span class="store-phone">+1 503-622-3244</span>
+                            </div>
+                            <div class="store-features">
+                                <span class="feature-tag">Affordable Pricing</span><span class="feature-tag">Clean & Organized</span><span class="feature-tag">Clothing</span><span class="feature-tag">General Merchandise</span>
+                            </div>
+                            <div class="store-actions">
+                                <a href="/oregon/welches/" class="btn-primary">View Details</a>
+                                <a href="http://www.hoodlandthriftway.com/" class="btn-secondary" target="_blank">Visit Website</a>
+                            </div>
+                        </div>
+                    </article>
 
-        <div class="store-card">
-            <h3 class="store-name">Lafayette Schoolhouse Antique Mall</h3>
-            <p class="store-address">748 3rd St, Lafayette, OR 97127</p>
-            <p class="store-reviews">★★★★★ (293 reviews)</p>
-            <div class="store-features">
-                <span class="feature-tag">Fair Pricing</span><span class="feature-tag">Wide Selection</span><span class="feature-tag">Antiques</span><span class="feature-tag">Clean & Organized</span>
-            </div>
-            <div class="store-contact"><a href="tel:5038642720" class="contact-link">📞 Call</a><a href="http://www.myantiquemall.com/lafayette.html" class="contact-link" target="_blank">🌐 Website</a></div>
-        </div>
-    
+                    <article class="store-card">
+                        <img src="https://lh5.googleusercontent.com/p/AF1QipMNpt4p2rEB-L6rwjr0FBk_sNjhBr6kpjCLWtq8=w800-h500-k-no" alt="Goodwill Industries Of The Columbia Willamette in Dallas, Oregon" class="store-image">
+                        <div class="store-info">
+                            <h3 class="store-name">Goodwill Industries Of The Columbia Willamette</h3>
+                            <p class="store-address">Dallas, Oregon</p>
+                            <div class="store-details">
+                                <span class="store-reviews">635 reviews</span>
+                                <span class="store-phone">+1 503-831-1426</span>
+                            </div>
+                            <div class="store-features">
+                                <span class="feature-tag">Mid-Range Pricing</span><span class="feature-tag">Clean & Organized</span><span class="feature-tag">Clothing</span><span class="feature-tag">General Merchandise</span>
+                            </div>
+                            <div class="store-actions">
+                                <a href="/oregon/dallas/" class="btn-primary">View Details</a>
+                                <a href="https://meetgoodwill.org/" class="btn-secondary" target="_blank">Visit Website</a>
+                            </div>
+                        </div>
+                    </article>
 
-        <div class="store-card">
-            <h3 class="store-name">Habitat For Humanity Restore</h3>
-            <p class="store-address">1249 13th St SE, Salem, OR 97302</p>
-            <p class="store-reviews">★★★★★ (265 reviews)</p>
-            <div class="store-features">
-                <span class="feature-tag">Fair Pricing</span><span class="feature-tag">Clean & Organized</span><span class="feature-tag">Clothing</span><span class="feature-tag">Friendly Staff</span>
+                </div>
             </div>
-            <div class="store-contact"><a href="tel:5034854845" class="contact-link">📞 Call</a><a href="http://salemhabitat.org/restore" class="contact-link" target="_blank">🌐 Website</a></div>
-        </div>
-    
+        </section>
 
-        <div class="store-card">
-            <h3 class="store-name">Safehaven Thrift Store</h3>
-            <p class="store-address">33650 OR-99E, Tangent, OR 97389</p>
-            <p class="store-reviews">★★★★★ (229 reviews)</p>
-            <div class="store-features">
-                <span class="feature-tag">Affordable Pricing</span><span class="feature-tag">Clean & Organized</span><span class="feature-tag">Clothing</span><span class="feature-tag">Friendly Staff</span>
-            </div>
-            <div class="store-contact"><a href="tel:5417919621" class="contact-link">📞 Call</a><a href="http://www.safehavenhumane.org/" class="contact-link" target="_blank">🌐 Website</a></div>
-        </div>
-    
+        <!-- All Cities Section -->
+        <section class="all-cities">
+            <div class="container">
+                <h2>All Cities in Oregon with Consignment Stores</h2>
+                <p>Browse consignment stores by city in Oregon. Click on any city below to view local secondhand shops and thrift stores.</p>
+                <div class="cities-grid">
+
+                    <div class="city-item">
+                        <h3><a href="/oregon/ashland/">Ashland</a></h3>
+                        <p>1 store</p>
                     </div>
-                </section>
 
-                <!-- More about consignment shopping in this state -->
-                <section style="background: var(--light-gray); padding: 30px; border-radius: 10px; margin: 40px 0;">
-                    <h2 style="font-size: 24px; color: var(--dark-blue); margin-bottom: 20px;">Why Shop Consignment in Oregon?</h2>
-                    <p style="font-size: 16px; line-height: 1.7; margin-bottom: 15px;">
-                        Oregon offers an amazing opportunities for those to buy or sell secondhand items. The state's consignment stores provide a sustainable and affordable shopping alternative while supporting local businesses and communities.
-                    </p>
-                    <p style="font-size: 16px; line-height: 1.7;">
-                        From bustling urban centers to charming small towns, Oregon's consignment stores reflect the diverse character and style preferences of their communities. Many stores specialize in specific categories like designer fashion, antique furniture, or vintage collectibles.
-                    </p>
-                </section>
+                    <div class="city-item">
+                        <h3><a href="/oregon/astoria/">Astoria</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/oregon/athena/">Athena</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/oregon/bay-city/">Bay City</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/oregon/bend/">Bend</a></h3>
+                        <p>5 stores</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/oregon/bonanza/">Bonanza</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/oregon/coos-bay/">Coos Bay</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/oregon/dallas/">Dallas</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/oregon/depoe-bay/">Depoe Bay</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/oregon/eugene/">Eugene</a></h3>
+                        <p>8 stores</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/oregon/florence/">Florence</a></h3>
+                        <p>3 stores</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/oregon/grants-pass/">Grants Pass</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/oregon/gresham/">Gresham</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/oregon/hood-river/">Hood River</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/oregon/junction-city/">Junction City</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/oregon/klamath-falls/">Klamath Falls</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/oregon/la-pine/">La Pine</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/oregon/lafayette/">Lafayette</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/oregon/langlois/">Langlois</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/oregon/madras/">Madras</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/oregon/medford/">Medford</a></h3>
+                        <p>2 stores</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/oregon/molalla/">Molalla</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/oregon/myrtle-creek/">Myrtle Creek</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/oregon/newberg/">Newberg</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/oregon/newport/">Newport</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/oregon/oakridge/">Oakridge</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/oregon/portland/">Portland</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/oregon/powers/">Powers</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/oregon/rickreall/">Rickreall</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/oregon/salem/">Salem</a></h3>
+                        <p>3 stores</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/oregon/tangent/">Tangent</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/oregon/waldport/">Waldport</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/oregon/welches/">Welches</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/oregon/yachats/">Yachats</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                </div>
             </div>
+        </section>
 
-            <!-- Right Column - Sidebar -->
-            <aside>
-                <!-- All Cities in State Module -->
-                <div class="sidebar">
-                    <h3>All Cities in Oregon</h3>
-                    <ul>
-                        <li><a href="/oregon/eugene/">Eugene (8 stores)</a></li>
-<li><a href="/oregon/bend/">Bend (5 stores)</a></li>
-<li><a href="/oregon/salem/">Salem (3 stores)</a></li>
-<li><a href="/oregon/florence/">Florence (3 stores)</a></li>
-<li><a href="/oregon/medford/">Medford (2 stores)</a></li>
-<li><a href="/oregon/madras/">Madras (1 stores)</a></li>
-<li><a href="/oregon/newberg/">Newberg (1 stores)</a></li>
-<li><a href="/oregon/coos-bay/">Coos Bay (1 stores)</a></li>
-<li><a href="/oregon/astoria/">Astoria (1 stores)</a></li>
-<li><a href="/oregon/grants-pass/">Grants Pass (1 stores)</a></li>
-<li><a href="/oregon/bonanza/">Bonanza (1 stores)</a></li>
-<li><a href="/oregon/athena/">Athena (1 stores)</a></li>
-<li><a href="/oregon/lafayette/">Lafayette (1 stores)</a></li>
-<li><a href="/oregon/rickreall/">Rickreall (1 stores)</a></li>
-<li><a href="/oregon/myrtle-creek/">Myrtle Creek (1 stores)</a></li>
-<li><a href="/oregon/ashland/">Ashland (1 stores)</a></li>
-<li><a href="/oregon/portland/">Portland (1 stores)</a></li>
-<li><a href="/oregon/langlois/">Langlois (1 stores)</a></li>
-<li><a href="/oregon/bay-city/">Bay City (1 stores)</a></li>
-<li><a href="/oregon/depoe-bay/">Depoe Bay (1 stores)</a></li>
-                    </ul>
-                </div>
+        <!-- SEO Content Section -->
+        <section class="state-content">
+            <div class="container">
+                <h2>Consignment Shopping in Oregon</h2>
+                <p>Oregon offers excellent consignment shopping opportunities with 50+ quality consignment stores, thrift shops, and secondhand boutiques throughout the state. From urban centers to small towns, you'll find amazing deals on clothing, furniture, antiques, and unique treasures.</p>
+                
+                <h3>What You'll Find at Oregon Consignment Stores</h3>
+                <p>Oregon consignment stores offer an impressive variety of items:</p>
+                
+                <ul>
+                    <li><strong>Clothing & Fashion:</strong> Designer brands, vintage pieces, and everyday wear at affordable prices</li>
+                    <li><strong>Furniture & Home Décor:</strong> Antique furniture, modern pieces, and unique home accessories</li>
+                    <li><strong>Books & Media:</strong> Rare books, vintage magazines, and collectible items</li>
+                    <li><strong>Jewelry & Accessories:</strong> Estate jewelry, costume pieces, and designer accessories</li>
+                    <li><strong>Gift Items:</strong> Unique gifts, collectibles, and specialty items</li>
+                </ul>
 
-                <!-- Store Categories -->
-                <div class="sidebar">
-                    <h3>Shop by Category</h3>
-                    <ul>
-                        <li><a href="/oregon/clothing/">👗 Clothing & Fashion</a></li>
-                        <li><a href="/oregon/furniture/">🪑 Furniture & Home</a></li>
-                        <li><a href="/oregon/antiques/">🏺 Antiques & Collectibles</a></li>
-                        <li><a href="/oregon/books/">📚 Books & Media</a></li>
-                        <li><a href="/oregon/jewelry/">💎 Jewelry & Accessories</a></li>
-                    </ul>
-                </div>
-
-                <!-- Popular Searches -->
-                <div class="sidebar">
-                    <h3>Popular Searches in Oregon</h3>
-                    <ul>
-                        <li><a href="/oregon/">Oregon consignment stores</a></li>
-                        <li><a href="/oregon/">Oregon thrift stores</a></li>
-                        <li><a href="/oregon/">Oregon secondhand shops</a></li>
-                        <li><a href="/oregon/">Oregon vintage stores</a></li>
-                        <li><a href="/oregon/">Oregon antique stores</a></li>
-                    </ul>
-                </div>
-            </aside>
-        </div>
+                <h3>Why Shop Consignment in Oregon?</h3>
+                <p>Shopping at Oregon consignment stores offers numerous benefits beyond just saving money. You'll find unique, quality items that aren't available in traditional retail stores, support local businesses, and contribute to environmental sustainability by giving pre-owned items a new life.</p>
+            </div>
+        </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <div class="footer-container">
-            <div class="footer-grid">
+            <div class="footer-content">
                 <div class="footer-section">
-                    <h4>Popular States</h4>
+                    <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="/california/">California Consignment Stores</a></li>
-                        <li><a href="/texas/">Texas Consignment Stores</a></li>
-                        <li><a href="/florida/">Florida Consignment Stores</a></li>
-                        <li><a href="/new-york/">New York Consignment Stores</a></li>
-                        <li><a href="/illinois/">Illinois Consignment Stores</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Popular Cities</h4>
-                    <ul>
-                        <li><a href="/california/los-angeles/">Los Angeles Consignment</a></li>
-                        <li><a href="/new-york/new-york-city/">NYC Consignment Stores</a></li>
-                        <li><a href="/illinois/chicago/">Chicago Consignment</a></li>
-                        <li><a href="/texas/houston/">Houston Consignment</a></li>
-                        <li><a href="/california/san-francisco/">San Francisco Consignment</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Store Categories</h4>
-                    <ul>
-                        <li><a href="/categories/clothing/">Clothing Consignment</a></li>
-                        <li><a href="/categories/furniture/">Furniture Consignment</a></li>
-                        <li><a href="/categories/antiques/">Antique Consignment</a></li>
-                        <li><a href="/categories/books/">Book Consignment</a></li>
-                        <li><a href="/categories/jewelry/">Jewelry Consignment</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Resources</h4>
-                    <ul>
+                        <li><a href="/">Home</a></li>
                         <li><a href="/about/">About Us</a></li>
-                        <li><a href="/sitemap/">Site Map</a></li>
+                        <li><a href="/sitemap/">Sitemap</a></li>
                         <li><a href="/sitemap.xml">XML Sitemap</a></li>
-                        <li><a href="/contact/">Contact Us</a></li>
-                        <li><a href="/privacy/">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Oregon Cities</h3>
+                    <ul>
+                        <li><a href="/oregon/ashland/">Ashland Consignment Stores</a></li>
+                        <li><a href="/oregon/astoria/">Astoria Consignment Stores</a></li>
+                        <li><a href="/oregon/athena/">Athena Consignment Stores</a></li>
+                        <li><a href="/oregon/bay-city/">Bay City Consignment Stores</a></li>
+                        <li><a href="/oregon/bend/">Bend Consignment Stores</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Store Categories</h3>
+                    <ul>
+                        <li>Clothing Consignment</li>
+                        <li>Furniture Consignment</li>
+                        <li>Antique Stores</li>
+                        <li>Designer Consignment</li>
+                        <li>Book Stores</li>
                     </ul>
                 </div>
             </div>
-            
             <div class="footer-bottom">
-                <p>&copy; 2024 Consignment Stores Near Me. All rights reserved. Find the best consignment stores, thrift shops, and secondhand stores in your area.</p>
+                <p>&copy; 2024 Consignment Stores Near Me. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <style>
+        .state-hero {
+            background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+            color: var(--white);
+            padding: 3rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .state-hero h1 {
+            color: var(--white);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .quick-search {
+            background-color: var(--light-gray);
+            padding: 2rem 0;
+            margin-bottom: 3rem;
+        }
+        
+        .quick-search .search-form {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: var(--white);
+            border-radius: 25px;
+            padding: 0.5rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .featured-stores,
+        .all-cities,
+        .state-content {
+            padding: 3rem 0;
+        }
+        
+        .cities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .city-item {
+            background-color: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+        
+        .city-item:hover {
+            transform: translateY(-2px);
+        }
+        
+        .city-item h3 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .city-item h3 a {
+            color: var(--dark-blue);
+            text-decoration: none;
+        }
+        
+        .city-item h3 a:hover {
+            color: var(--primary-blue);
+        }
+        
+        .city-item p {
+            color: var(--gray);
+            margin: 0;
+            font-size: 0.9rem;
+        }
+        
+        .state-content {
+            background-color: var(--light-gray);
+        }
+        
+        .state-content h2,
+        .state-content h3 {
+            color: var(--dark-blue);
+        }
+        
+        .state-content ul {
+            padding-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .state-content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .state-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .cities-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 1rem;
+            }
+        }
+    </style>
 </body>
 </html>

@@ -1,0 +1,1254 @@
+{
+  "sorted_states": [
+    [
+      "Alabama",
+      50
+    ],
+    [
+      "Alaska",
+      50
+    ],
+    [
+      "Arizona",
+      50
+    ],
+    [
+      "Arkansas",
+      50
+    ],
+    [
+      "California",
+      50
+    ],
+    [
+      "Colorado",
+      50
+    ],
+    [
+      "Connecticut",
+      50
+    ],
+    [
+      "Delaware",
+      50
+    ],
+    [
+      "District of Columbia",
+      50
+    ],
+    [
+      "Florida",
+      50
+    ],
+    [
+      "Georgia",
+      50
+    ],
+    [
+      "Hawaii",
+      50
+    ],
+    [
+      "Idaho",
+      50
+    ],
+    [
+      "Illinois",
+      50
+    ],
+    [
+      "Indiana",
+      50
+    ],
+    [
+      "Iowa",
+      50
+    ],
+    [
+      "Kansas",
+      50
+    ],
+    [
+      "Kentucky",
+      50
+    ],
+    [
+      "Louisiana",
+      50
+    ],
+    [
+      "Maine",
+      50
+    ],
+    [
+      "Maryland",
+      50
+    ],
+    [
+      "Massachusetts",
+      50
+    ],
+    [
+      "Michigan",
+      50
+    ],
+    [
+      "Minnesota",
+      50
+    ],
+    [
+      "Mississippi",
+      50
+    ],
+    [
+      "Missouri",
+      50
+    ],
+    [
+      "Montana",
+      50
+    ],
+    [
+      "Nebraska",
+      50
+    ],
+    [
+      "Nevada",
+      50
+    ],
+    [
+      "New Hampshire",
+      50
+    ],
+    [
+      "New Hampshire ",
+      50
+    ],
+    [
+      "New Jersey",
+      50
+    ],
+    [
+      "New Mexico",
+      50
+    ],
+    [
+      "New York",
+      50
+    ],
+    [
+      "North Carolina",
+      50
+    ],
+    [
+      "North Dakota",
+      50
+    ],
+    [
+      "Ohio",
+      50
+    ],
+    [
+      "Oklahoma",
+      50
+    ],
+    [
+      "Oregon",
+      50
+    ],
+    [
+      "Pennsylvania",
+      50
+    ],
+    [
+      "Rhode Island",
+      50
+    ],
+    [
+      "South Carolina",
+      50
+    ],
+    [
+      "South Dakota",
+      50
+    ],
+    [
+      "Tennessee",
+      50
+    ],
+    [
+      "Texas",
+      50
+    ],
+    [
+      "Utah",
+      50
+    ],
+    [
+      "Vermont",
+      50
+    ],
+    [
+      "Virginia",
+      50
+    ],
+    [
+      "Washington",
+      50
+    ],
+    [
+      "West Virginia",
+      50
+    ],
+    [
+      "Wisconsin",
+      50
+    ],
+    [
+      "Wyoming",
+      50
+    ]
+  ],
+  "state_details": {
+    "Alabama": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "Southeastern Salvage Home Emporium",
+          "city": "Mobile",
+          "reviews": 843
+        },
+        {
+          "name": "Lovelady Thrift Store",
+          "city": "Center Point",
+          "reviews": 610
+        },
+        {
+          "name": "T.J. Maxx",
+          "city": "Bessemer",
+          "reviews": 596
+        }
+      ]
+    },
+    "Alaska": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "The Hoarding Marmot",
+          "city": "Anchorage",
+          "reviews": 367
+        },
+        {
+          "name": "Plato's Closet",
+          "city": "Anchorage",
+          "reviews": 327
+        },
+        {
+          "name": "Plato's Closet",
+          "city": "Anchorage",
+          "reviews": 327
+        }
+      ]
+    },
+    "Arizona": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "American Furniture Warehouse",
+          "city": "Glendale",
+          "reviews": 19062
+        },
+        {
+          "name": "Cactus Corner Shopping Center",
+          "city": "Glendale",
+          "reviews": 1558
+        },
+        {
+          "name": "Common Hype",
+          "city": "Tempe",
+          "reviews": 667
+        }
+      ]
+    },
+    "Arkansas": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "Helping Hands Inc. Thrift Store",
+          "city": "Bentonville",
+          "reviews": 1038
+        },
+        {
+          "name": "Furnishings 4 Less",
+          "city": "Springdale",
+          "reviews": 577
+        },
+        {
+          "name": "Once Upon A Child",
+          "city": "Jonesboro",
+          "reviews": 271
+        }
+      ]
+    },
+    "California": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "Gran Plaza Outlets",
+          "city": "Calexico",
+          "reviews": 4929
+        },
+        {
+          "name": "Dixon Wellness Collective",
+          "city": "Dixon",
+          "reviews": 606
+        },
+        {
+          "name": "Shane Co.",
+          "city": "Cupertino",
+          "reviews": 578
+        }
+      ]
+    },
+    "Colorado": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "Mile High Thrift Store",
+          "city": "Northglenn",
+          "reviews": 908
+        },
+        {
+          "name": "Goodwill Store & Donation Center",
+          "city": "Pueblo",
+          "reviews": 729
+        },
+        {
+          "name": "Divide Venture Foods",
+          "city": "Divide",
+          "reviews": 697
+        }
+      ]
+    },
+    "Connecticut": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "Goodwill Norwich Store And Donation Center",
+          "city": "Norwich",
+          "reviews": 403
+        },
+        {
+          "name": "Mongers Market",
+          "city": "Bridgeport",
+          "reviews": 352
+        },
+        {
+          "name": "Shoppers World (Brass Mills)",
+          "city": "Waterbury",
+          "reviews": 319
+        }
+      ]
+    },
+    "Delaware": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "Antique Alley Of Bridgeville Llc",
+          "city": "Bridgeville",
+          "reviews": 624
+        },
+        {
+          "name": "Habitat For Humanity Ncc - Prices Corner Restore",
+          "city": "Wilmington",
+          "reviews": 498
+        },
+        {
+          "name": "Restore- Central Delaware Habitat For Humanity",
+          "city": "Dover",
+          "reviews": 391
+        }
+      ]
+    },
+    "District of Columbia": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "Nordstrom Rack",
+          "city": "Washington",
+          "reviews": 1341
+        },
+        {
+          "name": "Goodwill Of Greater Washington Retail Store",
+          "city": "Washington",
+          "reviews": 451
+        },
+        {
+          "name": "Goodwill Of Greater Washington Retail Store",
+          "city": "Washington",
+          "reviews": 451
+        }
+      ]
+    },
+    "Florida": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "Treasure Marts Eustis",
+          "city": "Eustis",
+          "reviews": 903
+        },
+        {
+          "name": "American Freight Furniture",
+          "city": "Jacksonville",
+          "reviews": 813
+        },
+        {
+          "name": "Goodwill - Miami/Bird Road",
+          "city": "Miami",
+          "reviews": 493
+        }
+      ]
+    },
+    "Georgia": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "Shoppers World",
+          "city": "Morrow",
+          "reviews": 656
+        },
+        {
+          "name": "Goodwill Thrift Store & Donation Center",
+          "city": "Rome",
+          "reviews": 438
+        },
+        {
+          "name": "Lavonia Antique Market",
+          "city": "Lavonia",
+          "reviews": 425
+        }
+      ]
+    },
+    "Hawaii": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "Marine Corps Exchange",
+          "city": "Kailua",
+          "reviews": 639
+        },
+        {
+          "name": "'Ele'Ele Shopping Center",
+          "city": "Eleele",
+          "reviews": 507
+        },
+        {
+          "name": "Tripler Army Medical Center",
+          "city": "TRIPLER AMC",
+          "reviews": 473
+        }
+      ]
+    },
+    "Idaho": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "Chf Home Furnishings",
+          "city": "Boise",
+          "reviews": 1711
+        },
+        {
+          "name": "Kid To Kid Boise",
+          "city": "Boise",
+          "reviews": 1335
+        },
+        {
+          "name": "Uptown Cheapskate Idaho Falls",
+          "city": "Ammon",
+          "reviews": 744
+        }
+      ]
+    },
+    "Illinois": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "Fox Valley Flea Market",
+          "city": "Elgin",
+          "reviews": 864
+        },
+        {
+          "name": "Elizabeth's Grand Antique Co.",
+          "city": "Elizabeth",
+          "reviews": 470
+        },
+        {
+          "name": "Goodwill Bloomington-Normal Il - Land Of Lincoln Goodwill Industries",
+          "city": "Normal",
+          "reviews": 373
+        }
+      ]
+    },
+    "Indiana": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "Plato's Closet",
+          "city": "Fishers",
+          "reviews": 862
+        },
+        {
+          "name": "Uptown Cheapskate Fort Wayne",
+          "city": "Fort Wayne",
+          "reviews": 747
+        },
+        {
+          "name": "Plato's Closet",
+          "city": "Avon",
+          "reviews": 602
+        }
+      ]
+    },
+    "Iowa": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "Brass Armadillo Antique Mall - Des Moines",
+          "city": "Des Moines",
+          "reviews": 2039
+        },
+        {
+          "name": "Plato's Closet Davenport",
+          "city": "Davenport",
+          "reviews": 735
+        },
+        {
+          "name": "What Cheer Flea Market",
+          "city": "What Cheer",
+          "reviews": 466
+        }
+      ]
+    },
+    "Kansas": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "Fort Riley Main Exchange",
+          "city": "Fort Riley",
+          "reviews": 1039
+        },
+        {
+          "name": "Shane Co.",
+          "city": "Overland Park",
+          "reviews": 843
+        },
+        {
+          "name": "Furniture On Consignment - Clearance Center",
+          "city": "Wichita",
+          "reviews": 829
+        }
+      ]
+    },
+    "Kentucky": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "Plato's Closet",
+          "city": "Florence",
+          "reviews": 655
+        },
+        {
+          "name": "Once Upon A Child",
+          "city": "Florence",
+          "reviews": 528
+        },
+        {
+          "name": "Once Upon A Child Louisville - Outer Loop",
+          "city": "Louisville",
+          "reviews": 288
+        }
+      ]
+    },
+    "Louisiana": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "Rooms To Go Outlet",
+          "city": "Gretna",
+          "reviews": 3617
+        },
+        {
+          "name": "Plato's Closet Baton Rouge",
+          "city": "Baton Rouge",
+          "reviews": 519
+        },
+        {
+          "name": "Red White And Blue Thrift Store",
+          "city": "Gretna",
+          "reviews": 370
+        }
+      ]
+    },
+    "Maine": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "Marden's",
+          "city": "Lewiston",
+          "reviews": 1719
+        },
+        {
+          "name": "Dow Furniture",
+          "city": "Waldoboro",
+          "reviews": 802
+        },
+        {
+          "name": "Bull Moose",
+          "city": "Lewiston",
+          "reviews": 702
+        }
+      ]
+    },
+    "Maryland": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "Hunt Valley Towne Centre",
+          "city": "Cockeysville",
+          "reviews": 5291
+        },
+        {
+          "name": "Second Chance Inc.",
+          "city": "Baltimore",
+          "reviews": 1488
+        },
+        {
+          "name": "Cabin John Village",
+          "city": "Potomac",
+          "reviews": 1313
+        }
+      ]
+    },
+    "Massachusetts": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "Brimfield Antiques Center",
+          "city": "Brimfield",
+          "reviews": 653
+        },
+        {
+          "name": "Ocean State Job Lot",
+          "city": "Athol",
+          "reviews": 436
+        },
+        {
+          "name": "The Goodwill Store",
+          "city": "Worcester",
+          "reviews": 337
+        }
+      ]
+    },
+    "Michigan": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "Cedar Park Shopping Center",
+          "city": "Holt",
+          "reviews": 950
+        },
+        {
+          "name": "Once Upon A Child - Wyoming",
+          "city": "Wyoming",
+          "reviews": 753
+        },
+        {
+          "name": "Community Threads Of Fenton",
+          "city": "Fenton",
+          "reviews": 681
+        }
+      ]
+    },
+    "Minnesota": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "J Longs – Men's And Women's Clothing",
+          "city": "Mankato",
+          "reviews": 605
+        },
+        {
+          "name": "Boys & Girls Club Thrift Store & More",
+          "city": "Detroit Lakes",
+          "reviews": 388
+        },
+        {
+          "name": "Goodwill - St. Louis Park",
+          "city": "St Louis Park",
+          "reviews": 334
+        }
+      ]
+    },
+    "Mississippi": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "No Place Like Home Furniture Store",
+          "city": "Clarksdale",
+          "reviews": 557
+        },
+        {
+          "name": "Greatest Hits Music & Books",
+          "city": "Tupelo",
+          "reviews": 309
+        },
+        {
+          "name": "Roses Discount Store",
+          "city": "Laurel",
+          "reviews": 301
+        }
+      ]
+    },
+    "Missouri": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "Vintage Stock",
+          "city": "Liberty",
+          "reviews": 880
+        },
+        {
+          "name": "Liberty Corners",
+          "city": "Liberty",
+          "reviews": 561
+        },
+        {
+          "name": "Hillcrest Hope Thrift Store",
+          "city": "Liberty",
+          "reviews": 402
+        }
+      ]
+    },
+    "Montana": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "Tc Resale & Donation Thrift Store",
+          "city": "Missoula",
+          "reviews": 562
+        },
+        {
+          "name": "Restyle Clothing Exchange",
+          "city": "Missoula",
+          "reviews": 334
+        },
+        {
+          "name": "Second Wind Sports",
+          "city": "Bozeman",
+          "reviews": 319
+        }
+      ]
+    },
+    "Nebraska": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "District 177",
+          "city": "North Platte",
+          "reviews": 1041
+        },
+        {
+          "name": "Master's Hand - Every Woman's Dream Shop",
+          "city": "Tekamah",
+          "reviews": 372
+        },
+        {
+          "name": "Ernie's In Ceresco",
+          "city": "Ceresco",
+          "reviews": 343
+        }
+      ]
+    },
+    "Nevada": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "Bulldog Liquidators",
+          "city": "Las Vegas",
+          "reviews": 1997
+        },
+        {
+          "name": "Flamingo Eastern Llc",
+          "city": "Las Vegas",
+          "reviews": 788
+        },
+        {
+          "name": "Me ‘N Mommy To Be",
+          "city": "Las Vegas",
+          "reviews": 763
+        }
+      ]
+    },
+    "New Hampshire": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "Rochester Crossing",
+          "city": "Rochester",
+          "reviews": 1461
+        },
+        {
+          "name": "Dublin General Store",
+          "city": "Dublin",
+          "reviews": 405
+        },
+        {
+          "name": "Plato's Closet Manchester",
+          "city": "Manchester",
+          "reviews": 399
+        }
+      ]
+    },
+    "New Hampshire ": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "Ski And Snowboard Outlet/Liquidation Center",
+          "city": "Intervale",
+          "reviews": 60
+        },
+        {
+          "name": "Ski And Snowboard Outlet/Liquidation Center",
+          "city": "Intervale",
+          "reviews": 60
+        },
+        {
+          "name": "Ski And Snowboard Outlet/Liquidation Center",
+          "city": "Intervale",
+          "reviews": 60
+        }
+      ]
+    },
+    "New Jersey": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "2Nd Ave Thrift Superstore - Pennsauken",
+          "city": "Pennsauken Township",
+          "reviews": 1063
+        },
+        {
+          "name": "K&G Fashion Superstore",
+          "city": "Woodbridge",
+          "reviews": 548
+        },
+        {
+          "name": "Plato's Closet - Deptford",
+          "city": "Deptford",
+          "reviews": 532
+        }
+      ]
+    },
+    "New Mexico": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "Pie-O-Neer Homestead",
+          "city": "Pie Town",
+          "reviews": 625
+        },
+        {
+          "name": "The Indoor Flea Market",
+          "city": "Albuquerque",
+          "reviews": 568
+        },
+        {
+          "name": "John Brooks Milan Supermarket",
+          "city": "Milan",
+          "reviews": 504
+        }
+      ]
+    },
+    "New York": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "Cookie's Department Stores",
+          "city": "Bronx",
+          "reviews": 1426
+        },
+        {
+          "name": "Beacon's Closet",
+          "city": "Brooklyn",
+          "reviews": 1005
+        },
+        {
+          "name": "Newburgh Vintage Emporium",
+          "city": "Newburgh",
+          "reviews": 715
+        }
+      ]
+    },
+    "North Carolina": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "Once Upon A Child",
+          "city": "Hickory",
+          "reviews": 613
+        },
+        {
+          "name": "Mr. Mike's Used Books",
+          "city": "Cary",
+          "reviews": 574
+        },
+        {
+          "name": "Community Thrift Store",
+          "city": "Charlotte",
+          "reviews": 400
+        }
+      ]
+    },
+    "North Dakota": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "Duluth Trading Company",
+          "city": "West Fargo",
+          "reviews": 769
+        },
+        {
+          "name": "Town & Country Shopping Center",
+          "city": "Minot",
+          "reviews": 552
+        },
+        {
+          "name": "Uptown Cheapskate Fargo",
+          "city": "Fargo",
+          "reviews": 520
+        }
+      ]
+    },
+    "Ohio": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "Value City Furniture",
+          "city": "Holland",
+          "reviews": 2227
+        },
+        {
+          "name": "Mt. Hope Auction",
+          "city": "Mt Hope",
+          "reviews": 579
+        },
+        {
+          "name": "Once Upon A Child",
+          "city": "West Chester Township",
+          "reviews": 562
+        }
+      ]
+    },
+    "Oklahoma": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "T.J. Maxx",
+          "city": "Edmond",
+          "reviews": 951
+        },
+        {
+          "name": "River City Trading Post",
+          "city": "Jenks",
+          "reviews": 662
+        },
+        {
+          "name": "Prime Thrift Tulsa",
+          "city": "Tulsa",
+          "reviews": 490
+        }
+      ]
+    },
+    "Oregon": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "Langlois Market",
+          "city": "Langlois",
+          "reviews": 1081
+        },
+        {
+          "name": "Hoodland Thriftway",
+          "city": "Welches",
+          "reviews": 710
+        },
+        {
+          "name": "Goodwill Industries Of The Columbia Willamette",
+          "city": "Dallas",
+          "reviews": 635
+        }
+      ]
+    },
+    "Pennsylvania": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "Kings Village",
+          "city": "Minersville",
+          "reviews": 845
+        },
+        {
+          "name": "Plato's Closet Dickson City",
+          "city": "Dickson City",
+          "reviews": 762
+        },
+        {
+          "name": "Luzerne Shopping Center",
+          "city": "Luzerne",
+          "reviews": 694
+        }
+      ]
+    },
+    "Rhode Island": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "Rhode Island Antiques Mall",
+          "city": "Pawtucket",
+          "reviews": 635
+        },
+        {
+          "name": "Plato's Closet",
+          "city": "Warwick",
+          "reviews": 421
+        },
+        {
+          "name": "The Find On 6",
+          "city": "Johnston",
+          "reviews": 345
+        }
+      ]
+    },
+    "South Carolina": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "Boiling Springs Shopping Center",
+          "city": "Spartanburg",
+          "reviews": 2316
+        },
+        {
+          "name": "Kid To Kid Fort Mill",
+          "city": "Fort Mill",
+          "reviews": 610
+        },
+        {
+          "name": "Roundabouts Consignments Inc",
+          "city": "Columbia",
+          "reviews": 555
+        }
+      ]
+    },
+    "South Dakota": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "Empire East",
+          "city": "Sioux Falls",
+          "reviews": 1921
+        },
+        {
+          "name": "Mount Rushmore Gift Shop",
+          "city": "Keystone",
+          "reviews": 755
+        },
+        {
+          "name": "Unclaimed Freight Furniture Clearance Center",
+          "city": "Sioux Falls",
+          "reviews": 362
+        }
+      ]
+    },
+    "Tennessee": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "Bargain Hunt",
+          "city": "Dickson",
+          "reviews": 692
+        },
+        {
+          "name": "Yesterday's Treasures Today Marketplace",
+          "city": "Dickson",
+          "reviews": 389
+        },
+        {
+          "name": "Goodwill Retail Store",
+          "city": "Smyrna",
+          "reviews": 348
+        }
+      ]
+    },
+    "Texas": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "Lowake Steak House",
+          "city": "Rowena",
+          "reviews": 1265
+        },
+        {
+          "name": "La Tienda Thriftway",
+          "city": "Pecos",
+          "reviews": 902
+        },
+        {
+          "name": "Plato's Closet - Arlington",
+          "city": "Arlington",
+          "reviews": 566
+        }
+      ]
+    },
+    "Utah": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "At Home",
+          "city": "Sandy",
+          "reviews": 1475
+        },
+        {
+          "name": "Big Deal Outlet",
+          "city": "Logan",
+          "reviews": 1084
+        },
+        {
+          "name": "Kid To Kid Ogden",
+          "city": "Ogden",
+          "reviews": 1067
+        }
+      ]
+    },
+    "Vermont": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "Vermont Antique Mall",
+          "city": "Quechee",
+          "reviews": 740
+        },
+        {
+          "name": "Sharon Trading Post",
+          "city": "Sharon",
+          "reviews": 332
+        },
+        {
+          "name": "The Newfane Store",
+          "city": "Newfane",
+          "reviews": 219
+        }
+      ]
+    },
+    "Virginia": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "The Dump Furniture Outlet",
+          "city": "Richmond",
+          "reviews": 1299
+        },
+        {
+          "name": "Selden Market",
+          "city": "Norfolk",
+          "reviews": 1148
+        },
+        {
+          "name": "Buy The Season",
+          "city": "Salem",
+          "reviews": 547
+        }
+      ]
+    },
+    "Washington": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "Thrift City Inc",
+          "city": "Tacoma",
+          "reviews": 447
+        },
+        {
+          "name": "Tacoma Goodwill - 38Th Street",
+          "city": "Tacoma",
+          "reviews": 436
+        },
+        {
+          "name": "Yakima Goodwill",
+          "city": "Yakima",
+          "reviews": 302
+        }
+      ]
+    },
+    "West Virginia": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "The Highlands",
+          "city": "Triadelphia",
+          "reviews": 5577
+        },
+        {
+          "name": "Eastpointe Shopping Center",
+          "city": "Clarksburg",
+          "reviews": 1937
+        },
+        {
+          "name": "Plato's Closet Morgantown",
+          "city": "Westover",
+          "reviews": 543
+        }
+      ]
+    },
+    "Wisconsin": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "Plato's Closet",
+          "city": "La Crosse",
+          "reviews": 663
+        },
+        {
+          "name": "Hixton Antique Mall",
+          "city": "Hixton",
+          "reviews": 276
+        },
+        {
+          "name": "Goodwill - Hudson",
+          "city": "Hudson",
+          "reviews": 250
+        }
+      ]
+    },
+    "Wyoming": {
+      "count": 50,
+      "top_stores": [
+        {
+          "name": "Farson Mercantile",
+          "city": "Farson",
+          "reviews": 1116
+        },
+        {
+          "name": "Rescued Treasures Thrift Store - East",
+          "city": "Casper",
+          "reviews": 304
+        },
+        {
+          "name": "Value Villa",
+          "city": "Gillette",
+          "reviews": 290
+        }
+      ]
+    }
+  }
+}

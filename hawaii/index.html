@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hawaii Consignment Stores - Find Local Secondhand Shops & Thrift Stores</title>
-    <meta name="description" content="Find the best consignment stores in Hawaii. Browse 50 local secondhand shops, thrift stores, and consignment stores across Hawaii. Search by city and location.">
-    <meta name="keywords" content="Hawaii consignment stores, Hawaii thrift stores, Hawaii secondhand shops, consignment stores Hawaii, thrift shops Hawaii">
-    <link rel="canonical" href="/hawaii/">
-    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-    <link rel="stylesheet" href="../css/styles.css">
+    <title>Best Consignment Stores in Hawaii - Hawaii Secondhand Shops Directory</title>
+    <meta name="description" content="Discover 50+ quality consignment shops, thrift stores, and secondhand boutiques in Hawaii. Find great deals on clothing, furniture, antiques, and more.">
+    <meta name="keywords" content="Hawaii consignment stores, Hawaii thrift stores, Hawaii secondhand shops, consignment stores Hawaii">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://consignmentstoresnearme.com/hawaii/">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/css/main.css">
     
-    <!-- JSON-LD Structured Data -->
+    <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "WebPage",
+        "@type": "CollectionPage",
         "name": "Hawaii Consignment Stores",
-        "description": "Directory of consignment stores in Hawaii",
+        "description": "Directory of consignment stores and thrift shops in Hawaii",
+        "url": "https://consignmentstoresnearme.com/hawaii/",
         "breadcrumb": {
             "@type": "BreadcrumbList",
             "itemListElement": [
@@ -24,101 +26,103 @@
                     "@type": "ListItem",
                     "position": 1,
                     "name": "Home",
-                    "item": "/"
+                    "item": "https://consignmentstoresnearme.com/"
                 },
                 {
                     "@type": "ListItem",
                     "position": 2,
-                    "name": "Hawaii Consignment Stores"
+                    "name": "Hawaii Consignment Stores",
+                    "item": "https://consignmentstoresnearme.com/hawaii/"
                 }
             ]
+        },
+        "mainEntity": {
+            "@type": "ItemList",
+            "name": "Hawaii Consignment Stores",
+            "numberOfItems": "50"
         }
     }
     </script>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
+    <header>
         <div class="header-container">
-            <a href="/" class="logo">
-                <img src="../images/logo.svg" alt="Consignment Stores Near Me Logo">
-                <span class="logo-text">Consignment Stores Near Me</span>
-            </a>
-            
-            <nav>
+            <div class="logo">
+                <img src="/images/logo-main.svg" alt="Consignment Stores Near Me Logo">
+            </div>
+            <nav class="main-nav">
                 <ul class="nav-menu">
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Stores by State</a>
+                        <a href="#" class="nav-link" style="color: var(--primary-blue); font-weight: 600;">Stores by State</a>
                         <div class="dropdown">
                             <div class="dropdown-columns">
-                                <a href="/alabama/" class="dropdown-link">Alabama</a>
-                                <a href="/alaska/" class="dropdown-link">Alaska</a>
-                                <a href="/arizona/" class="dropdown-link">Arizona</a>
-                                <a href="/arkansas/" class="dropdown-link">Arkansas</a>
-                                <a href="/california/" class="dropdown-link">California</a>
-                                <a href="/colorado/" class="dropdown-link">Colorado</a>
-                                <a href="/connecticut/" class="dropdown-link">Connecticut</a>
-                                <a href="/delaware/" class="dropdown-link">Delaware</a>
-                                <a href="/florida/" class="dropdown-link">Florida</a>
-                                <a href="/georgia/" class="dropdown-link">Georgia</a>
-                                <a href="/hawaii/" class="dropdown-link">Hawaii</a>
-                                <a href="/idaho/" class="dropdown-link">Idaho</a>
-                                <a href="/illinois/" class="dropdown-link">Illinois</a>
-                                <a href="/indiana/" class="dropdown-link">Indiana</a>
-                                <a href="/iowa/" class="dropdown-link">Iowa</a>
-                                <a href="/kansas/" class="dropdown-link">Kansas</a>
-                                <a href="/kentucky/" class="dropdown-link">Kentucky</a>
-                                <a href="/louisiana/" class="dropdown-link">Louisiana</a>
-                                <a href="/maine/" class="dropdown-link">Maine</a>
-                                <a href="/maryland/" class="dropdown-link">Maryland</a>
-                                <a href="/massachusetts/" class="dropdown-link">Massachusetts</a>
-                                <a href="/michigan/" class="dropdown-link">Michigan</a>
-                                <a href="/minnesota/" class="dropdown-link">Minnesota</a>
-                                <a href="/mississippi/" class="dropdown-link">Mississippi</a>
-                                <a href="/missouri/" class="dropdown-link">Missouri</a>
-                                <a href="/montana/" class="dropdown-link">Montana</a>
-                                <a href="/nebraska/" class="dropdown-link">Nebraska</a>
-                                <a href="/nevada/" class="dropdown-link">Nevada</a>
-                                <a href="/new-hampshire/" class="dropdown-link">New Hampshire</a>
-                                <a href="/new-jersey/" class="dropdown-link">New Jersey</a>
-                                <a href="/new-mexico/" class="dropdown-link">New Mexico</a>
-                                <a href="/new-york/" class="dropdown-link">New York</a>
-                                <a href="/north-carolina/" class="dropdown-link">North Carolina</a>
-                                <a href="/north-dakota/" class="dropdown-link">North Dakota</a>
-                                <a href="/ohio/" class="dropdown-link">Ohio</a>
-                                <a href="/oklahoma/" class="dropdown-link">Oklahoma</a>
-                                <a href="/oregon/" class="dropdown-link">Oregon</a>
-                                <a href="/pennsylvania/" class="dropdown-link">Pennsylvania</a>
-                                <a href="/rhode-island/" class="dropdown-link">Rhode Island</a>
-                                <a href="/south-carolina/" class="dropdown-link">South Carolina</a>
-                                <a href="/south-dakota/" class="dropdown-link">South Dakota</a>
-                                <a href="/tennessee/" class="dropdown-link">Tennessee</a>
-                                <a href="/texas/" class="dropdown-link">Texas</a>
-                                <a href="/utah/" class="dropdown-link">Utah</a>
-                                <a href="/vermont/" class="dropdown-link">Vermont</a>
-                                <a href="/virginia/" class="dropdown-link">Virginia</a>
-                                <a href="/washington/" class="dropdown-link">Washington</a>
-                                <a href="/west-virginia/" class="dropdown-link">West Virginia</a>
-                                <a href="/wisconsin/" class="dropdown-link">Wisconsin</a>
-                                <a href="/wyoming/" class="dropdown-link">Wyoming</a>
+                                <div class="dropdown-column">
+                                    <h4>A - F</h4>
+                                    <a href="/alabama/" class="dropdown-item">Alabama</a>
+                                    <a href="/alaska/" class="dropdown-item">Alaska</a>
+                                    <a href="/arizona/" class="dropdown-item">Arizona</a>
+                                    <a href="/arkansas/" class="dropdown-item">Arkansas</a>
+                                    <a href="/california/" class="dropdown-item">California</a>
+                                    <a href="/colorado/" class="dropdown-item">Colorado</a>
+                                    <a href="/connecticut/" class="dropdown-item">Connecticut</a>
+                                    <a href="/delaware/" class="dropdown-item">Delaware</a>
+                                    <a href="/florida/" class="dropdown-item">Florida</a>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h4>G - M</h4>
+                                    <a href="/georgia/" class="dropdown-item">Georgia</a>
+                                    <a href="/hawaii/" class="dropdown-item">Hawaii</a>
+                                    <a href="/idaho/" class="dropdown-item">Idaho</a>
+                                    <a href="/illinois/" class="dropdown-item">Illinois</a>
+                                    <a href="/indiana/" class="dropdown-item">Indiana</a>
+                                    <a href="/iowa/" class="dropdown-item">Iowa</a>
+                                    <a href="/kansas/" class="dropdown-item">Kansas</a>
+                                    <a href="/kentucky/" class="dropdown-item">Kentucky</a>
+                                    <a href="/louisiana/" class="dropdown-item">Louisiana</a>
+                                    <a href="/maine/" class="dropdown-item">Maine</a>
+                                    <a href="/maryland/" class="dropdown-item">Maryland</a>
+                                    <a href="/massachusetts/" class="dropdown-item">Massachusetts</a>
+                                    <a href="/michigan/" class="dropdown-item">Michigan</a>
+                                    <a href="/minnesota/" class="dropdown-item">Minnesota</a>
+                                    <a href="/mississippi/" class="dropdown-item">Mississippi</a>
+                                    <a href="/missouri/" class="dropdown-item">Missouri</a>
+                                    <a href="/montana/" class="dropdown-item">Montana</a>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h4>N - W</h4>
+                                    <a href="/nebraska/" class="dropdown-item">Nebraska</a>
+                                    <a href="/nevada/" class="dropdown-item">Nevada</a>
+                                    <a href="/new-hampshire/" class="dropdown-item">New Hampshire</a>
+                                    <a href="/new-jersey/" class="dropdown-item">New Jersey</a>
+                                    <a href="/new-mexico/" class="dropdown-item">New Mexico</a>
+                                    <a href="/new-york/" class="dropdown-item">New York</a>
+                                    <a href="/north-carolina/" class="dropdown-item">North Carolina</a>
+                                    <a href="/north-dakota/" class="dropdown-item">North Dakota</a>
+                                    <a href="/ohio/" class="dropdown-item">Ohio</a>
+                                    <a href="/oklahoma/" class="dropdown-item">Oklahoma</a>
+                                    <a href="/oregon/" class="dropdown-item">Oregon</a>
+                                    <a href="/pennsylvania/" class="dropdown-item">Pennsylvania</a>
+                                    <a href="/rhode-island/" class="dropdown-item">Rhode Island</a>
+                                    <a href="/south-carolina/" class="dropdown-item">South Carolina</a>
+                                    <a href="/south-dakota/" class="dropdown-item">South Dakota</a>
+                                    <a href="/tennessee/" class="dropdown-item">Tennessee</a>
+                                    <a href="/texas/" class="dropdown-item">Texas</a>
+                                    <a href="/utah/" class="dropdown-item">Utah</a>
+                                    <a href="/vermont/" class="dropdown-item">Vermont</a>
+                                    <a href="/virginia/" class="dropdown-item">Virginia</a>
+                                    <a href="/washington/" class="dropdown-item">Washington</a>
+                                    <a href="/west-virginia/" class="dropdown-item">West Virginia</a>
+                                    <a href="/wisconsin/" class="dropdown-item">Wisconsin</a>
+                                    <a href="/wyoming/" class="dropdown-item">Wyoming</a>
+                                </div>
                             </div>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Stores by City</a>
+                        <a href="#" class="nav-link">Store by City</a>
                         <div class="dropdown">
-                            <div class="dropdown-columns">
-                                <!-- Popular cities for this state will be populated here -->
-                                <a href="/hawaii/honolulu/" class="dropdown-link">Honolulu, HA</a>
-<a href="/hawaii/kailua/" class="dropdown-link">Kailua, HA</a>
-<a href="/hawaii/haiku/" class="dropdown-link">Haiku, HA</a>
-<a href="/hawaii/hilo/" class="dropdown-link">Hilo, HA</a>
-<a href="/hawaii/wailuku/" class="dropdown-link">Wailuku, HA</a>
-<a href="/hawaii/lahaina/" class="dropdown-link">Lahaina, HA</a>
-<a href="/hawaii/lihue/" class="dropdown-link">Lihue, HA</a>
-<a href="/hawaii/kealakekua/" class="dropdown-link">Kealakekua, HA</a>
-<a href="/hawaii/kahului/" class="dropdown-link">Kahului, HA</a>
-<a href="/hawaii/tripler-amc/" class="dropdown-link">TRIPLER AMC, HA</a>
+                            <div class="dropdown-content">
+                                <a href="/sitemap/" class="dropdown-item text-blue">View All Cities →</a>
                             </div>
                         </div>
                     </li>
@@ -130,249 +134,413 @@
         </div>
     </header>
 
-    <!-- Breadcrumb -->
-    <div class="breadcrumb">
-        <a href="/">Home</a> > <a href="/hawaii/">Hawaii Consignment Stores</a>
-    </div>
+    <main>
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item">
+                    <a href="/" class="breadcrumb-link">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <span>Hawaii Consignment Stores</span>
+                </li>
+            </ol>
+        </nav>
 
-    <!-- Page Header -->
-    <div class="page-header">
-        <div class="main-container">
-            <h1 class="page-title">Best Consignment Stores in Hawaii</h1>
-            <p class="page-subtitle">Find 50 local consignment stores, thrift shops, and secondhand stores across Hawaii</p>
-        </div>
-    </div>
-
-    <!-- Main Content -->
-    <main class="main-container">
-        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 40px;">
-            <!-- Left Column - Store Listings -->
-            <div>
-                <!-- Intro Text -->
-                <section style="margin-bottom: 40px;">
-                    <p style="font-size: 18px; line-height: 1.8; color: var(--dark-gray);">
-                        Discover the best consignment stores in Hawaii! Our comprehensive directory features 50 carefully curated consignment shops, thrift stores, and secondhand retailers across the state. Whether you're looking for designer clothing, vintage furniture, rare books, or unique antiques, Hawaii's consignment stores offer incredible value and one-of-a-kind finds.
-                    </p>
-                </section>
-
-                <!-- Featured Stores Grid -->
-                <section>
-                    <h2 style="font-size: 24px; color: var(--dark-blue); margin-bottom: 30px;">Top Rated Hawaii Consignment Stores</h2>
-                    
-                    <div class="stores-grid">
-                        <!-- Store cards will be populated from data -->
-                        
-        <div class="store-card">
-            <h3 class="store-name">Marine Corps Exchange</h3>
-            <p class="store-address">BLDG 6109, Cushman Ave, Kailua, HI 96734</p>
-            <p class="store-reviews">★★★★★ (639 reviews)</p>
-            <div class="store-features">
-                <span class="feature-tag">Fair Pricing</span><span class="feature-tag">Clean & Organized</span><span class="feature-tag">Clothing</span><span class="feature-tag">Friendly Staff</span>
+        <!-- State Hero Section -->
+        <section class="state-hero">
+            <div class="container">
+                <h1>Best Consignment Stores in Hawaii</h1>
+                <p class="lead">Discover 50+ quality consignment shops, thrift stores, and secondhand boutiques in Hawaii. Find great deals on clothing, furniture, antiques, and more.</p>
             </div>
-            <div class="store-contact"><a href="tel:8082574832" class="contact-link">📞 Call</a><a href="http://www.mymcx.com/" class="contact-link" target="_blank">🌐 Website</a></div>
-        </div>
-    
+        </section>
 
-        <div class="store-card">
-            <h3 class="store-name">&#x27;Ele&#x27;Ele Shopping Center</h3>
-            <p class="store-address">4469 Waialo Rd, Eleele, HI 96705</p>
-            <p class="store-reviews">★★★★★ (507 reviews)</p>
-            <div class="store-features">
-                <span class="feature-tag">Fair Pricing</span><span class="feature-tag">Wide Selection</span><span class="feature-tag">Clean & Organized</span><span class="feature-tag">Clothing</span>
+        <!-- Quick Search Section -->
+        <section class="quick-search">
+            <div class="container">
+                <form class="search-form" action="/search" method="GET">
+                    <input type="hidden" name="state" value="Hawaii">
+                    <input type="text" class="search-input" name="q" placeholder="Search Hawaii consignment stores..." required>
+                    <button type="submit" class="search-button">Search</button>
+                </form>
             </div>
-            <div class="store-contact"><a href="tel:8083359989" class="contact-link">📞 Call</a><a href="http://www.eleeleshoppingcenter.com/" class="contact-link" target="_blank">🌐 Website</a></div>
-        </div>
-    
+        </section>
 
-        <div class="store-card">
-            <h3 class="store-name">Tripler Army Medical Center</h3>
-            <p class="store-address">1 Jarrett White Rd, TRIPLER AMC, HI 96859</p>
-            <p class="store-reviews">★★★★★ (473 reviews)</p>
-            <div class="store-features">
-                <span class="feature-tag">Fair Pricing</span><span class="feature-tag">Wide Selection</span><span class="feature-tag">Clean & Organized</span><span class="feature-tag">Clothing</span>
-            </div>
-            <div class="store-contact"><a href="tel:8886832778" class="contact-link">📞 Call</a><a href="https://tripler.tricare.mil/" class="contact-link" target="_blank">🌐 Website</a></div>
-        </div>
-    
+        <!-- Featured Stores Section -->
+        <section class="featured-stores">
+            <div class="container">
+                <h2>Featured Hawaii Consignment Stores</h2>
+                <div class="store-grid">
 
-        <div class="store-card">
-            <h3 class="store-name">The Mystic Closet</h3>
-            <p class="store-address">164 Kamehameha Ave, Hilo, HI 96720</p>
-            <p class="store-reviews">★★★★★ (350 reviews)</p>
-            <div class="store-features">
-                <span class="feature-tag">Fair Pricing</span><span class="feature-tag">Clean & Organized</span><span class="feature-tag">Clothing</span><span class="feature-tag">Friendly Staff</span>
-            </div>
-            <div class="store-contact"><a href="tel:8088252040" class="contact-link">📞 Call</a><a href="http://www.themysticcloset.com/" class="contact-link" target="_blank">🌐 Website</a></div>
-        </div>
-    
+                    <article class="store-card">
+                        <img src="https://lh5.googleusercontent.com/p/AF1QipOGpKatN1DK85HRY8thZFTh8IGfFtyRLp6JTd7D=w800-h500-k-no" alt="Marine Corps Exchange in Kailua, Hawaii" class="store-image">
+                        <div class="store-info">
+                            <h3 class="store-name">Marine Corps Exchange</h3>
+                            <p class="store-address">Kailua, Hawaii</p>
+                            <div class="store-details">
+                                <span class="store-reviews">639 reviews</span>
+                                <span class="store-phone">+1 808-257-4832</span>
+                            </div>
+                            <div class="store-features">
+                                <span class="feature-tag">Mid-Range Pricing</span><span class="feature-tag">Clean & Organized</span><span class="feature-tag">Clothing</span><span class="feature-tag">General Merchandise</span>
+                            </div>
+                            <div class="store-actions">
+                                <a href="/hawaii/kailua/" class="btn-primary">View Details</a>
+                                <a href="http://www.mymcx.com/" class="btn-secondary" target="_blank">Visit Website</a>
+                            </div>
+                        </div>
+                    </article>
 
-        <div class="store-card">
-            <h3 class="store-name">Haiku Market</h3>
-            <p class="store-address">810 Haiku Rd Ste 143, Haiku, HI 96708</p>
-            <p class="store-reviews">★★★★★ (345 reviews)</p>
-            <div class="store-features">
-                <span class="feature-tag">Fair Pricing</span><span class="feature-tag">Clean & Organized</span><span class="feature-tag">Clothing</span><span class="feature-tag">Friendly Staff</span>
-            </div>
-            <div class="store-contact"><a href="tel:8085759291" class="contact-link">📞 Call</a></div>
-        </div>
-    
+                    <article class="store-card">
+                        <img src="https://lh5.googleusercontent.com/p/AF1QipP9ukoMDuTKVTD9cDn_k_uIDpu7KM6fx0mcFrQ=w800-h500-k-no" alt="'Ele'Ele Shopping Center in Eleele, Hawaii" class="store-image">
+                        <div class="store-info">
+                            <h3 class="store-name">'Ele'Ele Shopping Center</h3>
+                            <p class="store-address">Eleele, Hawaii</p>
+                            <div class="store-details">
+                                <span class="store-reviews">507 reviews</span>
+                                <span class="store-phone">+1 808-335-9989</span>
+                            </div>
+                            <div class="store-features">
+                                <span class="feature-tag">Mid-Range Pricing</span><span class="feature-tag">Wide Selection</span><span class="feature-tag">Clean & Organized</span><span class="feature-tag">Clothing</span>
+                            </div>
+                            <div class="store-actions">
+                                <a href="/hawaii/eleele/" class="btn-primary">View Details</a>
+                                <a href="http://www.eleeleshoppingcenter.com/" class="btn-secondary" target="_blank">Visit Website</a>
+                            </div>
+                        </div>
+                    </article>
 
-        <div class="store-card">
-            <h3 class="store-name">Nahiku Marketplace</h3>
-            <p class="store-address">1546 HI-360, Hana, HI 96713</p>
-            <p class="store-reviews">★★★★★ (305 reviews)</p>
-            <div class="store-features">
-                <span class="feature-tag">Fair Pricing</span><span class="feature-tag">Wide Selection</span><span class="feature-tag">Clean & Organized</span><span class="feature-tag">Clothing</span>
-            </div>
-            <div class="store-contact"><a href="tel:0" class="contact-link">📞 Call</a></div>
-        </div>
-    
+                    <article class="store-card">
+                        <img src="https://lh5.googleusercontent.com/p/AF1QipOXU9Wxpn1PQpkJKz8KuLfVfpyqDy_8j-O-k6mv=w800-h500-k-no" alt="Tripler Army Medical Center in TRIPLER AMC, Hawaii" class="store-image">
+                        <div class="store-info">
+                            <h3 class="store-name">Tripler Army Medical Center</h3>
+                            <p class="store-address">TRIPLER AMC, Hawaii</p>
+                            <div class="store-details">
+                                <span class="store-reviews">473 reviews</span>
+                                <span class="store-phone">+1 888-683-2778</span>
+                            </div>
+                            <div class="store-features">
+                                <span class="feature-tag">Mid-Range Pricing</span><span class="feature-tag">Wide Selection</span><span class="feature-tag">Clean & Organized</span><span class="feature-tag">Clothing</span>
+                            </div>
+                            <div class="store-actions">
+                                <a href="/hawaii/tripler-amc/" class="btn-primary">View Details</a>
+                                <a href="https://tripler.tricare.mil/" class="btn-secondary" target="_blank">Visit Website</a>
+                            </div>
+                        </div>
+                    </article>
 
-        <div class="store-card">
-            <h3 class="store-name">Goodwill Store And Donation Center</h3>
-            <p class="store-address">1075 S Beretania St., Honolulu, HI 96814</p>
-            <p class="store-reviews">★★★★★ (249 reviews)</p>
-            <div class="store-features">
-                <span class="feature-tag">Fair Pricing</span><span class="feature-tag">Wide Selection</span><span class="feature-tag">Clean & Organized</span><span class="feature-tag">Clothing</span>
+                </div>
             </div>
-            <div class="store-contact"><a href="tel:8085211798" class="contact-link">📞 Call</a><a href="https://www.goodwillhawaii.org/" class="contact-link" target="_blank">🌐 Website</a></div>
-        </div>
-    
+        </section>
 
-        <div class="store-card">
-            <h3 class="store-name">Bailey&#x27;s Antiques And Aloha Shirts</h3>
-            <p class="store-address">517 Kapahulu Ave, Honolulu, HI 96815</p>
-            <p class="store-reviews">★★★★★ (244 reviews)</p>
-            <div class="store-features">
-                <span class="feature-tag">Fair Pricing</span><span class="feature-tag">Antiques</span><span class="feature-tag">Clean & Organized</span><span class="feature-tag">Clothing</span>
-            </div>
-            <div class="store-contact"><a href="tel:8087347628" class="contact-link">📞 Call</a></div>
-        </div>
-    
+        <!-- All Cities Section -->
+        <section class="all-cities">
+            <div class="container">
+                <h2>All Cities in Hawaii with Consignment Stores</h2>
+                <p>Browse consignment stores by city in Hawaii. Click on any city below to view local secondhand shops and thrift stores.</p>
+                <div class="cities-grid">
+
+                    <div class="city-item">
+                        <h3><a href="/hawaii/eleele/">Eleele</a></h3>
+                        <p>1 store</p>
                     </div>
-                </section>
 
-                <!-- More about consignment shopping in this state -->
-                <section style="background: var(--light-gray); padding: 30px; border-radius: 10px; margin: 40px 0;">
-                    <h2 style="font-size: 24px; color: var(--dark-blue); margin-bottom: 20px;">Why Shop Consignment in Hawaii?</h2>
-                    <p style="font-size: 16px; line-height: 1.7; margin-bottom: 15px;">
-                        Hawaii offers an amazing opportunities for those to buy or sell secondhand items. The state's consignment stores provide a sustainable and affordable shopping alternative while supporting local businesses and communities.
-                    </p>
-                    <p style="font-size: 16px; line-height: 1.7;">
-                        From bustling urban centers to charming small towns, Hawaii's consignment stores reflect the diverse character and style preferences of their communities. Many stores specialize in specific categories like designer fashion, antique furniture, or vintage collectibles.
-                    </p>
-                </section>
+                    <div class="city-item">
+                        <h3><a href="/hawaii/haiku/">Haiku</a></h3>
+                        <p>3 stores</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/hawaii/hana/">Hana</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/hawaii/hanalei/">Hanalei</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/hawaii/hanapepe/">Hanapepe</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/hawaii/hilo/">Hilo</a></h3>
+                        <p>3 stores</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/hawaii/hoolehua/">Ho'olehua</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/hawaii/honolulu/">Honolulu</a></h3>
+                        <p>12 stores</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/hawaii/joint-base-pearl-harbor-hickam/">Joint Base Pearl Harbor-Hickam</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/hawaii/kahului/">Kahului</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/hawaii/kailua/">Kailua</a></h3>
+                        <p>4 stores</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/hawaii/kailua-kona/">Kailua-Kona</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/hawaii/kalaheo/">Kalaheo</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/hawaii/keaau/">Keaau</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/hawaii/kealakekua/">Kealakekua</a></h3>
+                        <p>2 stores</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/hawaii/kihei/">Kihei</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/hawaii/kilauea/">Kilauea</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/hawaii/lahaina/">Lahaina</a></h3>
+                        <p>3 stores</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/hawaii/lihue/">Lihue</a></h3>
+                        <p>2 stores</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/hawaii/makawao/">Makawao</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/hawaii/tripler-amc/">TRIPLER AMC</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/hawaii/wahiawa/">Wahiawa</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/hawaii/waialua/">Waialua</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/hawaii/waianae/">Waianae</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/hawaii/wailuku/">Wailuku</a></h3>
+                        <p>3 stores</p>
+                    </div>
+
+                    <div class="city-item">
+                        <h3><a href="/hawaii/waipahu/">Waipahu</a></h3>
+                        <p>1 store</p>
+                    </div>
+
+                </div>
             </div>
+        </section>
 
-            <!-- Right Column - Sidebar -->
-            <aside>
-                <!-- All Cities in State Module -->
-                <div class="sidebar">
-                    <h3>All Cities in Hawaii</h3>
-                    <ul>
-                        <li><a href="/hawaii/honolulu/">Honolulu (12 stores)</a></li>
-<li><a href="/hawaii/kailua/">Kailua (4 stores)</a></li>
-<li><a href="/hawaii/haiku/">Haiku (3 stores)</a></li>
-<li><a href="/hawaii/hilo/">Hilo (3 stores)</a></li>
-<li><a href="/hawaii/wailuku/">Wailuku (3 stores)</a></li>
-<li><a href="/hawaii/lahaina/">Lahaina (3 stores)</a></li>
-<li><a href="/hawaii/lihue/">Lihue (2 stores)</a></li>
-<li><a href="/hawaii/kealakekua/">Kealakekua (2 stores)</a></li>
-<li><a href="/hawaii/kahului/">Kahului (1 stores)</a></li>
-<li><a href="/hawaii/tripler-amc/">TRIPLER AMC (1 stores)</a></li>
-<li><a href="/hawaii/waialua/">Waialua (1 stores)</a></li>
-<li><a href="/hawaii/hanalei/">Hanalei (1 stores)</a></li>
-<li><a href="/hawaii/kalaheo/">Kalaheo (1 stores)</a></li>
-<li><a href="/hawaii/hana/">Hana (1 stores)</a></li>
-<li><a href="/hawaii/joint-base-pearl-harbor-hickam/">Joint Base Pearl Harbor-Hickam (1 stores)</a></li>
-<li><a href="/hawaii/wahiawa/">Wahiawa (1 stores)</a></li>
-<li><a href="/hawaii/waianae/">Waianae (1 stores)</a></li>
-<li><a href="/hawaii/kilauea/">Kilauea (1 stores)</a></li>
-<li><a href="/hawaii/waipahu/">Waipahu (1 stores)</a></li>
-<li><a href="/hawaii/kailua-kona/">Kailua-Kona (1 stores)</a></li>
-                    </ul>
-                </div>
+        <!-- SEO Content Section -->
+        <section class="state-content">
+            <div class="container">
+                <h2>Consignment Shopping in Hawaii</h2>
+                <p>Hawaii offers excellent consignment shopping opportunities with 50+ quality consignment stores, thrift shops, and secondhand boutiques throughout the state. From urban centers to small towns, you'll find amazing deals on clothing, furniture, antiques, and unique treasures.</p>
+                
+                <h3>What You'll Find at Hawaii Consignment Stores</h3>
+                <p>Hawaii consignment stores offer an impressive variety of items:</p>
+                
+                <ul>
+                    <li><strong>Clothing & Fashion:</strong> Designer brands, vintage pieces, and everyday wear at affordable prices</li>
+                    <li><strong>Furniture & Home Décor:</strong> Antique furniture, modern pieces, and unique home accessories</li>
+                    <li><strong>Books & Media:</strong> Rare books, vintage magazines, and collectible items</li>
+                    <li><strong>Jewelry & Accessories:</strong> Estate jewelry, costume pieces, and designer accessories</li>
+                    <li><strong>Gift Items:</strong> Unique gifts, collectibles, and specialty items</li>
+                </ul>
 
-                <!-- Store Categories -->
-                <div class="sidebar">
-                    <h3>Shop by Category</h3>
-                    <ul>
-                        <li><a href="/hawaii/clothing/">👗 Clothing & Fashion</a></li>
-                        <li><a href="/hawaii/furniture/">🪑 Furniture & Home</a></li>
-                        <li><a href="/hawaii/antiques/">🏺 Antiques & Collectibles</a></li>
-                        <li><a href="/hawaii/books/">📚 Books & Media</a></li>
-                        <li><a href="/hawaii/jewelry/">💎 Jewelry & Accessories</a></li>
-                    </ul>
-                </div>
-
-                <!-- Popular Searches -->
-                <div class="sidebar">
-                    <h3>Popular Searches in Hawaii</h3>
-                    <ul>
-                        <li><a href="/hawaii/">Hawaii consignment stores</a></li>
-                        <li><a href="/hawaii/">Hawaii thrift stores</a></li>
-                        <li><a href="/hawaii/">Hawaii secondhand shops</a></li>
-                        <li><a href="/hawaii/">Hawaii vintage stores</a></li>
-                        <li><a href="/hawaii/">Hawaii antique stores</a></li>
-                    </ul>
-                </div>
-            </aside>
-        </div>
+                <h3>Why Shop Consignment in Hawaii?</h3>
+                <p>Shopping at Hawaii consignment stores offers numerous benefits beyond just saving money. You'll find unique, quality items that aren't available in traditional retail stores, support local businesses, and contribute to environmental sustainability by giving pre-owned items a new life.</p>
+            </div>
+        </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <div class="footer-container">
-            <div class="footer-grid">
+            <div class="footer-content">
                 <div class="footer-section">
-                    <h4>Popular States</h4>
+                    <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="/california/">California Consignment Stores</a></li>
-                        <li><a href="/texas/">Texas Consignment Stores</a></li>
-                        <li><a href="/florida/">Florida Consignment Stores</a></li>
-                        <li><a href="/new-york/">New York Consignment Stores</a></li>
-                        <li><a href="/illinois/">Illinois Consignment Stores</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Popular Cities</h4>
-                    <ul>
-                        <li><a href="/california/los-angeles/">Los Angeles Consignment</a></li>
-                        <li><a href="/new-york/new-york-city/">NYC Consignment Stores</a></li>
-                        <li><a href="/illinois/chicago/">Chicago Consignment</a></li>
-                        <li><a href="/texas/houston/">Houston Consignment</a></li>
-                        <li><a href="/california/san-francisco/">San Francisco Consignment</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Store Categories</h4>
-                    <ul>
-                        <li><a href="/categories/clothing/">Clothing Consignment</a></li>
-                        <li><a href="/categories/furniture/">Furniture Consignment</a></li>
-                        <li><a href="/categories/antiques/">Antique Consignment</a></li>
-                        <li><a href="/categories/books/">Book Consignment</a></li>
-                        <li><a href="/categories/jewelry/">Jewelry Consignment</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Resources</h4>
-                    <ul>
+                        <li><a href="/">Home</a></li>
                         <li><a href="/about/">About Us</a></li>
-                        <li><a href="/sitemap/">Site Map</a></li>
+                        <li><a href="/sitemap/">Sitemap</a></li>
                         <li><a href="/sitemap.xml">XML Sitemap</a></li>
-                        <li><a href="/contact/">Contact Us</a></li>
-                        <li><a href="/privacy/">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Hawaii Cities</h3>
+                    <ul>
+                        <li><a href="/hawaii/eleele/">Eleele Consignment Stores</a></li>
+                        <li><a href="/hawaii/haiku/">Haiku Consignment Stores</a></li>
+                        <li><a href="/hawaii/hana/">Hana Consignment Stores</a></li>
+                        <li><a href="/hawaii/hanalei/">Hanalei Consignment Stores</a></li>
+                        <li><a href="/hawaii/hanapepe/">Hanapepe Consignment Stores</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Store Categories</h3>
+                    <ul>
+                        <li>Clothing Consignment</li>
+                        <li>Furniture Consignment</li>
+                        <li>Antique Stores</li>
+                        <li>Designer Consignment</li>
+                        <li>Book Stores</li>
                     </ul>
                 </div>
             </div>
-            
             <div class="footer-bottom">
-                <p>&copy; 2024 Consignment Stores Near Me. All rights reserved. Find the best consignment stores, thrift shops, and secondhand stores in your area.</p>
+                <p>&copy; 2024 Consignment Stores Near Me. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <style>
+        .state-hero {
+            background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+            color: var(--white);
+            padding: 3rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .state-hero h1 {
+            color: var(--white);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .quick-search {
+            background-color: var(--light-gray);
+            padding: 2rem 0;
+            margin-bottom: 3rem;
+        }
+        
+        .quick-search .search-form {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: var(--white);
+            border-radius: 25px;
+            padding: 0.5rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .featured-stores,
+        .all-cities,
+        .state-content {
+            padding: 3rem 0;
+        }
+        
+        .cities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .city-item {
+            background-color: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+        
+        .city-item:hover {
+            transform: translateY(-2px);
+        }
+        
+        .city-item h3 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .city-item h3 a {
+            color: var(--dark-blue);
+            text-decoration: none;
+        }
+        
+        .city-item h3 a:hover {
+            color: var(--primary-blue);
+        }
+        
+        .city-item p {
+            color: var(--gray);
+            margin: 0;
+            font-size: 0.9rem;
+        }
+        
+        .state-content {
+            background-color: var(--light-gray);
+        }
+        
+        .state-content h2,
+        .state-content h3 {
+            color: var(--dark-blue);
+        }
+        
+        .state-content ul {
+            padding-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .state-content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .state-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .cities-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 1rem;
+            }
+        }
+    </style>
 </body>
 </html>
