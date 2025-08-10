@@ -1,0 +1,18 @@
+<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="30" cy="30" r="25" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+  
+  <!-- Hanger icon -->
+  <path d="M20 20 L40 20 L38 25 L35 25 L35 40 L25 40 L25 25 L22 25 Z" fill="white"/>
+  <circle cx="30" cy="17" r="3" fill="white"/>
+  
+  <!-- Store building -->
+  <rect x="15" y="35" width="30" height="15" fill="white" opacity="0.8"/>
+  <rect x="18" y="38" width="4" height="6" fill="#3498db"/>
+  <rect x="26" y="38" width="4" height="6" fill="#3498db"/>
+  <rect x="34" y="38" width="4" height="6" fill="#3498db"/>
+  
+  <!-- Text -->
+  <text x="65" y="25" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2980b9">Consignment</text>
+  <text x="65" y="43" font-family="Arial, sans-serif" font-size="14" fill="#3498db">Stores Near Me</text>
+</svg>

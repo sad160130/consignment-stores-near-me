@@ -1,0 +1,10 @@
+<!-- This is a placeholder for favicon.ico. In a real project, you would use an actual ICO file. 
+For now, we'll create an SVG favicon that browsers will accept. -->
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" rx="6" fill="#3B82F6"/>
+  <rect x="6" y="12" width="20" height="14" fill="white" rx="1"/>
+  <rect x="13" y="17" width="6" height="9" fill="#3B82F6" rx="1"/>
+  <rect x="8" y="14" width="3" height="2" fill="#3B82F6" rx="0.5"/>
+  <rect x="21" y="14" width="3" height="2" fill="#3B82F6" rx="0.5"/>
+  <path d="M4 12 L16 8 L28 12 L30 10 L16 6 L2 10 Z" fill="#EBF8FF"/>
+</svg>

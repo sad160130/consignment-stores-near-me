@@ -1,0 +1,25 @@
+<svg width="200" height="50" viewBox="0 0 200 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Store icon background -->
+  <rect x="2" y="8" width="34" height="34" rx="8" fill="#3B82F6"/>
+  
+  <!-- Store building -->
+  <rect x="8" y="18" width="22" height="18" fill="white" rx="1"/>
+  
+  <!-- Store door -->
+  <rect x="16" y="24" width="6" height="12" fill="#3B82F6" rx="1"/>
+  
+  <!-- Store windows -->
+  <rect x="10" y="20" width="4" height="3" fill="#3B82F6" rx="0.5"/>
+  <rect x="24" y="20" width="4" height="3" fill="#3B82F6" rx="0.5"/>
+  
+  <!-- Store awning -->
+  <path d="M6 18 L18 14 L30 18 L32 16 L18 12 L4 16 Z" fill="#EBF8FF"/>
+  
+  <!-- Text -->
+  <text x="44" y="18" font-family="system-ui, -apple-system, sans-serif" font-weight="bold" font-size="14" fill="#1F2937">
+    Consignment Stores
+  </text>
+  <text x="44" y="32" font-family="system-ui, -apple-system, sans-serif" font-weight="500" font-size="12" fill="#3B82F6">
+    Near Me
+  </text>
+</svg>
