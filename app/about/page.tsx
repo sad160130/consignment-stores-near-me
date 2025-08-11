@@ -6,10 +6,14 @@ export const metadata: Metadata = {
   title: 'About Consignment Stores Near Me - Your Guide to Second-Hand Shopping',
   description: 'Learn about our comprehensive directory of consignment stores across the United States. Find the best thrift shops, second-hand stores, and resale shops in your area.',
   keywords: 'about consignment stores, second hand shopping, thrift store directory, resale shop guide, vintage shopping, sustainable shopping',
+  alternates: {
+    canonical: 'https://www.consignmentstores.site/about/'
+  },
   openGraph: {
     title: 'About Consignment Stores Near Me',
     description: 'Your comprehensive guide to finding the best consignment stores nationwide',
     type: 'website',
+    url: 'https://www.consignmentstores.site/about/'
   }
 };
 

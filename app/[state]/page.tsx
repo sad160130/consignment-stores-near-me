@@ -27,14 +27,21 @@ export async function generateMetadata({ params }: StatePageProps): Promise<Meta
   const storeCount = data.storesByState[stateName]?.length || 0;
   const cities = data.citiesByState[stateName] || [];
 
+  const stateSlug = getStateSlug(stateName);
+  const canonicalUrl = `https://www.consignmentstores.site/${stateSlug}/`;
+  
   return {
     title: `Best Consignment Stores in ${stateName} - Directory & Reviews`,
     description: `Find the best consignment stores in ${stateName}. Browse ${storeCount} stores across ${cities.length} cities. Quality second-hand furniture, clothing, and vintage items.`,
     keywords: `consignment stores ${stateName}, thrift stores ${stateName}, second hand stores ${stateName}, resale shops ${stateName}`,
+    alternates: {
+      canonical: canonicalUrl
+    },
     openGraph: {
       title: `Best Consignment Stores in ${stateName}`,
       description: `Discover ${storeCount} consignment stores across ${stateName}`,
       type: 'website',
+      url: canonicalUrl
     }
   };
 }

@@ -18,11 +18,15 @@ export const metadata: Metadata = {
   title: "Consignment Stores Near Me - Find the Best Consignment Shops in Your Area",
   description: "Discover the best consignment stores near you. Browse thousands of consignment shops across the United States by city and state. Find quality second-hand items, furniture, clothing, and more.",
   keywords: "consignment stores, consignment shops, second hand stores, thrift stores, resale shops, used furniture, vintage clothing",
+  alternates: {
+    canonical: 'https://www.consignmentstores.site/'
+  },
   openGraph: {
     title: "Consignment Stores Near Me",
     description: "Find the best consignment stores in your area",
     type: "website",
     locale: "en_US",
+    url: "https://www.consignmentstores.site/"
   },
   twitter: {
     card: "summary_large_image",
