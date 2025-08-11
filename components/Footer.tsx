@@ -32,12 +32,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-gray-600 hover:text-blue-600">
+                <Link href="/about/" className="text-gray-600 hover:text-blue-600">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/sitemap" className="text-gray-600 hover:text-blue-600">
+                <Link href="/sitemap/" className="text-gray-600 hover:text-blue-600">
                   Sitemap
                 </Link>
               </li>
@@ -54,22 +54,22 @@ export default function Footer() {
             <h3 className="font-semibold text-gray-900 mb-4">Popular States</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/california" className="text-gray-600 hover:text-blue-600">
+                <Link href="/california/" className="text-gray-600 hover:text-blue-600">
                   California
                 </Link>
               </li>
               <li>
-                <Link href="/texas" className="text-gray-600 hover:text-blue-600">
+                <Link href="/texas/" className="text-gray-600 hover:text-blue-600">
                   Texas
                 </Link>
               </li>
               <li>
-                <Link href="/florida" className="text-gray-600 hover:text-blue-600">
+                <Link href="/florida/" className="text-gray-600 hover:text-blue-600">
                   Florida
                 </Link>
               </li>
               <li>
-                <Link href="/new-york" className="text-gray-600 hover:text-blue-600">
+                <Link href="/new-york/" className="text-gray-600 hover:text-blue-600">
                   New York
                 </Link>
               </li>
@@ -81,22 +81,22 @@ export default function Footer() {
             <h3 className="font-semibold text-gray-900 mb-4">Popular Cities</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/california/los-angeles" className="text-gray-600 hover:text-blue-600">
+                <Link href="/california/los-angeles/" className="text-gray-600 hover:text-blue-600">
                   Los Angeles, CA
                 </Link>
               </li>
               <li>
-                <Link href="/new-york/new-york" className="text-gray-600 hover:text-blue-600">
+                <Link href="/new-york/new-york/" className="text-gray-600 hover:text-blue-600">
                   New York, NY
                 </Link>
               </li>
               <li>
-                <Link href="/illinois/chicago" className="text-gray-600 hover:text-blue-600">
+                <Link href="/illinois/chicago/" className="text-gray-600 hover:text-blue-600">
                   Chicago, IL
                 </Link>
               </li>
               <li>
-                <Link href="/texas/houston" className="text-gray-600 hover:text-blue-600">
+                <Link href="/texas/houston/" className="text-gray-600 hover:text-blue-600">
                   Houston, TX
                 </Link>
               </li>
@@ -110,7 +110,7 @@ export default function Footer() {
               © {currentYear} Consignment Stores Near Me. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/sitemap" className="text-gray-600 hover:text-blue-600 text-sm">
+              <Link href="/sitemap/" className="text-gray-600 hover:text-blue-600 text-sm">
                 HTML Sitemap
               </Link>
               <Link href="/sitemap.xml" className="text-gray-600 hover:text-blue-600 text-sm">

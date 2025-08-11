@@ -84,7 +84,7 @@ export default function Navigation({ className = '' }: NavigationProps) {
                       {states.map((state) => (
                         <Link
                           key={state}
-                          href={`/${getStateSlug(state)}`}
+                          href={`/${getStateSlug(state)}/`}
                           className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded"
                           onClick={() => setIsStatesOpen(false)}
                         >
@@ -111,7 +111,7 @@ export default function Navigation({ className = '' }: NavigationProps) {
                       {cities.slice(0, 50).map((city) => (
                         <Link
                           key={city}
-                          href={`/city/${getCitySlug(city)}`}
+                          href={`/city/${getCitySlug(city)}/`}
                           className="block px-2 py-1 text-xs text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded truncate"
                           onClick={() => setIsCitiesOpen(false)}
                           title={city}
@@ -132,7 +132,7 @@ export default function Navigation({ className = '' }: NavigationProps) {
               </div>
 
               {/* About Us */}
-              <Link href="/about" className="nav-link">
+              <Link href="/about/" className="nav-link">
                 About Us
               </Link>
             </div>

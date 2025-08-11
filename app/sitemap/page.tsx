@@ -38,10 +38,10 @@ export default function SitemapPage() {
               <Link href="/" className="text-blue-600 hover:text-blue-700 hover:underline">
                 🏠 Homepage
               </Link>
-              <Link href="/about" className="text-blue-600 hover:text-blue-700 hover:underline">
+              <Link href="/about/" className="text-blue-600 hover:text-blue-700 hover:underline">
                 ℹ️ About Us
               </Link>
-              <Link href="/sitemap" className="text-blue-600 hover:text-blue-700 hover:underline">
+              <Link href="/sitemap/" className="text-blue-600 hover:text-blue-700 hover:underline">
                 🗺️ HTML Sitemap
               </Link>
             </div>
@@ -63,7 +63,7 @@ export default function SitemapPage() {
                   <div key={stateName} className="border-b border-gray-200 pb-6">
                     <div className="flex items-center justify-between mb-4">
                       <Link 
-                        href={`/${stateSlug}`}
+                        href={`/${stateSlug}/`}
                         className="text-xl font-semibold text-blue-600 hover:text-blue-700 hover:underline"
                       >
                         📍 {stateName} ({storeCount} stores)
@@ -81,7 +81,7 @@ export default function SitemapPage() {
                         return (
                           <Link
                             key={`${cityName}-${stateName}`}
-                            href={`/${stateSlug}/${citySlug}`}
+                            href={`/${stateSlug}/${citySlug}/`}
                             className="text-blue-600 hover:text-blue-700 hover:underline text-sm flex justify-between"
                           >
                             <span>{cityName}</span>

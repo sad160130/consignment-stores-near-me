@@ -132,7 +132,7 @@ export default async function StatePage({ params }: StatePageProps) {
             {citiesWithStores.map((city) => (
               <Link
                 key={city.name}
-                href={`/${resolvedParams.state}/${city.slug}`}
+                href={`/${resolvedParams.state}/${city.slug}/`}
                 className="card hover:shadow-lg transition-shadow duration-200"
               >
                 <div className="flex justify-between items-center">

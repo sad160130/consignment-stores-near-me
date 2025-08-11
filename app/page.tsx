@@ -98,7 +98,7 @@ export default function Home() {
             {featuredStates.map((state) => (
               <Link
                 key={state.name}
-                href={`/${state.slug}`}
+                href={`/${state.slug}/`}
                 className="card text-center hover:shadow-lg transition-shadow duration-200 p-4"
               >
                 <div className="font-semibold text-gray-900 mb-1">{state.name}</div>
@@ -127,7 +127,7 @@ export default function Home() {
             {featuredCities.map((city) => (
               <Link
                 key={`${city.city}-${city.state}`}
-                href={`/${city.stateSlug}/${city.citySlug}`}
+                href={`/${city.stateSlug}/${city.citySlug}/`}
                 className="card hover:shadow-lg transition-shadow duration-200"
               >
                 <div className="font-semibold text-gray-900 mb-2">
