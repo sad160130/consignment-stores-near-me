@@ -1,5 +1,17 @@
 import { Metadata } from 'next';
-import AboutClient from './AboutClient';
+import dynamic from 'next/dynamic';
+
+// Dynamically import the client component with SSR disabled to avoid hydration issues
+const AboutClient = dynamic(() => import('./AboutClient'), { 
+  ssr: false,
+  loading: () => (
+    <div className="min-h-screen bg-white flex items-center justify-center">
+      <div className="text-center">
+        <h2 className="text-2xl font-bold text-gray-900">Loading...</h2>
+      </div>
+    </div>
+  )
+});
 
 export const metadata: Metadata = {
   title: 'About Us - Connecting Communities Through Consignment',
