@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - ConsignmentStores.site</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Warm Neutrals (Beige, Slate, Off-White) -->
+    <!-- Application Structure Plan: A narrative-driven, single-page scrolling experience divided into thematic sections: Hero (Mission), Our Story (The 'Why'), Our Process (The 'How'), Our Team (The 'Who'), and Our Values (Commitment). This structure is chosen to build a story and establish trust (E-E-A-T) progressively. Navigation is handled by a sticky top bar that smoothly scrolls to the relevant section, making exploration intuitive. Interactive elements like clickable value cards and a simple 'process' timeline engage the user without being distracting. This is more effective for usability than a static text page because it guides the user through a compelling brand narrative. -->
+    <!-- Visualization & Content Choices: Report Info: Google's E-E-A-T guidelines and user's need for a better 'About' page. -> Goal: Build trust and tell a story. -> Viz/Presentation Method: The core of the page uses structured HTML/CSS with Tailwind to create visually distinct sections. An interactive timeline/stepper is used for 'Our Process' to make it digestible. Cards are used for 'Our Values' to highlight key commitments. -> Interaction: Smooth scrolling navigation, hover effects on cards, and clickable elements to reveal more details (though kept minimal here to avoid complexity). -> Justification: These choices directly address the 'Who, How, and Why' questions from the Google guide. The interactive, visual structure is more engaging and helps convey expertise and trustworthiness better than plain text. -> Library/Method: Vanilla JavaScript for interactions, Tailwind CSS for styling. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDFDFB;
+            color: #333;
+        }
+        .nav-link {
+            transition: color 0.3s ease, border-bottom-color 0.3s ease;
+            border-bottom: 2px solid transparent;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #A58D78;
+            border-bottom-color: #A58D78;
+        }
+        .hero-bg {
+            background-color: #F5F1ED;
+        }
+        .btn-primary {
+            background-color: #A58D78;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #8E7661;
+        }
+        .section-title {
+            color: #333;
+        }
+        .step-connector {
+            width: 2px;
+            background-color: #D1C5B9;
+            height: 100%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .step-dot {
+            background-color: #A58D78;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header id="header" class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-800">ConsignmentStores.site</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#story" class="nav-link pb-1">Our Story</a>
+                <a href="#process" class="nav-link pb-1">Our Process</a>
+                <a href="#team" class="nav-link pb-1">Our Team</a>
+                <a href="#values" class="nav-link pb-1">Our Values</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <span class="text-3xl">☰</span>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+             <a href="#story" class="block py-2 text-center nav-link">Our Story</a>
+             <a href="#process" class="block py-2 text-center nav-link">Our Process</a>
+             <a href="#team" class="block py-2 text-center nav-link">Our Team</a>
+             <a href="#values" class="block py-2 text-center nav-link">Our Values</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-bg py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold section-title mb-4">Connecting Communities, One Treasure at a Time.</h1>
+                <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8">We're building the most trusted and comprehensive guide to consignment stores, helping you discover local gems and embrace sustainable style.</p>
+                <a href="#story" class="btn-primary font-bold py-3 px-8 rounded-full inline-block">Learn Our "Why"</a>
+            </div>
+        </section>
+
+        <!-- Our Story Section -->
+        <section id="story" class="py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold section-title">Our Story: More Than a Directory</h2>
+                    <p class="text-gray-500 mt-2">Why we started, and what drives us every day.</p>
+                </div>
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1628103134375-4c07c7324c4e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Inside view of a stylish consignment store with clothing racks." class="rounded-lg shadow-xl w-full h-auto">
+                    </div>
+                    <div class="md:w-1/2 text-gray-700 space-y-4 text-lg">
+                        <p>Our journey began from a simple, personal frustration: we loved the thrill of consignment shopping but found it incredibly difficult to find reliable, up-to-date information about local stores. We knew there were countless hidden gems out there, full of unique treasures and passionate owners.</p>
+                        <p>Driven by a passion for sustainable fashion and supporting small businesses, we decided to build the solution ourselves. In [Year], we launched ConsignmentStores.site not just as a list of stores, but as a community hub—a place for shoppers to discover and for store owners to be seen.</p>
+                        <p>Our mission is to make second-hand the first choice by making it accessible, trustworthy, and exciting for everyone.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Process Section -->
+        <section id="process" class="py-20 md:py-28 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold section-title">Our Process: How We Ensure Quality</h2>
+                    <p class="text-gray-500 mt-2">A look behind the curtain at our commitment to trust and accuracy.</p>
+                </div>
+                <div class="relative max-w-2xl mx-auto">
+                    <!-- Step 1 -->
+                    <div class="flex items-center w-full mb-12">
+                        <div class="w-1/2 flex justify-end pr-8">
+                            <div class="text-right">
+                                <h3 class="font-bold text-xl text-gray-800">Discovery & Research</h3>
+                                <p class="text-gray-600">We actively seek out new stores and rely on community suggestions to keep our database growing and comprehensive.</p>
+                            </div>
+                        </div>
+                        <div class="w-10 h-10 rounded-full bg-white border-4 border-A58D78 step-dot z-10 flex items-center justify-center font-bold text-white">1</div>
+                        <div class="w-1/2"></div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="flex items-center w-full mb-12">
+                        <div class="w-1/2"></div>
+                        <div class="w-10 h-10 rounded-full bg-white border-4 border-A58D78 step-dot z-10 flex items-center justify-center font-bold text-white">2</div>
+                        <div class="w-1/2 pl-8">
+                            <div>
+                                <h3 class="font-bold text-xl text-gray-800">Verification & Vetting</h3>
+                                <p class="text-gray-600">Our team personally verifies key information for each store, ensuring details like hours, location, and specialties are accurate.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="flex items-center w-full">
+                        <div class="w-1/2 flex justify-end pr-8">
+                            <div class="text-right">
+                                <h3 class="font-bold text-xl text-gray-800">Continuous Updates</h3>
+                                <p class="text-gray-600">The retail world changes fast. We regularly review and update our listings to reflect closures, moves, and new openings.</p>
+                            </div>
+                        </div>
+                        <div class="w-10 h-10 rounded-full bg-white border-4 border-A58D78 step-dot z-10 flex items-center justify-center font-bold text-white">3</div>
+                        <div class="w-1/2"></div>
+                    </div>
+                    <div class="step-connector top-5 bottom-5"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Our Team Section -->
+        <section id="team" class="py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold section-title">Our Team: The People Behind the Passion</h2>
+                    <p class="text-gray-500 mt-2">Meet the founder who started it all.</p>
+                </div>
+                <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg flex flex-col sm:flex-row items-center gap-8">
+                    <img src="https://googleusercontent.com/file_content/3" alt="Portrait of Rohan Kadam, founder of ConsignmentStores.site" class="w-32 h-32 sm:w-48 sm:h-48 rounded-full object-cover flex-shrink-0">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800">Rohan Kadam</h3>
+                        <p class="text-A58D78 font-semibold mb-2">Founder & Chief Thrifter</p>
+                        <p class="text-gray-600">"As a lifelong consignment shopper, I wanted to share the joy of discovering unique, pre-loved items with a wider audience. This site is the result of that passion. With over 10 years of experience in marketing and finding amazing deals, my goal is to build a platform that genuinely helps both shoppers and small business owners thrive."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Values Section -->
+        <section id="values" class="py-20 md:py-28 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold section-title">Our Core Values</h2>
+                    <p class="text-gray-500 mt-2">The principles that guide every decision we make.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                        <div class="text-4xl mb-4">🤝</div>
+                        <h3 class="text-xl font-bold mb-2">Community First</h3>
+                        <p class="text-gray-600">We are dedicated to supporting the ecosystem of local consignment stores and the vibrant community of shoppers who cherish them.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                        <div class="text-4xl mb-4">✅</div>
+                        <h3 class="text-xl font-bold mb-2">Unwavering Trust</h3>
+                        <p class="text-gray-600">Accuracy and reliability are the cornerstones of our platform. You can count on our information to be vetted and up-to-date.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                        <div class="text-4xl mb-4">♻️</div>
+                        <h3 class="text-xl font-bold mb-2">Sustainable Impact</h3>
+                        <p class="text-gray-600">We champion the circular economy by making it easier for people to choose second-hand, reducing waste and promoting conscious consumption.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 ConsignmentStores.site. All Rights Reserved.</p>
+            <p class="text-gray-400 text-sm mt-2">Helping you find the best in pre-loved goods.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('section[id]');
+
+            function smoothScroll(targetId) {
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - document.getElementById('header').offsetHeight,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    smoothScroll(targetId);
+                    if(mobileMenu.classList.contains('hidden') === false){
+                         mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+            
+            const heroLink = document.querySelector('#hero a');
+            heroLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                smoothScroll(targetId);
+            });
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - document.getElementById('header').offsetHeight - 50;
+                    if (pageYOffset >= sectionTop) {
+                        current = '#' + section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === current) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
