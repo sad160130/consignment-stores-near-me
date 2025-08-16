@@ -209,9 +209,6 @@ export default async function CityPage({ params }: CityPageProps) {
                             src={store.photo} 
                             alt={store.businessName}
                             className="w-24 h-24 object-cover rounded-lg ml-4 flex-shrink-0"
-                            onError={(e) => {
-                              e.currentTarget.style.display = 'none';
-                            }}
                           />
                         )}
                       </div>

@@ -182,9 +182,6 @@ export default async function StatePage({ params }: StatePageProps) {
                       src={store.photo} 
                       alt={store.businessName}
                       className="w-20 h-20 object-cover rounded-lg ml-4"
-                      onError={(e) => {
-                        e.currentTarget.style.display = 'none';
-                      }}
                     />
                   )}
                 </div>
