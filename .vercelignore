@@ -1,19 +1,39 @@
-app/
-components/
-lib/
-public/
-next.config.ts
-tsconfig.json
-next-env.d.ts
-package.json
-package-lock.json
-eslint.config.mjs
-postcss.config.mjs
+# Python files
 *.py
+*.pyc
+__pycache__/
+
+# Data files
 *.xlsx
 *.csv
 consignment_stores_data.json
 state_data.json
-templates/
-*.ts
-*.tsx
+
+# Development files
+.env.local
+.env.development
+.env.test
+
+# Editor directories
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test files
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx
+
+# Documentation
+README.md
+CONTRIBUTING.md
+CLAUDE.md
+
+# Temporary files
+*.tmp
+*.temp
+~$*
