@@ -3,8 +3,7 @@
 *.pyc
 __pycache__/
 
-# Data files
-*.xlsx
+# Data files (exclude the main data file)
 *.csv
 consignment_stores_data.json
 state_data.json

@@ -46,20 +46,31 @@ function slugify(text: string): string {
 
 export function processExcelData(): ProcessedData {
   try {
-    const filePath = path.join(process.cwd(), 'New_SEO_Consignment_Stores.xlsx');
-    
-    // Check if file exists
-    let workbook;
+    // Try to load from generated JSON file first
+    let jsonData;
     try {
-      workbook = XLSX.readFile(filePath);
-    } catch {
-      console.warn('Excel file not found, using sample data for development');
+      if (typeof window !== 'undefined') {
+        // Client side - fetch the JSON
+        console.warn('Client-side data loading not implemented, using sample data');
+        return getSampleData();
+      } else {
+        // Server side - read the JSON file
+        const fs = require('fs');
+        const jsonPath = path.join(process.cwd(), 'public', 'stores-data.json');
+        if (fs.existsSync(jsonPath)) {
+          const jsonContent = fs.readFileSync(jsonPath, 'utf8');
+          jsonData = JSON.parse(jsonContent);
+          console.log('Successfully loaded real data from Excel file:', jsonData.length, 'stores');
+        } else {
+          console.warn('JSON data file not found, using sample data');
+          return getSampleData();
+        }
+      }
+    } catch (error) {
+      console.warn('Error loading data, using sample data for development');
+      console.warn('Error:', error);
       return getSampleData();
     }
-    
-    const sheetName = workbook.SheetNames[0];
-    const worksheet = workbook.Sheets[sheetName];
-    const jsonData = XLSX.utils.sheet_to_json(worksheet);
 
     const stores: ConsignmentStore[] = (jsonData as Record<string, unknown>[]).map((row) => ({
       businessName: String(row['Business Name'] || ''),
