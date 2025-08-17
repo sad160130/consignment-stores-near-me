@@ -284,9 +284,12 @@ export default function AboutClient() {
             
             <div className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg flex flex-col sm:flex-row items-center gap-8">
               <div className="relative w-32 h-32 sm:w-48 sm:h-48 flex-shrink-0">
-                <div className="w-full h-full rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white text-4xl sm:text-6xl font-bold">
-                  RK
-                </div>
+                <Image
+                  src="/owner.jpg"
+                  alt="Rohan Kadam - Founder"
+                  fill
+                  className="rounded-full object-cover"
+                />
               </div>
               
               <div>
