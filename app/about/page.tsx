@@ -53,7 +53,7 @@ export default function AboutPage() {
             <div className="md:w-1/2">
               <div className="relative h-[400px] w-full rounded-lg overflow-hidden shadow-xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1628103134375-4c07c7324c4e?q=80&w=2940&auto=format&fit=crop"
+                  src="/consignment-stores.jpg"
                   alt="Inside view of a stylish consignment store with clothing racks"
                   fill
                   className="object-cover"
