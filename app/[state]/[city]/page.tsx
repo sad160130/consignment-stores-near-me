@@ -185,6 +185,12 @@ export default async function CityPage({ params }: CityPageProps) {
                               {store.city}, {store.state}
                             </p>
                             
+                            {store.seoDescription && (
+                              <p className="text-sm text-gray-600 mb-3 line-clamp-2">
+                                {store.seoDescription}
+                              </p>
+                            )}
+                            
                             <div className="flex items-center space-x-4 text-sm">
                               {store.phone && (
                                 <a href={`tel:${store.phone}`} className="text-blue-600 hover:text-blue-700">

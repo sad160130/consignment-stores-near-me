@@ -171,6 +171,11 @@ export default async function StatePage({ params }: StatePageProps) {
                     <p className="text-sm text-gray-500 mb-2">
                       {store.city}, {store.state}
                     </p>
+                    {store.seoDescription && (
+                      <p className="text-sm text-gray-600 mb-2 line-clamp-2">
+                        {store.seoDescription}
+                      </p>
+                    )}
                     {store.phone && (
                       <p className="text-sm text-blue-600">
                         <a href={`tel:${store.phone}`}>{store.phone}</a>

@@ -10,6 +10,7 @@ export interface ConsignmentStore {
   site: string;
   phone: string;
   photo: string;
+  seoDescription: string;
   pricing: boolean;
   wideSelection: boolean;
   sellAntiques: boolean;
@@ -76,11 +77,12 @@ export function processExcelData(): ProcessedData {
       businessName: String(row['Business Name'] || ''),
       address: String(row['Address'] || ''),
       city: String(row['City'] || ''),
-      state: String(row['State'] || ''),
+      state: String(row['State'] || '').trim(),
       numberOfReviews: parseInt(String(row['Number of Reviews'] || '0')) || 0,
       site: String(row['Site'] || ''),
       phone: String(row['Phone'] || ''),
       photo: String(row['Photo'] || ''),
+      seoDescription: String(row['SEO Description'] || ''),
       pricing: parseYesNo(String(row['pricing'] || '')),
       wideSelection: parseYesNo(String(row['wide_selection'] || '')),
       sellAntiques: parseYesNo(String(row['sell_antiques'] || '')),
@@ -95,8 +97,19 @@ export function processExcelData(): ProcessedData {
       friendlyEmployees: parseYesNo(String(row['friendly_employees'] || '')),
     }));
 
+    // Remove duplicates based on business name, address, and city combination
+    const uniqueStores = stores.filter((store, index, array) => {
+      const key = `${store.businessName.toLowerCase().trim()}-${store.address.toLowerCase().trim()}-${store.city.toLowerCase().trim()}`;
+      return array.findIndex(s => {
+        const compareKey = `${s.businessName.toLowerCase().trim()}-${s.address.toLowerCase().trim()}-${s.city.toLowerCase().trim()}`;
+        return compareKey === key;
+      }) === index;
+    });
+
+    console.log(`Removed ${stores.length - uniqueStores.length} duplicate stores from dataset`);
+
     // Sort stores by number of reviews (descending)
-    stores.sort((a, b) => b.numberOfReviews - a.numberOfReviews);
+    uniqueStores.sort((a, b) => b.numberOfReviews - a.numberOfReviews);
 
     // Process states and cities
     const statesSet = new Set<string>();
@@ -104,7 +117,7 @@ export function processExcelData(): ProcessedData {
     const storesByState: Record<string, ConsignmentStore[]> = {};
     const storesByCity: Record<string, ConsignmentStore[]> = {};
 
-    stores.forEach(store => {
+    uniqueStores.forEach(store => {
       const state = store.state.trim();
       const city = store.city.trim();
       
@@ -145,7 +158,7 @@ export function processExcelData(): ProcessedData {
     });
 
     return {
-      stores,
+      stores: uniqueStores,
       statesList,
       citiesByState: citiesByStateArray,
       storesByState,
@@ -194,6 +207,7 @@ function getSampleData(): ProcessedData {
       site: "https://example.com",
       phone: "(555) 123-4567",
       photo: "",
+      seoDescription: "Find unique vintage treasures and quality secondhand items at our Los Angeles consignment store.",
       pricing: true,
       wideSelection: true,
       sellAntiques: true,
@@ -216,6 +230,7 @@ function getSampleData(): ProcessedData {
       site: "https://example2.com",
       phone: "(555) 987-6543",
       photo: "",
+      seoDescription: "Quality consignment shopping in San Francisco with books, clothing, and gift items at affordable prices.",
       pricing: true,
       wideSelection: false,
       sellAntiques: false,
@@ -238,6 +253,7 @@ function getSampleData(): ProcessedData {
       site: "",
       phone: "(555) 456-7890",
       photo: "",
+      seoDescription: "Austin's premier consignment destination for antiques, furniture, books, and clothing with friendly service.",
       pricing: true,
       wideSelection: true,
       sellAntiques: true,

@@ -34,6 +34,11 @@ export default function Home() {
     .sort((a, b) => b.storeCount - a.storeCount)
     .slice(0, 16);
 
+  // Get featured stores (top stores by reviews with photos)
+  const featuredStores = data.stores
+    .filter(store => store.photo && store.numberOfReviews > 20)
+    .slice(0, 12);
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -82,8 +87,94 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Browse by State Section */}
+      {/* Featured Stores Section */}
       <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Top Consignment Stores 🛍️
+            </h2>
+            <p className="text-lg text-gray-600">
+              Discover the most popular consignment stores with the best reviews
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {featuredStores.map((store, index) => (
+              <div key={index} className="store-card group">
+                {store.photo && (
+                  <div className="relative mb-4 overflow-hidden rounded-lg">
+                    <img 
+                      src={store.photo} 
+                      alt={store.businessName}
+                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-200"
+                    />
+                    <div className="absolute top-3 left-3 bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium">
+                      #{index + 1}
+                    </div>
+                  </div>
+                )}
+                
+                <div className="space-y-2">
+                  <h3 className="font-bold text-lg text-gray-900 line-clamp-2">
+                    {store.businessName}
+                  </h3>
+                  
+                  <div className="flex items-center text-sm text-gray-600">
+                    <span className="text-yellow-500 mr-1">⭐</span>
+                    <span className="font-medium">{store.numberOfReviews} reviews</span>
+                  </div>
+                  
+                  <p className="text-sm text-gray-600">
+                    📍 {store.city}, {store.state}
+                  </p>
+                  
+                  {store.phone && (
+                    <p className="text-sm text-blue-600">
+                      📞 {store.phone}
+                    </p>
+                  )}
+                  
+                  {store.seoDescription && (
+                    <p className="text-sm text-gray-600 line-clamp-2">
+                      {store.seoDescription}
+                    </p>
+                  )}
+                  
+                  <div className="flex flex-wrap gap-1 pt-2">
+                    {store.sellClothes && <span className="feature-badge">👔 Clothing</span>}
+                    {store.sellFurniture && <span className="feature-badge">🪑 Furniture</span>}
+                    {store.sellAntiques && <span className="feature-badge">🏺 Antiques</span>}
+                    {store.sellBooks && <span className="feature-badge">📚 Books</span>}
+                  </div>
+                  
+                  {store.site && (
+                    <div className="pt-3">
+                      <a 
+                        href={store.site} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center text-blue-600 hover:text-blue-700 text-sm font-medium"
+                      >
+                        Visit Website →
+                      </a>
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          {featuredStores.length === 0 && (
+            <div className="text-center py-12">
+              <p className="text-gray-600">Loading featured stores...</p>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Browse by State Section */}
+      <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -112,7 +203,7 @@ export default function Home() {
       </section>
 
       {/* Browse by City Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -146,7 +237,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
