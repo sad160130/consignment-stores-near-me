@@ -227,20 +227,44 @@ export default async function CityPage({ params }: CityPageProps) {
 
                       {/* Features */}
                       <div className="mb-4">
-                        <h4 className="font-medium text-gray-900 mb-2">What they offer:</h4>
-                        <div className="flex flex-wrap gap-1">
-                          {store.pricing && <span className="feature-badge">💰 Affordable Prices</span>}
-                          {store.wideSelection && <span className="feature-badge">📦 Wide Selection</span>}
-                          {store.sellClothes && <span className="feature-badge">👔 Clothing</span>}
-                          {store.sellFurniture && <span className="feature-badge">🪑 Furniture</span>}
-                          {store.sellJewelry && <span className="feature-badge">💍 Jewelry</span>}
-                          {store.sellAntiques && <span className="feature-badge">🏺 Antiques</span>}
-                          {store.sellBooks && <span className="feature-badge">📚 Books</span>}
-                          {store.sellGiftItems && <span className="feature-badge">🎁 Gift Items</span>}
-                          {store.sellPremiumBrand && <span className="feature-badge">✨ Premium Brands</span>}
-                          {store.sellMerchandise && <span className="feature-badge">🛍️ Merchandise</span>}
-                          {store.cleanOrganized && <span className="feature-badge">✅ Clean & Organized</span>}
-                          {store.friendlyEmployees && <span className="feature-badge">😊 Friendly Staff</span>}
+                        <h4 className="font-medium text-gray-900 mb-2">Store Features:</h4>
+                        <div className="flex flex-wrap gap-2">
+                          <span className={store.pricing ? "feature-badge-active" : "feature-badge-inactive"}>
+                            {store.pricing ? "✓" : "✗"} 💰 Affordable Prices
+                          </span>
+                          <span className={store.wideSelection ? "feature-badge-active" : "feature-badge-inactive"}>
+                            {store.wideSelection ? "✓" : "✗"} 📦 Wide Selection
+                          </span>
+                          <span className={store.sellClothes ? "feature-badge-active" : "feature-badge-inactive"}>
+                            {store.sellClothes ? "✓" : "✗"} 👔 Clothing
+                          </span>
+                          <span className={store.sellFurniture ? "feature-badge-active" : "feature-badge-inactive"}>
+                            {store.sellFurniture ? "✓" : "✗"} 🪑 Furniture
+                          </span>
+                          <span className={store.sellJewelry ? "feature-badge-active" : "feature-badge-inactive"}>
+                            {store.sellJewelry ? "✓" : "✗"} 💍 Jewelry
+                          </span>
+                          <span className={store.sellAntiques ? "feature-badge-active" : "feature-badge-inactive"}>
+                            {store.sellAntiques ? "✓" : "✗"} 🏺 Antiques
+                          </span>
+                          <span className={store.sellBooks ? "feature-badge-active" : "feature-badge-inactive"}>
+                            {store.sellBooks ? "✓" : "✗"} 📚 Books
+                          </span>
+                          <span className={store.sellGiftItems ? "feature-badge-active" : "feature-badge-inactive"}>
+                            {store.sellGiftItems ? "✓" : "✗"} 🎁 Gift Items
+                          </span>
+                          <span className={store.sellPremiumBrand ? "feature-badge-active" : "feature-badge-inactive"}>
+                            {store.sellPremiumBrand ? "✓" : "✗"} ✨ Premium Brands
+                          </span>
+                          <span className={store.sellMerchandise ? "feature-badge-active" : "feature-badge-inactive"}>
+                            {store.sellMerchandise ? "✓" : "✗"} 🛍️ Merchandise
+                          </span>
+                          <span className={store.cleanOrganized ? "feature-badge-active" : "feature-badge-inactive"}>
+                            {store.cleanOrganized ? "✓" : "✗"} ✅ Clean & Organized
+                          </span>
+                          <span className={store.friendlyEmployees ? "feature-badge-active" : "feature-badge-inactive"}>
+                            {store.friendlyEmployees ? "✓" : "✗"} 😊 Friendly Staff
+                          </span>
                         </div>
                       </div>
                     </div>

@@ -142,10 +142,24 @@ export default function Home() {
                   )}
                   
                   <div className="flex flex-wrap gap-1 pt-2">
-                    {store.sellClothes && <span className="feature-badge">👔 Clothing</span>}
-                    {store.sellFurniture && <span className="feature-badge">🪑 Furniture</span>}
-                    {store.sellAntiques && <span className="feature-badge">🏺 Antiques</span>}
-                    {store.sellBooks && <span className="feature-badge">📚 Books</span>}
+                    <span className={store.sellClothes ? "feature-badge-active" : "feature-badge-inactive"}>
+                      {store.sellClothes ? "✓" : "✗"} 👔
+                    </span>
+                    <span className={store.sellFurniture ? "feature-badge-active" : "feature-badge-inactive"}>
+                      {store.sellFurniture ? "✓" : "✗"} 🪑
+                    </span>
+                    <span className={store.sellJewelry ? "feature-badge-active" : "feature-badge-inactive"}>
+                      {store.sellJewelry ? "✓" : "✗"} 💍
+                    </span>
+                    <span className={store.sellAntiques ? "feature-badge-active" : "feature-badge-inactive"}>
+                      {store.sellAntiques ? "✓" : "✗"} 🏺
+                    </span>
+                    <span className={store.sellBooks ? "feature-badge-active" : "feature-badge-inactive"}>
+                      {store.sellBooks ? "✓" : "✗"} 📚
+                    </span>
+                    <span className={store.sellGiftItems ? "feature-badge-active" : "feature-badge-inactive"}>
+                      {store.sellGiftItems ? "✓" : "✗"} 🎁
+                    </span>
                   </div>
                   
                   {store.site && (
