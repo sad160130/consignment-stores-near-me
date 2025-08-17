@@ -1,4 +1,3 @@
-import * as XLSX from 'xlsx';
 import path from 'path';
 
 export interface ConsignmentStore {
@@ -56,6 +55,7 @@ export function processExcelData(): ProcessedData {
         return getSampleData();
       } else {
         // Server side - read the JSON file
+        // eslint-disable-next-line @typescript-eslint/no-require-imports
         const fs = require('fs');
         const jsonPath = path.join(process.cwd(), 'public', 'stores-data.json');
         if (fs.existsSync(jsonPath)) {
