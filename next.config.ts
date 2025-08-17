@@ -11,6 +11,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  // Force cache invalidation - deployed at: 2025-01-17
   /* config options here */
 };
 
