@@ -286,9 +286,10 @@ export default function AboutClient() {
               <div className="relative w-32 h-32 sm:w-48 sm:h-48 flex-shrink-0">
                 <Image
                   src="/owner.jpg"
-                  alt="Rohan Kadam - Founder"
+                  alt="Rohan Kadam - Founder & Chief Thrifter"
                   fill
                   className="rounded-full object-cover"
+                  priority
                 />
               </div>
               
