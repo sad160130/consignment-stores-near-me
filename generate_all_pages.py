@@ -117,7 +117,7 @@ def create_state_page(state_name, stores, states_data):
     <meta name="description" content="Discover {store_count}+ quality consignment shops, thrift stores, and secondhand boutiques in {state_name}. Find great deals on clothing, furniture, antiques, and more.">
     <meta name="keywords" content="{state_name} consignment stores, {state_name} thrift stores, {state_name} secondhand shops, consignment stores {state_name}">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://consignmentstoresnearme.com/{state_slug}/">
+    <link rel="canonical" href="https://www.consignmentstores.site/{state_slug}/">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="/css/main.css">
     
@@ -128,7 +128,7 @@ def create_state_page(state_name, stores, states_data):
         "@type": "CollectionPage",
         "name": "{state_name} Consignment Stores",
         "description": "Directory of consignment stores and thrift shops in {state_name}",
-        "url": "https://consignmentstoresnearme.com/{state_slug}/",
+        "url": "https://www.consignmentstores.site/{state_slug}/",
         "breadcrumb": {{
             "@type": "BreadcrumbList",
             "itemListElement": [
@@ -136,13 +136,13 @@ def create_state_page(state_name, stores, states_data):
                     "@type": "ListItem",
                     "position": 1,
                     "name": "Home",
-                    "item": "https://consignmentstoresnearme.com/"
+                    "item": "https://www.consignmentstores.site/"
                 }},
                 {{
                     "@type": "ListItem",
                     "position": 2,
                     "name": "{state_name} Consignment Stores",
-                    "item": "https://consignmentstoresnearme.com/{state_slug}/"
+                    "item": "https://www.consignmentstores.site/{state_slug}/"
                 }}
             ]
         }},
@@ -549,7 +549,7 @@ def create_city_page(city_name, state_name, stores):
     <meta name="description" content="Find the best consignment stores in {city_name}, {state_name}! Discover {store_count} quality secondhand shops, thrift stores, and consignment boutiques with reviews, locations, and contact info.">
     <meta name="keywords" content="{city_name} consignment stores, {city_name} thrift stores, {city_name} {state_name} secondhand shops, consignment stores {city_name} {state_name}">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://consignmentstoresnearme.com/{state_slug}/{city_slug}/">
+    <link rel="canonical" href="https://www.consignmentstores.site/{state_slug}/{city_slug}/">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="/css/main.css">
     
@@ -560,7 +560,7 @@ def create_city_page(city_name, state_name, stores):
         "@type": "CollectionPage",
         "name": "{city_name} {state_name} Consignment Stores",
         "description": "Directory of consignment stores and thrift shops in {city_name}, {state_name}",
-        "url": "https://consignmentstoresnearme.com/{state_slug}/{city_slug}/",
+        "url": "https://www.consignmentstores.site/{state_slug}/{city_slug}/",
         "breadcrumb": {{
             "@type": "BreadcrumbList",
             "itemListElement": [
@@ -568,19 +568,19 @@ def create_city_page(city_name, state_name, stores):
                     "@type": "ListItem",
                     "position": 1,
                     "name": "Home",
-                    "item": "https://consignmentstoresnearme.com/"
+                    "item": "https://www.consignmentstores.site/"
                 }},
                 {{
                     "@type": "ListItem",
                     "position": 2,
                     "name": "{state_name}",
-                    "item": "https://consignmentstoresnearme.com/{state_slug}/"
+                    "item": "https://www.consignmentstores.site/{state_slug}/"
                 }},
                 {{
                     "@type": "ListItem",
                     "position": 3,
                     "name": "{city_name} Consignment Stores",
-                    "item": "https://consignmentstoresnearme.com/{state_slug}/{city_slug}/"
+                    "item": "https://www.consignmentstores.site/{state_slug}/{city_slug}/"
                 }}
             ]
         }}

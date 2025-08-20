@@ -122,39 +122,8 @@ export default async function StatePage({ params }: StatePageProps) {
           </div>
         </div>
 
-        {/* All Cities in State */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">
-            All Cities with Consignment Stores in {stateName}
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            {citiesWithStores.map((city) => (
-              <Link
-                key={city.name}
-                href={`/${resolvedParams.state}/${city.slug}/`}
-                className="card hover:shadow-lg transition-shadow duration-200"
-              >
-                <div className="flex justify-between items-center">
-                  <div>
-                    <div className="font-semibold text-gray-900 mb-1">{city.name}</div>
-                    <div className="text-sm text-gray-600">
-                      {city.storeCount} store{city.storeCount !== 1 ? 's' : ''}
-                    </div>
-                  </div>
-                  <div className="text-blue-600">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </section>
-
         {/* Featured Stores */}
-        <section>
+        <section className="mb-12">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">
             Top-Rated Consignment Stores in {stateName}
           </h2>
@@ -257,6 +226,37 @@ export default async function StatePage({ params }: StatePageProps) {
               </p>
             </div>
           )}
+        </section>
+
+        {/* All Cities in State */}
+        <section>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            All Cities with Consignment Stores in {stateName}
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            {citiesWithStores.map((city) => (
+              <Link
+                key={city.name}
+                href={`/${resolvedParams.state}/${city.slug}/`}
+                className="card hover:shadow-lg transition-shadow duration-200"
+              >
+                <div className="flex justify-between items-center">
+                  <div>
+                    <div className="font-semibold text-gray-900 mb-1">{city.name}</div>
+                    <div className="text-sm text-gray-600">
+                      {city.storeCount} store{city.storeCount !== 1 ? 's' : ''}
+                    </div>
+                  </div>
+                  <div className="text-blue-600">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
         </section>
       </div>
     </div>

@@ -124,7 +124,7 @@ def generate_html_sitemap():
     <meta name="description" content="Complete directory sitemap of all {total_cities:,} cities with consignment stores across {total_states} US states. Browse 2,600+ secondhand shops and thrift stores by location.">
     <meta name="keywords" content="consignment stores sitemap, thrift stores directory, secondhand shops by state, consignment stores by city">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://consignmentstoresnearme.com/sitemap/">
+    <link rel="canonical" href="https://www.consignmentstores.site/sitemap/">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="/css/main.css">
     
@@ -135,7 +135,7 @@ def generate_html_sitemap():
         "@type": "ItemList",
         "name": "Consignment Stores Directory Sitemap",
         "description": "Complete directory of consignment stores across {total_states} US states and {total_cities} cities",
-        "url": "https://consignmentstoresnearme.com/sitemap/",
+        "url": "https://www.consignmentstores.site/sitemap/",
         "numberOfItems": "{total_cities}"
     }}
     </script>

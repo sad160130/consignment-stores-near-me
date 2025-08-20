@@ -56,7 +56,7 @@ def generate_complete_sitemap():
     # Homepage
     xml_content.append('    <!-- Homepage -->')
     xml_content.append('    <url>')
-    xml_content.append('        <loc>https://consignmentstoresnearme.com/</loc>')
+    xml_content.append('        <loc>https://www.consignmentstores.site/</loc>')
     xml_content.append(f'        <lastmod>{current_date}</lastmod>')
     xml_content.append('        <changefreq>daily</changefreq>')
     xml_content.append('        <priority>1.0</priority>')
@@ -66,7 +66,7 @@ def generate_complete_sitemap():
     # About Page
     xml_content.append('    <!-- About Page -->')
     xml_content.append('    <url>')
-    xml_content.append('        <loc>https://consignmentstoresnearme.com/about/</loc>')
+    xml_content.append('        <loc>https://www.consignmentstores.site/about/</loc>')
     xml_content.append(f'        <lastmod>{current_date}</lastmod>')
     xml_content.append('        <changefreq>monthly</changefreq>')
     xml_content.append('        <priority>0.8</priority>')
@@ -76,7 +76,7 @@ def generate_complete_sitemap():
     # HTML Sitemap
     xml_content.append('    <!-- HTML Sitemap -->')
     xml_content.append('    <url>')
-    xml_content.append('        <loc>https://consignmentstoresnearme.com/sitemap/</loc>')
+    xml_content.append('        <loc>https://www.consignmentstores.site/sitemap/</loc>')
     xml_content.append(f'        <lastmod>{current_date}</lastmod>')
     xml_content.append('        <changefreq>weekly</changefreq>')
     xml_content.append('        <priority>0.6</priority>')
@@ -91,7 +91,7 @@ def generate_complete_sitemap():
     for state in states_list:
         state_slug = state_slugs.get(state, slugify(state))
         xml_content.append('    <url>')
-        xml_content.append(f'        <loc>https://consignmentstoresnearme.com/{state_slug}/</loc>')
+        xml_content.append(f'        <loc>https://www.consignmentstores.site/{state_slug}/</loc>')
         xml_content.append(f'        <lastmod>{current_date}</lastmod>')
         xml_content.append('        <changefreq>weekly</changefreq>')
         xml_content.append('        <priority>0.9</priority>')
@@ -110,7 +110,7 @@ def generate_complete_sitemap():
         for city in cities:
             city_slug = slugify(city)
             xml_content.append('    <url>')
-            xml_content.append(f'        <loc>https://consignmentstoresnearme.com/{state_slug}/{city_slug}/</loc>')
+            xml_content.append(f'        <loc>https://www.consignmentstores.site/{state_slug}/{city_slug}/</loc>')
             xml_content.append(f'        <lastmod>{current_date}</lastmod>')
             xml_content.append('        <changefreq>weekly</changefreq>')
             xml_content.append('        <priority>0.8</priority>')
