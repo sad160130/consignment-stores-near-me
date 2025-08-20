@@ -2,7 +2,7 @@ import { processExcelData, getStateSlug, getCitySlug } from '@/lib/data-processo
 
 export async function GET() {
   const data = processExcelData();
-  const baseUrl = 'https://consignmentstoresnearme.com'; // Replace with your actual domain
+  const baseUrl = 'https://www.consignmentstores.site'; // Updated domain
   
   let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
