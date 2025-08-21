@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import SearchBar from '@/components/SearchBar';
+import StoreListWithFilters from '@/components/StoreListWithFilters';
 import { Metadata } from 'next';
 
 interface CityPageProps {
@@ -150,10 +151,10 @@ export default async function CityPage({ params }: CityPageProps) {
               </div>
             </div>
 
-            {/* Store Listings */}
+            {/* Interactive Store List with Map and Filters */}
             <section>
               <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                Consignment Stores in {cityName} (Ranked by Reviews)
+                Explore Consignment Stores in {cityName}
               </h2>
               
               {stores.length === 0 ? (
@@ -166,110 +167,12 @@ export default async function CityPage({ params }: CityPageProps) {
                   </Link>
                 </div>
               ) : (
-                <div className="space-y-6">
-                  {stores.map((store, index) => (
-                    <div key={index} className="store-card" id={store.businessName.toLowerCase().replace(/\s+/g, '-')}>
-                      <div className="flex justify-between items-start mb-4">
-                        <div className="flex items-start space-x-4">
-                          <div className="flex-shrink-0">
-                            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                              <span className="text-blue-600 font-bold text-lg">#{index + 1}</span>
-                            </div>
-                          </div>
-                          <div className="flex-1">
-                            <h3 className="font-bold text-xl text-gray-900 mb-2">
-                              {store.businessName}
-                            </h3>
-                            <p className="text-gray-600 mb-2">{store.address}</p>
-                            <p className="text-sm text-gray-500 mb-3">
-                              {store.city}, {store.state}
-                            </p>
-                            
-                            {store.seoDescription && (
-                              <p className="text-sm text-gray-600 mb-3 line-clamp-2">
-                                {store.seoDescription}
-                              </p>
-                            )}
-                            
-                            <div className="flex items-center space-x-4 text-sm">
-                              {store.phone && (
-                                <a href={`tel:${store.phone}`} className="text-blue-600 hover:text-blue-700">
-                                  📞 {store.phone}
-                                </a>
-                              )}
-                              {store.site && (
-                                <a 
-                                  href={store.site} 
-                                  target="_blank" 
-                                  rel="noopener noreferrer"
-                                  className="text-blue-600 hover:text-blue-700"
-                                >
-                                  🌐 Visit Website
-                                </a>
-                              )}
-                            </div>
-                          </div>
-                        </div>
-                        {store.photo && (
-                          <img 
-                            src={store.photo} 
-                            alt={store.businessName}
-                            className="w-24 h-24 object-cover rounded-lg ml-4 flex-shrink-0"
-                          />
-                        )}
-                      </div>
-                      
-                      <div className="mb-4">
-                        <div className="inline-flex items-center bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">
-                          ⭐ {store.numberOfReviews} review{store.numberOfReviews !== 1 ? 's' : ''}
-                        </div>
-                      </div>
-
-                      {/* Features */}
-                      <div className="mb-4">
-                        <h4 className="font-medium text-gray-900 mb-2">Store Features:</h4>
-                        <div className="flex flex-wrap gap-2">
-                          <span className={store.pricing ? "feature-badge-active" : "feature-badge-inactive"}>
-                            {store.pricing ? "✓" : "✗"} 💰 Affordable Prices
-                          </span>
-                          <span className={store.wideSelection ? "feature-badge-active" : "feature-badge-inactive"}>
-                            {store.wideSelection ? "✓" : "✗"} 📦 Wide Selection
-                          </span>
-                          <span className={store.sellClothes ? "feature-badge-active" : "feature-badge-inactive"}>
-                            {store.sellClothes ? "✓" : "✗"} 👔 Clothing
-                          </span>
-                          <span className={store.sellFurniture ? "feature-badge-active" : "feature-badge-inactive"}>
-                            {store.sellFurniture ? "✓" : "✗"} 🪑 Furniture
-                          </span>
-                          <span className={store.sellJewelry ? "feature-badge-active" : "feature-badge-inactive"}>
-                            {store.sellJewelry ? "✓" : "✗"} 💍 Jewelry
-                          </span>
-                          <span className={store.sellAntiques ? "feature-badge-active" : "feature-badge-inactive"}>
-                            {store.sellAntiques ? "✓" : "✗"} 🏺 Antiques
-                          </span>
-                          <span className={store.sellBooks ? "feature-badge-active" : "feature-badge-inactive"}>
-                            {store.sellBooks ? "✓" : "✗"} 📚 Books
-                          </span>
-                          <span className={store.sellGiftItems ? "feature-badge-active" : "feature-badge-inactive"}>
-                            {store.sellGiftItems ? "✓" : "✗"} 🎁 Gift Items
-                          </span>
-                          <span className={store.sellPremiumBrand ? "feature-badge-active" : "feature-badge-inactive"}>
-                            {store.sellPremiumBrand ? "✓" : "✗"} ✨ Premium Brands
-                          </span>
-                          <span className={store.sellMerchandise ? "feature-badge-active" : "feature-badge-inactive"}>
-                            {store.sellMerchandise ? "✓" : "✗"} 🛍️ Merchandise
-                          </span>
-                          <span className={store.cleanOrganized ? "feature-badge-active" : "feature-badge-inactive"}>
-                            {store.cleanOrganized ? "✓" : "✗"} ✅ Clean & Organized
-                          </span>
-                          <span className={store.friendlyEmployees ? "feature-badge-active" : "feature-badge-inactive"}>
-                            {store.friendlyEmployees ? "✓" : "✗"} 😊 Friendly Staff
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                <StoreListWithFilters 
+                  stores={stores} 
+                  showMap={true}
+                  stateName={stateName}
+                  cityName={cityName}
+                />
               )}
             </section>
           </div>

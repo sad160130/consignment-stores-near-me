@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import SearchBar from '@/components/SearchBar';
+import StoreListWithFilters from '@/components/StoreListWithFilters';
 import { Metadata } from 'next';
 
 interface StatePageProps {
@@ -122,110 +123,17 @@ export default async function StatePage({ params }: StatePageProps) {
           </div>
         </div>
 
-        {/* Featured Stores */}
+        {/* Interactive Store List with Map and Filters */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">
-            Top-Rated Consignment Stores in {stateName}
+            Explore Consignment Stores in {stateName}
           </h2>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {stores.slice(0, 10).map((store, index) => (
-              <div key={index} className="store-card">
-                <div className="flex justify-between items-start mb-4">
-                  <div className="flex-1">
-                    <h3 className="font-semibold text-lg text-gray-900 mb-1">
-                      {store.businessName}
-                    </h3>
-                    <p className="text-gray-600 mb-2">{store.address}</p>
-                    <p className="text-sm text-gray-500 mb-2">
-                      {store.city}, {store.state}
-                    </p>
-                    {store.seoDescription && (
-                      <p className="text-sm text-gray-600 mb-2 line-clamp-2">
-                        {store.seoDescription}
-                      </p>
-                    )}
-                    {store.phone && (
-                      <p className="text-sm text-blue-600">
-                        <a href={`tel:${store.phone}`}>{store.phone}</a>
-                      </p>
-                    )}
-                  </div>
-                  {store.photo && (
-                    <img 
-                      src={store.photo} 
-                      alt={store.businessName}
-                      className="w-20 h-20 object-cover rounded-lg ml-4"
-                    />
-                  )}
-                </div>
-                
-                <div className="flex justify-between items-center mb-4">
-                  <div className="text-sm text-gray-600">
-                    {store.numberOfReviews} review{store.numberOfReviews !== 1 ? 's' : ''}
-                  </div>
-                  {store.site && (
-                    <a 
-                      href={store.site} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-sm text-blue-600 hover:text-blue-700"
-                    >
-                      Visit Website →
-                    </a>
-                  )}
-                </div>
-
-                {/* Features */}
-                <div className="flex flex-wrap gap-2">
-                  <span className={store.pricing ? "feature-badge-active" : "feature-badge-inactive"}>
-                    {store.pricing ? "✓" : "✗"} 💰 Affordable
-                  </span>
-                  <span className={store.wideSelection ? "feature-badge-active" : "feature-badge-inactive"}>
-                    {store.wideSelection ? "✓" : "✗"} 📦 Wide Selection
-                  </span>
-                  <span className={store.sellClothes ? "feature-badge-active" : "feature-badge-inactive"}>
-                    {store.sellClothes ? "✓" : "✗"} 👔 Clothing
-                  </span>
-                  <span className={store.sellFurniture ? "feature-badge-active" : "feature-badge-inactive"}>
-                    {store.sellFurniture ? "✓" : "✗"} 🪑 Furniture
-                  </span>
-                  <span className={store.sellJewelry ? "feature-badge-active" : "feature-badge-inactive"}>
-                    {store.sellJewelry ? "✓" : "✗"} 💍 Jewelry
-                  </span>
-                  <span className={store.sellAntiques ? "feature-badge-active" : "feature-badge-inactive"}>
-                    {store.sellAntiques ? "✓" : "✗"} 🏺 Antiques
-                  </span>
-                  <span className={store.sellBooks ? "feature-badge-active" : "feature-badge-inactive"}>
-                    {store.sellBooks ? "✓" : "✗"} 📚 Books
-                  </span>
-                  <span className={store.sellGiftItems ? "feature-badge-active" : "feature-badge-inactive"}>
-                    {store.sellGiftItems ? "✓" : "✗"} 🎁 Gift Items
-                  </span>
-                  <span className={store.sellPremiumBrand ? "feature-badge-active" : "feature-badge-inactive"}>
-                    {store.sellPremiumBrand ? "✓" : "✗"} ✨ Premium
-                  </span>
-                  <span className={store.sellMerchandise ? "feature-badge-active" : "feature-badge-inactive"}>
-                    {store.sellMerchandise ? "✓" : "✗"} 🛍️ Merchandise
-                  </span>
-                  <span className={store.cleanOrganized ? "feature-badge-active" : "feature-badge-inactive"}>
-                    {store.cleanOrganized ? "✓" : "✗"} ✅ Clean
-                  </span>
-                  <span className={store.friendlyEmployees ? "feature-badge-active" : "feature-badge-inactive"}>
-                    {store.friendlyEmployees ? "✓" : "✗"} 😊 Friendly
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {stores.length > 10 && (
-            <div className="text-center mt-8">
-              <p className="text-gray-600">
-                Showing top 10 stores. Browse by city to see all stores in {stateName}.
-              </p>
-            </div>
-          )}
+          <StoreListWithFilters 
+            stores={stores} 
+            showMap={true}
+            stateName={stateName}
+          />
         </section>
 
         {/* All Cities in State */}
