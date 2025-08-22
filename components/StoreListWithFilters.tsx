@@ -2,9 +2,19 @@
 
 import { useState, useMemo } from 'react';
 import { ConsignmentStore } from '@/lib/data-processor';
-import StoreMap from './StoreMap';
+import dynamic from 'next/dynamic';
 import StoreSorting from './StoreSorting';
 import StoreFilters, { FilterOptions } from './StoreFilters';
+
+// Dynamically import the map to avoid SSR issues
+const SimpleLeafletMap = dynamic(() => import('./SimpleLeafletMap'), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full h-[500px] bg-gray-100 rounded-lg flex items-center justify-center">
+      <p className="text-gray-600">Loading map...</p>
+    </div>
+  )
+});
 
 interface StoreListWithFiltersProps {
   stores: ConsignmentStore[];
@@ -15,7 +25,9 @@ interface StoreListWithFiltersProps {
 
 export default function StoreListWithFilters({ 
   stores, 
-  showMap = true
+  showMap = true,
+  stateName,
+  cityName
 }: StoreListWithFiltersProps) {
   const [sortBy, setSortBy] = useState('reviews-desc');
   const [filters, setFilters] = useState<FilterOptions>({
@@ -26,7 +38,6 @@ export default function StoreListWithFilters({
     minReviews: 0,
   });
   const [selectedStore, setSelectedStore] = useState<ConsignmentStore | null>(null);
-  const [viewMode, setViewMode] = useState<'list' | 'map'>('list');
 
   // Get unique cities from stores
   const availableCities = useMemo(() => {
@@ -127,44 +138,9 @@ export default function StoreListWithFilters({
         availableCities={availableCities}
       />
 
-      {/* Sorting and View Toggle */}
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
+      {/* Sorting */}
+      <div className="mb-6">
         <StoreSorting currentSort={sortBy} onSortChange={setSortBy} />
-        
-        {showMap && (
-          <div className="flex items-center space-x-2">
-            <button
-              onClick={() => setViewMode('list')}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                viewMode === 'list'
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-              }`}
-            >
-              <span className="flex items-center space-x-2">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-                <span>List</span>
-              </span>
-            </button>
-            <button
-              onClick={() => setViewMode('map')}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                viewMode === 'map'
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-              }`}
-            >
-              <span className="flex items-center space-x-2">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-                </svg>
-                <span>Map</span>
-              </span>
-            </button>
-          </div>
-        )}
       </div>
 
       {/* Results Count */}
@@ -176,20 +152,22 @@ export default function StoreListWithFilters({
         </p>
       </div>
 
-      {/* Map View */}
-      {showMap && viewMode === 'map' && (
+      {/* Interactive Map */}
+      {showMap && (
         <div className="mb-8">
-          <StoreMap 
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">Interactive Map</h3>
+          <SimpleLeafletMap 
             stores={sortedStores} 
             selectedStore={selectedStore}
             onStoreSelect={handleStoreClick}
+            stateName={stateName}
+            cityName={cityName}
           />
         </div>
       )}
 
-      {/* List View */}
-      {viewMode === 'list' && (
-        <div className="space-y-6">
+      {/* Store List */}
+      <div className="space-y-6">
           {sortedStores.length === 0 ? (
             <div className="card text-center py-12">
               <p className="text-gray-600 mb-4">
@@ -320,8 +298,7 @@ export default function StoreListWithFilters({
               </div>
             ))
           )}
-        </div>
-      )}
+      </div>
     </div>
   );
 }
