@@ -4,6 +4,8 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import SearchBar from '@/components/SearchBar';
 import StoreListWithFilters from '@/components/StoreListWithFilters';
+import SchemaMarkup from '@/components/SchemaMarkup';
+import { generateStatePageSchema } from '@/lib/schema-markup';
 import { Metadata } from 'next';
 
 interface StatePageProps {
@@ -84,8 +86,19 @@ export default async function StatePage({ params }: StatePageProps) {
     { name: stateName }
   ];
 
+  // Generate schema markup
+  const schemas = generateStatePageSchema(
+    stateName,
+    resolvedParams.state,
+    stores,
+    cities,
+    'https://www.consignmentstores.site'
+  );
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
+      <SchemaMarkup schemas={schemas} />
+      <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Breadcrumb items={breadcrumbItems} />
         
@@ -168,5 +181,6 @@ export default async function StatePage({ params }: StatePageProps) {
         </section>
       </div>
     </div>
+    </>
   );
 }

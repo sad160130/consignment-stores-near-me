@@ -4,6 +4,8 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import SearchBar from '@/components/SearchBar';
 import StoreListWithFilters from '@/components/StoreListWithFilters';
+import SchemaMarkup from '@/components/SchemaMarkup';
+import { generateCityPageSchema } from '@/lib/schema-markup';
 import { Metadata } from 'next';
 
 interface CityPageProps {
@@ -107,8 +109,20 @@ export default async function CityPage({ params }: CityPageProps) {
     { name: cityName }
   ];
 
+  // Generate schema markup
+  const schemas = generateCityPageSchema(
+    cityName,
+    resolvedParams.city,
+    stateName,
+    resolvedParams.state,
+    stores,
+    'https://www.consignmentstores.site'
+  );
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
+      <SchemaMarkup schemas={schemas} />
+      <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Breadcrumb items={breadcrumbItems} />
         
@@ -241,5 +255,6 @@ export default async function CityPage({ params }: CityPageProps) {
         </div>
       </div>
     </div>
+    </>
   );
 }
