@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
-import { processExcelData } from '@/lib/data-processor';
+import { processExcelData, getStateSlug, getCitySlug } from '@/lib/data-processor';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
 
 interface NavigationProps {
@@ -13,21 +13,29 @@ export default function Navigation({ className = '' }: NavigationProps) {
   const [isStatesOpen, setIsStatesOpen] = useState(false);
   const [isCitiesOpen, setIsCitiesOpen] = useState(false);
   const [states, setStates] = useState<string[]>([]);
-  const [cities, setCities] = useState<string[]>([]);
+  const [citiesWithStates, setCitiesWithStates] = useState<Array<{city: string, state: string, stateSlug: string, citySlug: string}>>([]);
   
   const statesDropdownRef = useRef<HTMLDivElement>(null);
   const citiesDropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const data = processExcelData();
-    setStates(data.statesList);
+    setStates(data.statesList.sort());
     
-    // Get all cities from all states
-    const allCities: string[] = [];
-    Object.values(data.citiesByState).forEach(stateCities => {
-      allCities.push(...stateCities);
+    // Get all cities with their states for proper routing
+    const citiesData: Array<{city: string, state: string, stateSlug: string, citySlug: string}> = [];
+    Object.entries(data.citiesByState).forEach(([stateName, stateCities]) => {
+      const stateSlug = getStateSlug(stateName);
+      stateCities.forEach((cityName) => {
+        citiesData.push({
+          city: cityName,
+          state: stateName,
+          stateSlug,
+          citySlug: getCitySlug(cityName)
+        });
+      });
     });
-    setCities([...new Set(allCities)].sort());
+    setCitiesWithStates(citiesData.sort((a, b) => a.city.localeCompare(b.city)));
   }, []);
 
   useEffect(() => {
@@ -44,13 +52,6 @@ export default function Navigation({ className = '' }: NavigationProps) {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  const getStateSlug = (state: string) => {
-    return state.toLowerCase().replace(/[^\w\s-]/g, '').replace(/[\s_-]+/g, '-');
-  };
-
-  const getCitySlug = (city: string) => {
-    return city.toLowerCase().replace(/[^\w\s-]/g, '').replace(/[\s_-]+/g, '-');
-  };
 
   return (
     <nav className={`bg-white border-b border-gray-200 ${className}`}>
@@ -79,18 +80,28 @@ export default function Navigation({ className = '' }: NavigationProps) {
                   <ChevronDownIcon className="w-4 h-4" />
                 </button>
                 {isStatesOpen && (
-                  <div className="dropdown-menu w-64 p-2">
-                    <div className="grid grid-cols-2 gap-1">
-                      {states.map((state) => (
-                        <Link
-                          key={state}
-                          href={`/${getStateSlug(state)}/`}
-                          className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded"
-                          onClick={() => setIsStatesOpen(false)}
-                        >
-                          {state}
-                        </Link>
-                      ))}
+                  <div className="dropdown-menu w-72 p-3">
+                    <div className="max-h-80 overflow-y-auto">
+                      <div className="space-y-1">
+                        {states.map((state) => (
+                          <Link
+                            key={state}
+                            href={`/${getStateSlug(state)}/`}
+                            className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-150 border-l-2 border-transparent hover:border-blue-400"
+                            onClick={() => setIsStatesOpen(false)}
+                          >
+                            <div className="flex items-center justify-between">
+                              <span className="font-medium">{state}</span>
+                              <ChevronDownIcon className="w-4 h-4 rotate-[-90deg] text-gray-400" />
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="mt-3 pt-3 border-t border-gray-100">
+                      <p className="text-xs text-gray-500 text-center">
+                        Browse consignment stores by state
+                      </p>
                     </div>
                   </div>
                 )}
@@ -106,27 +117,32 @@ export default function Navigation({ className = '' }: NavigationProps) {
                   <ChevronDownIcon className="w-4 h-4" />
                 </button>
                 {isCitiesOpen && (
-                  <div className="dropdown-menu w-80 p-2">
-                    <div className="grid grid-cols-3 gap-1 max-h-80 overflow-y-auto">
-                      {cities.slice(0, 50).map((city) => (
-                        <Link
-                          key={city}
-                          href={`/city/${getCitySlug(city)}/`}
-                          className="block px-2 py-1 text-xs text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded truncate"
-                          onClick={() => setIsCitiesOpen(false)}
-                          title={city}
-                        >
-                          {city}
-                        </Link>
-                      ))}
-                    </div>
-                    {cities.length > 50 && (
-                      <div className="mt-2 pt-2 border-t border-gray-200">
-                        <p className="text-xs text-gray-500 text-center">
-                          Showing first 50 cities. Use search to find more.
-                        </p>
+                  <div className="dropdown-menu w-80 p-3">
+                    <div className="max-h-80 overflow-y-auto">
+                      <div className="space-y-1">
+                        {citiesWithStates.slice(0, 100).map((cityData, index) => (
+                          <Link
+                            key={`${cityData.city}-${cityData.state}-${index}`}
+                            href={`/${cityData.stateSlug}/${cityData.citySlug}/`}
+                            className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-150 border-l-2 border-transparent hover:border-blue-400"
+                            onClick={() => setIsCitiesOpen(false)}
+                          >
+                            <div className="flex items-center justify-between">
+                              <div className="flex flex-col">
+                                <span className="font-medium">{cityData.city}</span>
+                                <span className="text-xs text-gray-500">{cityData.state}</span>
+                              </div>
+                              <ChevronDownIcon className="w-4 h-4 rotate-[-90deg] text-gray-400" />
+                            </div>
+                          </Link>
+                        ))}
                       </div>
-                    )}
+                    </div>
+                    <div className="mt-3 pt-3 border-t border-gray-100">
+                      <p className="text-xs text-gray-500 text-center">
+                        Showing top 100 cities • Browse consignment stores by city
+                      </p>
+                    </div>
                   </div>
                 )}
               </div>
