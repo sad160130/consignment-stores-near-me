@@ -46,14 +46,14 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
   const canonicalUrl = `https://www.consignmentstores.site/${stateSlug}/${citySlug}/`;
 
   return {
-    title: `Best Consignment Stores in ${cityName}, ${stateName} - Reviews & Directory`,
-    description: `Find the best consignment stores in ${cityName}, ${stateName}. Browse ${stores.length} top-rated stores with reviews. Quality second-hand furniture, clothing, and vintage items.`,
+    title: `Consignment Stores in ${cityName}, ${stateName}`,
+    description: `Explore ${stores.length} consignment stores in ${cityName}, ${stateName}. Shop for quality second-hand furniture, designer clothing, vintage treasures and unique finds at local resale shops with customer reviews.`,
     keywords: `consignment stores ${cityName} ${stateName}, thrift stores ${cityName}, second hand stores ${cityName}, resale shops ${cityName}`,
     alternates: {
       canonical: canonicalUrl
     },
     openGraph: {
-      title: `Best Consignment Stores in ${cityName}, ${stateName}`,
+      title: `Consignment Stores in ${cityName}, ${stateName}`,
       description: `Discover ${stores.length} consignment stores in ${cityName}, ${stateName}`,
       type: 'website',
       url: canonicalUrl
