@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
 import { processExcelData, getStateSlug, getCitySlug } from '@/lib/data-processor';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
+import { generateUrl } from '@/lib/url-utils';
 
 interface NavigationProps {
   className?: string;
@@ -14,11 +15,17 @@ export default function Navigation({ className = '' }: NavigationProps) {
   const [isCitiesOpen, setIsCitiesOpen] = useState(false);
   const [states, setStates] = useState<string[]>([]);
   const [citiesWithStates, setCitiesWithStates] = useState<Array<{city: string, state: string, stateSlug: string, citySlug: string}>>([]);
+  const [currentHost, setCurrentHost] = useState<string>('');
   
   const statesDropdownRef = useRef<HTMLDivElement>(null);
   const citiesDropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Get current host for subdomain-aware linking
+    if (typeof window !== 'undefined') {
+      setCurrentHost(window.location.hostname);
+    }
+    
     const data = processExcelData();
     setStates(data.statesList.sort());
     
@@ -59,7 +66,7 @@ export default function Navigation({ className = '' }: NavigationProps) {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center space-x-2">
+            <Link href={currentHost && currentHost !== 'www.consignmentstores.site' && currentHost !== 'localhost:3000' ? 'https://www.consignmentstores.site/' : '/'} className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">C</span>
               </div>
@@ -83,19 +90,23 @@ export default function Navigation({ className = '' }: NavigationProps) {
                   <div className="dropdown-menu w-72 p-3">
                     <div className="max-h-80 overflow-y-auto">
                       <div className="space-y-1">
-                        {states.map((state) => (
-                          <Link
-                            key={state}
-                            href={`/${getStateSlug(state)}/`}
-                            className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-150 border-l-2 border-transparent hover:border-blue-400"
-                            onClick={() => setIsStatesOpen(false)}
-                          >
-                            <div className="flex items-center justify-between">
-                              <span className="font-medium">{state}</span>
-                              <ChevronDownIcon className="w-4 h-4 rotate-[-90deg] text-gray-400" />
-                            </div>
-                          </Link>
-                        ))}
+                        {states.map((state) => {
+                          const stateSlug = getStateSlug(state);
+                          const stateUrl = generateUrl(stateSlug);
+                          return (
+                            <a
+                              key={state}
+                              href={stateUrl}
+                              className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-150 border-l-2 border-transparent hover:border-blue-400"
+                              onClick={() => setIsStatesOpen(false)}
+                            >
+                              <div className="flex items-center justify-between">
+                                <span className="font-medium">{state}</span>
+                                <ChevronDownIcon className="w-4 h-4 rotate-[-90deg] text-gray-400" />
+                              </div>
+                            </a>
+                          );
+                        })}
                       </div>
                     </div>
                     <div className="mt-3 pt-3 border-t border-gray-100">
@@ -120,22 +131,25 @@ export default function Navigation({ className = '' }: NavigationProps) {
                   <div className="dropdown-menu w-80 p-3">
                     <div className="max-h-80 overflow-y-auto">
                       <div className="space-y-1">
-                        {citiesWithStates.slice(0, 100).map((cityData, index) => (
-                          <Link
-                            key={`${cityData.city}-${cityData.state}-${index}`}
-                            href={`/${cityData.stateSlug}/${cityData.citySlug}/`}
-                            className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-150 border-l-2 border-transparent hover:border-blue-400"
-                            onClick={() => setIsCitiesOpen(false)}
-                          >
-                            <div className="flex items-center justify-between">
-                              <div className="flex flex-col">
-                                <span className="font-medium">{cityData.city}</span>
-                                <span className="text-xs text-gray-500">{cityData.state}</span>
+                        {citiesWithStates.slice(0, 100).map((cityData, index) => {
+                          const cityUrl = generateUrl(cityData.stateSlug, cityData.citySlug);
+                          return (
+                            <a
+                              key={`${cityData.city}-${cityData.state}-${index}`}
+                              href={cityUrl}
+                              className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-150 border-l-2 border-transparent hover:border-blue-400"
+                              onClick={() => setIsCitiesOpen(false)}
+                            >
+                              <div className="flex items-center justify-between">
+                                <div className="flex flex-col">
+                                  <span className="font-medium">{cityData.city}</span>
+                                  <span className="text-xs text-gray-500">{cityData.state}</span>
+                                </div>
+                                <ChevronDownIcon className="w-4 h-4 rotate-[-90deg] text-gray-400" />
                               </div>
-                              <ChevronDownIcon className="w-4 h-4 rotate-[-90deg] text-gray-400" />
-                            </div>
-                          </Link>
-                        ))}
+                            </a>
+                          );
+                        })}
                       </div>
                     </div>
                     <div className="mt-3 pt-3 border-t border-gray-100">

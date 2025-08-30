@@ -6,6 +6,7 @@ import SearchBar from '@/components/SearchBar';
 import StoreListWithFilters from '@/components/StoreListWithFilters';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import { generateStatePageSchema } from '@/lib/schema-markup';
+import { generateUrl } from '@/lib/url-utils';
 import { Metadata } from 'next';
 
 interface StatePageProps {
@@ -31,7 +32,7 @@ export async function generateMetadata({ params }: StatePageProps): Promise<Meta
   const cities = data.citiesByState[stateName] || [];
 
   const stateSlug = getStateSlug(stateName);
-  const canonicalUrl = `https://www.consignmentstores.site/${stateSlug}/`;
+  const canonicalUrl = generateUrl(stateSlug);
   
   return {
     title: `Consignment Stores in ${stateName}`,
@@ -86,13 +87,13 @@ export default async function StatePage({ params }: StatePageProps) {
     { name: stateName }
   ];
 
-  // Generate schema markup
+  // Generate schema markup with subdomain URL
   const schemas = generateStatePageSchema(
     stateName,
     resolvedParams.state,
     stores,
     cities,
-    'https://www.consignmentstores.site'
+    `https://${resolvedParams.state}.consignmentstores.site`
   );
 
   return (
@@ -159,7 +160,7 @@ export default async function StatePage({ params }: StatePageProps) {
             {citiesWithStores.map((city) => (
               <Link
                 key={city.name}
-                href={`/${resolvedParams.state}/${city.slug}/`}
+                href={`/${city.slug}/`}
                 className="card hover:shadow-lg transition-shadow duration-200"
               >
                 <div className="flex justify-between items-center">

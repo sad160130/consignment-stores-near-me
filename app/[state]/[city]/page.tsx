@@ -6,6 +6,7 @@ import SearchBar from '@/components/SearchBar';
 import StoreListWithFilters from '@/components/StoreListWithFilters';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import { generateCityPageSchema } from '@/lib/schema-markup';
+import { generateUrl } from '@/lib/url-utils';
 import { Metadata } from 'next';
 
 interface CityPageProps {
@@ -43,7 +44,7 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
   
   const stateSlug = getStateSlug(stateName);
   const citySlug = getCitySlug(cityName);
-  const canonicalUrl = `https://www.consignmentstores.site/${stateSlug}/${citySlug}/`;
+  const canonicalUrl = generateUrl(stateSlug, citySlug);
 
   return {
     title: `Consignment Stores in ${cityName}, ${stateName}`,
@@ -104,19 +105,19 @@ export default async function CityPage({ params }: CityPageProps) {
   const nearbyCities = getNearbyCities(cityName, stateName, data, 8);
 
   const breadcrumbItems = [
-    { name: 'States', href: '/' },
-    { name: stateName, href: `/${resolvedParams.state}/` },
+    { name: 'States', href: 'https://www.consignmentstores.site/' },
+    { name: stateName, href: '/' },
     { name: cityName }
   ];
 
-  // Generate schema markup
+  // Generate schema markup with subdomain URL
   const schemas = generateCityPageSchema(
     cityName,
     resolvedParams.city,
     stateName,
     resolvedParams.state,
     stores,
-    'https://www.consignmentstores.site'
+    `https://${resolvedParams.state}.consignmentstores.site`
   );
 
   return (
@@ -176,7 +177,7 @@ export default async function CityPage({ params }: CityPageProps) {
                   <p className="text-gray-600 mb-4">
                     No consignment stores found in {cityName}, {stateName}.
                   </p>
-                  <Link href={`/${resolvedParams.state}/`} className="text-blue-600 hover:text-blue-700">
+                  <Link href="/" className="text-blue-600 hover:text-blue-700">
                     Browse other cities in {stateName} →
                   </Link>
                 </div>
@@ -203,7 +204,7 @@ export default async function CityPage({ params }: CityPageProps) {
                   {nearbyCities.map((city) => (
                     <Link
                       key={city}
-                      href={`/${resolvedParams.state}/${getCitySlug(city)}/`}
+                      href={`/${getCitySlug(city)}/`}
                       className="block text-blue-600 hover:text-blue-700 hover:underline text-sm"
                     >
                       Consignment Stores in {city}
@@ -212,7 +213,7 @@ export default async function CityPage({ params }: CityPageProps) {
                 </div>
                 <div className="mt-4 pt-4 border-t border-gray-200">
                   <Link 
-                    href={`/${resolvedParams.state}/`}
+                    href="/"
                     className="text-sm text-gray-600 hover:text-blue-600"
                   >
                     View all cities in {stateName} →

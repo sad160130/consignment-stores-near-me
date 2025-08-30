@@ -27,16 +27,19 @@ export function generateStatePageSchema(
   cities: string[],
   baseUrl: string
 ) {
+  // For state pages, baseUrl should be the subdomain URL
+  const stateUrl = baseUrl.includes(stateSlug) ? baseUrl : `https://${stateSlug}.consignmentstores.site`;
+  
   const breadcrumbs = generateBreadcrumbSchema([
-    { name: "Home", url: "/" },
+    { name: "Home", url: "https://www.consignmentstores.site/" },
     { name: stateName }
-  ], baseUrl);
+  ], "");
 
   const collectionPage = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "@id": `${baseUrl}/${stateSlug}/`,
-    "url": `${baseUrl}/${stateSlug}/`,
+    "@id": `${stateUrl}/`,
+    "url": `${stateUrl}/`,
     "name": `Consignment Stores in ${stateName}`,
     "description": `Find the best consignment stores in ${stateName}. Browse ${stores.length} stores across ${cities.length} cities. Quality second-hand furniture, clothing, and vintage items.`,
     "breadcrumb": {
@@ -71,7 +74,7 @@ export function generateStatePageSchema(
     "isPartOf": {
       "@type": "WebSite",
       "name": "Consignment Stores Directory",
-      "url": baseUrl
+      "url": "https://www.consignmentstores.site"
     }
   };
 
@@ -86,26 +89,29 @@ export function generateCityPageSchema(
   stores: ConsignmentStore[],
   baseUrl: string
 ) {
+  // For city pages, baseUrl should be the subdomain URL
+  const stateUrl = baseUrl.includes(stateSlug) ? baseUrl : `https://${stateSlug}.consignmentstores.site`;
+  
   const breadcrumbs = generateBreadcrumbSchema([
-    { name: "Home", url: "/" },
-    { name: stateName, url: `/${stateSlug}/` },
+    { name: "Home", url: "https://www.consignmentstores.site/" },
+    { name: stateName, url: `${stateUrl}/` },
     { name: cityName }
-  ], baseUrl);
+  ], "");
 
   const webPage = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "@id": `${baseUrl}/${stateSlug}/${citySlug}/`,
-    "url": `${baseUrl}/${stateSlug}/${citySlug}/`,
+    "@id": `${stateUrl}/${citySlug}/`,
+    "url": `${stateUrl}/${citySlug}/`,
     "name": `Consignment Stores in ${cityName}, ${stateName}`,
     "description": `Find the best consignment stores in ${cityName}, ${stateName}. Browse ${stores.length} top-rated stores with reviews. Quality second-hand furniture, clothing, and vintage items.`,
     "breadcrumb": {
-      "@id": `${baseUrl}/${stateSlug}/${citySlug}/#breadcrumb`
+      "@id": `${stateUrl}/${citySlug}/#breadcrumb`
     },
     "isPartOf": {
       "@type": "WebSite",
       "name": "Consignment Stores Directory",
-      "url": baseUrl
+      "url": "https://www.consignmentstores.site"
     }
   };
 
@@ -113,7 +119,7 @@ export function generateCityPageSchema(
   const localBusinesses = stores.map(store => ({
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": `${baseUrl}/${stateSlug}/${citySlug}/#${store.businessName.toLowerCase().replace(/\s+/g, '-')}`,
+    "@id": `${stateUrl}/${citySlug}/#${store.businessName.toLowerCase().replace(/\s+/g, '-')}`,
     "name": store.businessName,
     "description": store.seoDescription || `${store.businessName} is a consignment store located in ${store.city}, ${store.state} offering quality second-hand items.`,
     "address": {
