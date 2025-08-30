@@ -334,6 +334,7 @@ export function generateStoreItemList(
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
+    "@id": `https://${stateSlug}.consignmentstores.site/${citySlug}/#itemlist`,
     "name": `Consignment Stores in ${cityName}, ${stateName}`,
     "description": `List of ${stores.length} consignment stores in ${cityName}, ${stateName}`,
     "numberOfItems": stores.length,
@@ -395,7 +396,7 @@ export function generateCompleteCityPageStructuredData(
           { "@id": cityEntity["@id"] },
           { "@id": stateEntity["@id"] }
         ],
-        "mainEntity": { "@id": storesList["@id"] || `#itemlist` },
+        "mainEntity": { "@id": `https://${stateSlug}.consignmentstores.site/${citySlug}/#itemlist` },
         "isPartOf": {
           "@type": "WebSite",
           "@id": "https://www.consignmentstores.site/#website",

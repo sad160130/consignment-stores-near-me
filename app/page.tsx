@@ -1,6 +1,5 @@
 import { processExcelData, getStateSlug, getCitySlug } from '@/lib/data-processor';
 import SearchBar from '@/components/SearchBar';
-import Link from 'next/link';
 import { MapPinIcon, BuildingStorefrontIcon, StarIcon } from '@heroicons/react/24/outline';
 import { generateUrl } from '@/lib/url-utils';
 
