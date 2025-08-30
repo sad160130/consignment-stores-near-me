@@ -30,11 +30,27 @@ export function middleware(request: NextRequest) {
 
   // Parse the hostname to extract subdomain
   const hostParts = hostname.split('.');
-  const isSubdomain = hostParts.length > 2 || (hostParts.length === 2 && !hostParts[0].startsWith('www'));
-  const subdomain = isSubdomain ? hostParts[0].replace('www.', '') : null;
+  
+  // Debug logging
+  console.log('Hostname:', hostname);
+  console.log('Host parts:', hostParts);
+  
+  // Extract subdomain - should be the first part if it's not 'www'
+  let subdomain = null;
+  
+  if (hostParts.length >= 2) {
+    const firstPart = hostParts[0];
+    // Check if it's a state subdomain (not www and not the main domain)
+    if (firstPart !== 'www' && firstPart !== 'consignmentstores' && VALID_STATES.includes(firstPart)) {
+      subdomain = firstPart;
+    }
+  }
+  
+  console.log('Detected subdomain:', subdomain);
 
   // Handle subdomain routing for state pages
-  if (subdomain && VALID_STATES.includes(subdomain)) {
+  if (subdomain) {
+    console.log('Processing state subdomain:', subdomain);
     // This is a state subdomain (e.g., california.consignmentstores.site)
     
     // Rewrite the URL internally to handle it with the existing Next.js routing
@@ -54,6 +70,9 @@ export function middleware(request: NextRequest) {
     if (!newUrl.pathname.endsWith('/')) {
       newUrl.pathname += '/';
     }
+    
+    // Debug the rewrite
+    console.log('Rewriting from:', url.pathname, 'to:', newUrl.pathname);
     
     // Rewrite the request to the new pathname
     return NextResponse.rewrite(newUrl);
