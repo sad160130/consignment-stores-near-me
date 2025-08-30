@@ -27,6 +27,12 @@ export function middleware(request: NextRequest) {
   ) {
     return NextResponse.next();
   }
+  
+  // Debug all requests
+  console.log('=== MIDDLEWARE DEBUG ===');
+  console.log('Hostname:', hostname);
+  console.log('Pathname:', pathname);
+  console.log('URL:', url.toString());
 
   // Parse the hostname to extract subdomain
   const hostParts = hostname.split('.');
@@ -40,9 +46,15 @@ export function middleware(request: NextRequest) {
   
   if (hostParts.length >= 2) {
     const firstPart = hostParts[0];
+    console.log('First part of hostname:', firstPart);
+    console.log('Is valid state?', VALID_STATES.includes(firstPart));
+    
     // Check if it's a state subdomain (not www and not the main domain)
     if (firstPart !== 'www' && firstPart !== 'consignmentstores' && VALID_STATES.includes(firstPart)) {
       subdomain = firstPart;
+      console.log('✅ Valid state subdomain detected:', subdomain);
+    } else {
+      console.log('❌ Not a valid state subdomain');
     }
   }
   
@@ -50,7 +62,9 @@ export function middleware(request: NextRequest) {
 
   // Handle subdomain routing for state pages
   if (subdomain) {
-    console.log('Processing state subdomain:', subdomain);
+    console.log('🔄 Processing state subdomain:', subdomain);
+    console.log('📍 Current pathname:', pathname);
+    
     // This is a state subdomain (e.g., california.consignmentstores.site)
     
     // Rewrite the URL internally to handle it with the existing Next.js routing
@@ -59,23 +73,30 @@ export function middleware(request: NextRequest) {
     if (pathname === '/' || pathname === '') {
       // State homepage: california.consignmentstores.site/ -> /california/
       newUrl.pathname = `/${subdomain}/`;
+      console.log('🏠 State homepage rewrite:', newUrl.pathname);
     } else {
       // City page: california.consignmentstores.site/victorville/ -> /california/victorville/
       // Keep the pathname as is, but prepend the state
       const cleanPath = pathname.startsWith('/') ? pathname.slice(1) : pathname;
       newUrl.pathname = `/${subdomain}/${cleanPath}`;
+      console.log('🏙️ City page rewrite:', newUrl.pathname);
     }
     
     // Add trailing slash if missing
     if (!newUrl.pathname.endsWith('/')) {
       newUrl.pathname += '/';
+      console.log('➕ Added trailing slash:', newUrl.pathname);
     }
     
     // Debug the rewrite
-    console.log('Rewriting from:', url.pathname, 'to:', newUrl.pathname);
+    console.log('🎯 FINAL REWRITE:', `${url.pathname} → ${newUrl.pathname}`);
+    console.log('========================');
     
     // Rewrite the request to the new pathname
     return NextResponse.rewrite(newUrl);
+  } else {
+    console.log('❌ No subdomain detected, continuing normally');
+    console.log('========================');
   }
 
   // Handle redirects from old subdirectory URLs to new subdomain URLs
