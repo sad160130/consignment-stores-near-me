@@ -1,0 +1,21 @@
+
+Subdomain Sitemap Generated Successfully!
+========================================
+
+Main Pages: 3 (Homepage, About, Sitemap)
+State Pages: 51 (subdomain format)
+City Pages: 1721 (within state subdomains)
+Total URLs: 1775
+
+URL Structure:
+- Main: https://www.consignmentstores.site/
+- States: https://[state].consignmentstores.site/
+- Cities: https://[state].consignmentstores.site/[city]/
+
+Examples:
+- https://california.consignmentstores.site/
+- https://california.consignmentstores.site/los-angeles/
+- https://new-york.consignmentstores.site/
+- https://new-york.consignmentstores.site/new-york-city/
+
+Generated: 2025-08-30
