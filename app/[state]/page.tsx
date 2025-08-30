@@ -6,6 +6,7 @@ import SearchBar from '@/components/SearchBar';
 import StoreListWithFilters from '@/components/StoreListWithFilters';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import { generateStatePageSchema } from '@/lib/schema-markup';
+import { generateCompleteStatePageStructuredData } from '@/lib/structured-data-enhanced';
 import { generateUrl } from '@/lib/url-utils';
 import { Metadata } from 'next';
 
@@ -87,7 +88,15 @@ export default async function StatePage({ params }: StatePageProps) {
     { name: stateName }
   ];
 
-  // Generate schema markup with subdomain URL
+  // Generate enhanced structured data with entities and relationships
+  const enhancedStructuredData = generateCompleteStatePageStructuredData(
+    stores,
+    cities,
+    stateName,
+    resolvedParams.state
+  );
+  
+  // Also keep the original schema for backward compatibility
   const schemas = generateStatePageSchema(
     stateName,
     resolvedParams.state,
@@ -99,6 +108,12 @@ export default async function StatePage({ params }: StatePageProps) {
   return (
     <>
       <SchemaMarkup schemas={schemas} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(enhancedStructuredData, null, 2)
+        }}
+      />
       <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Breadcrumb items={breadcrumbItems} />

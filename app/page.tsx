@@ -1,7 +1,8 @@
-import { processExcelData } from '@/lib/data-processor';
+import { processExcelData, getStateSlug, getCitySlug } from '@/lib/data-processor';
 import SearchBar from '@/components/SearchBar';
 import Link from 'next/link';
 import { MapPinIcon, BuildingStorefrontIcon, StarIcon } from '@heroicons/react/24/outline';
+import { generateUrl } from '@/lib/url-utils';
 
 export default function Home() {
   const data = processExcelData();
@@ -9,13 +10,82 @@ export default function Home() {
   const totalStates = data.statesList.length;
   const totalCities = Object.keys(data.storesByCity).length;
   
-  // Get featured states (top states by number of stores)
-  const featuredStates = data.statesList
+  // Generate structured data for home page
+  const homePageStructuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.consignmentstores.site/#website",
+        "url": "https://www.consignmentstores.site/",
+        "name": "Consignment Stores Near Me",
+        "description": `Find the best consignment stores across ${totalStates} states and ${totalCities} cities. Browse ${totalStores}+ consignment shops, thrift stores, and second-hand stores.`,
+        "publisher": {
+          "@type": "Organization",
+          "name": "Consignment Stores Directory",
+          "url": "https://www.consignmentstores.site/"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.consignmentstores.site/search?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "CollectionPage",
+        "@id": "https://www.consignmentstores.site/#webpage",
+        "url": "https://www.consignmentstores.site/",
+        "name": "Find Consignment Stores Near Me - Complete US Directory",
+        "isPartOf": {
+          "@id": "https://www.consignmentstores.site/#website"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Consignment Stores",
+          "description": "Directory of consignment stores across the United States"
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.consignmentstores.site/"
+            }
+          ]
+        },
+        "description": "Browse our comprehensive directory of consignment stores across all 50 states. Find quality second-hand furniture, clothing, vintage items, and more."
+      },
+      {
+        "@type": "ItemList",
+        "name": "US States with Consignment Stores",
+        "numberOfItems": totalStates,
+        "itemListElement": data.statesList.map((state, index) => ({
+          "@type": "ListItem",
+          "position": index + 1,
+          "name": state,
+          "url": `https://${state.toLowerCase().replace(/[^\w\s-]/g, '').replace(/[\s_-]+/g, '-')}.consignmentstores.site/`
+        }))
+      }
+    ]
+  };
+  
+  // Get all states sorted alphabetically for complete Browse by State section
+  const allStates = data.statesList
     .map(state => ({
       name: state,
-      slug: state.toLowerCase().replace(/[^\w\s-]/g, '').replace(/[\s_-]+/g, '-'),
-      storeCount: data.storesByState[state]?.length || 0
+      slug: getStateSlug(state),
+      storeCount: data.storesByState[state]?.length || 0,
+      cities: data.citiesByState[state]?.length || 0
     }))
+    .sort((a, b) => a.name.localeCompare(b.name));
+  
+  // Get featured states (top states by number of stores)
+  const featuredStates = [...allStates]
     .sort((a, b) => b.storeCount - a.storeCount)
     .slice(0, 12);
 
@@ -26,8 +96,8 @@ export default function Home() {
       return {
         city,
         state,
-        citySlug: city.toLowerCase().replace(/[^\w\s-]/g, '').replace(/[\s_-]+/g, '-'),
-        stateSlug: state.toLowerCase().replace(/[^\w\s-]/g, '').replace(/[\s_-]+/g, '-'),
+        citySlug: getCitySlug(city),
+        stateSlug: getStateSlug(state),
         storeCount: stores.length
       };
     })
@@ -40,7 +110,14 @@ export default function Home() {
     .slice(0, 12);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(homePageStructuredData, null, 2)
+        }}
+      />
+      <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-50 to-white py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -187,31 +264,71 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Browse by State Section */}
+      {/* Complete Browse by State Section - Semantic Content Network */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Browse Consignment Stores by State
+              Browse All {allStates.length} States - Complete Directory
             </h2>
-            <p className="text-lg text-gray-600">
-              Find consignment stores in your state
+            <p className="text-lg text-gray-600 mb-2">
+              Explore consignment stores across the United States
+            </p>
+            <p className="text-sm text-gray-500">
+              Each state has its own dedicated subdomain for better local search results
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
-            {featuredStates.map((state) => (
-              <Link
-                key={state.name}
-                href={`/${state.slug}/`}
-                className="card text-center hover:shadow-lg transition-shadow duration-200 p-4"
-              >
-                <div className="font-semibold text-gray-900 mb-1">{state.name}</div>
-                <div className="text-sm text-gray-600">
-                  {state.storeCount} store{state.storeCount !== 1 ? 's' : ''}
-                </div>
-              </Link>
-            ))}
+          {/* All States Grid - Complete Semantic Network */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mb-12">
+            {allStates.map((state) => {
+              const stateUrl = generateUrl(state.slug);
+              return (
+                <a
+                  key={state.name}
+                  href={stateUrl}
+                  className="card hover:shadow-lg transition-all duration-200 p-4 border-2 border-transparent hover:border-blue-500"
+                >
+                  <div className="font-bold text-gray-900 mb-2">{state.name}</div>
+                  <div className="text-sm text-gray-600 mb-1">
+                    {state.storeCount} store{state.storeCount !== 1 ? 's' : ''}
+                  </div>
+                  <div className="text-xs text-gray-500">
+                    {state.cities} cit{state.cities !== 1 ? 'ies' : 'y'}
+                  </div>
+                  <div className="text-xs text-blue-600 font-medium mt-2">
+                    Visit {state.slug}.consignmentstores.site →
+                  </div>
+                </a>
+              );
+            })}
+          </div>
+          
+          {/* Featured States Highlight */}
+          <div className="border-t pt-12">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+              Top States by Store Count
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
+              {featuredStates.map((state, index) => {
+                const stateUrl = generateUrl(state.slug);
+                return (
+                  <a
+                    key={state.name}
+                    href={stateUrl}
+                    className="relative card text-center hover:shadow-xl transition-shadow duration-200 p-4 bg-gradient-to-br from-white to-blue-50"
+                  >
+                    <div className="absolute top-2 right-2 bg-blue-600 text-white text-xs px-2 py-1 rounded-full">
+                      #{index + 1}
+                    </div>
+                    <div className="font-bold text-gray-900 mb-1">{state.name}</div>
+                    <div className="text-sm text-gray-600">
+                      {state.storeCount} stores
+                    </div>
+                  </a>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
@@ -229,23 +346,26 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredCities.map((city) => (
-              <Link
-                key={`${city.city}-${city.state}`}
-                href={`/${city.stateSlug}/${city.citySlug}/`}
-                className="card hover:shadow-lg transition-shadow duration-200"
-              >
-                <div className="font-semibold text-gray-900 mb-2">
-                  {city.city}, {city.state}
-                </div>
-                <div className="text-sm text-gray-600 mb-2">
-                  {city.storeCount} consignment store{city.storeCount !== 1 ? 's' : ''}
-                </div>
-                <div className="text-xs text-blue-600 font-medium">
-                  View Stores →
-                </div>
-              </Link>
-            ))}
+            {featuredCities.map((city) => {
+              const cityUrl = generateUrl(city.stateSlug, city.citySlug);
+              return (
+                <a
+                  key={`${city.city}-${city.state}`}
+                  href={cityUrl}
+                  className="card hover:shadow-lg transition-shadow duration-200"
+                >
+                  <div className="font-semibold text-gray-900 mb-2">
+                    {city.city}, {city.state}
+                  </div>
+                  <div className="text-sm text-gray-600 mb-2">
+                    {city.storeCount} consignment store{city.storeCount !== 1 ? 's' : ''}
+                  </div>
+                  <div className="text-xs text-blue-600 font-medium">
+                    View Stores →
+                  </div>
+                </a>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -293,6 +413,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }
