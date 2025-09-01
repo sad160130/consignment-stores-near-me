@@ -2,9 +2,54 @@ import { processExcelData, getStateSlug, getCitySlug } from '@/lib/data-processo
 import SearchBar from '@/components/SearchBar';
 import { MapPinIcon, BuildingStorefrontIcon, StarIcon } from '@heroicons/react/24/outline';
 import { generateUrl } from '@/lib/url-utils';
+import { headers } from 'next/headers';
+import { Suspense } from 'react';
+import StatePageContent from '@/components/StatePageContent';
 
-export default function Home() {
+// List of valid state slugs - must match middleware
+const VALID_STATES = [
+  'alabama', 'alaska', 'arizona', 'arkansas', 'california', 'colorado',
+  'connecticut', 'delaware', 'district-of-columbia', 'florida', 'georgia',
+  'hawaii', 'idaho', 'illinois', 'indiana', 'iowa', 'kansas', 'kentucky',
+  'louisiana', 'maine', 'maryland', 'massachusetts', 'michigan', 'minnesota',
+  'mississippi', 'missouri', 'montana', 'nebraska', 'nevada', 'new-hampshire',
+  'new-jersey', 'new-mexico', 'new-york', 'north-carolina', 'north-dakota',
+  'ohio', 'oklahoma', 'oregon', 'pennsylvania', 'rhode-island', 'south-carolina',
+  'south-dakota', 'tennessee', 'texas', 'utah', 'vermont', 'virginia',
+  'washington', 'west-virginia', 'wisconsin', 'wyoming'
+];
+
+export default async function Home() {
   const data = processExcelData();
+  
+  // Check if this is a state subdomain
+  const headersList = await headers();
+  const host = headersList.get('host') || '';
+  
+  let stateSlug = null;
+  let stateName = null;
+  
+  if (host) {
+    const hostParts = host.split('.');
+    if (hostParts.length >= 2) {
+      const firstPart = hostParts[0];
+      if (firstPart !== 'www' && firstPart !== 'consignmentstores' && VALID_STATES.includes(firstPart)) {
+        stateSlug = firstPart;
+        stateName = data.statesList.find(state => getStateSlug(state) === stateSlug);
+      }
+    }
+  }
+  
+  // If this is a state subdomain, render the state page content
+  if (stateName && stateSlug) {
+    return (
+      <Suspense fallback={<div>Loading...</div>}>
+        <StatePageContent stateName={stateName} stateSlug={stateSlug} />
+      </Suspense>
+    );
+  }
+
+  // Otherwise render the home page content
   const totalStores = data.stores.length;
   const totalStates = data.statesList.length;
   const totalCities = Object.keys(data.storesByCity).length;
