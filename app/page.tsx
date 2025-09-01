@@ -26,8 +26,8 @@ export default async function Home() {
   const headersList = await headers();
   const host = headersList.get('host') || '';
   
-  let stateSlug = null;
-  let stateName = null;
+  let stateSlug: string | null = null;
+  let stateName: string | null = null;
   
   if (host) {
     const hostParts = host.split('.');
