@@ -41,7 +41,7 @@ export default async function StatePage({ params }: StatePageProps) {
         <h3>🚨 DEBUGGING INFO</h3>
         <p><strong>If you can see this, the state page routing is working correctly!</strong></p>
         <p>This page should only appear when visiting: {resolvedParams.state}.consignmentstores.site</p>
-        <p>Expected H1: "{stateName} Consignment Stores"</p>
+        <p>Expected H1: &quot;{stateName} Consignment Stores&quot;</p>
       </div>
     </div>
   );
