@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: StatePageProps): Promise<Meta
   const canonicalUrl = generateUrl(stateSlug);
   
   return {
-    title: `Consignment Stores in ${stateName}`,
+    title: `${stateName} Consignment Stores - Find Best Thrift & Resale Shops`,
     description: `Discover ${storeCount} consignment stores in ${stateName} across ${cities.length} cities. Find quality second-hand furniture, clothing, vintage items and more at the best resale shops near you.`,
     keywords: `consignment stores ${stateName}, thrift stores ${stateName}, second hand stores ${stateName}, resale shops ${stateName}`,
     alternates: {
