@@ -35,7 +35,7 @@ export default async function Home() {
       const firstPart = hostParts[0];
       if (firstPart !== 'www' && firstPart !== 'consignmentstores' && VALID_STATES.includes(firstPart)) {
         stateSlug = firstPart;
-        stateName = data.statesList.find(state => getStateSlug(state) === stateSlug);
+        stateName = data.statesList.find(state => getStateSlug(state) === stateSlug) || null;
       }
     }
   }
