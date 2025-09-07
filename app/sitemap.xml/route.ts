@@ -31,7 +31,7 @@ export async function GET() {
   data.statesList.forEach((stateName) => {
     const stateSlug = getStateSlug(stateName);
     sitemap += `  <url>
-    <loc>${baseUrl}/${stateSlug}</loc>
+    <loc>https://${stateSlug}.consignmentstores.site</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -45,7 +45,7 @@ export async function GET() {
     cities.forEach((cityName) => {
       const citySlug = getCitySlug(cityName);
       sitemap += `  <url>
-    <loc>${baseUrl}/${stateSlug}/${citySlug}</loc>
+    <loc>https://${stateSlug}.consignmentstores.site/${citySlug}</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
